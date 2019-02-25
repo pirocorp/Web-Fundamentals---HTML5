@@ -1,0 +1,18 @@
+body{
+    color: #F00
+}
+
+p{
+    color: #000000
+}
+
+strong{
+    color: #00F
+}
+
+p strong{
+    color: #0F0
+}
+
+h1{
+}
