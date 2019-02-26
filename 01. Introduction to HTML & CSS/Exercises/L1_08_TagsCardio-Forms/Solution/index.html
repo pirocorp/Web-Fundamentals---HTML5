@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Customer Details</legend>            
+                <p>
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" placeholder="George" autofocus>
+                </p>
+                <p>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Devis">
+                </p>
+                <p>
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender" id="gender-male">
+                    <label for="gender-female">Female</label>
+                    <input type="radio" name="gender" id="gender-female">
+                    <label for="gender-other">Other</label>
+                    <input type="radio" name="gender" id="gender-other">
+                </p>                
+                <p>
+                    <sppan>Preferred contact method:</sppan>
+                    <label for="email-radio">Email</label>
+                    <input type="radio" name="contact-method" id="email-radio" checked>
+                    <label for="phone-radio">Phone</label>
+                    <input type="radio" name="contact-method" id="phone-radio">
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="your@email.com">
+                </p>              
+                <p>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+359885236225">
+                </p>
+                <label for="town-select">Town</label>  
+                <select name="town-select" id="town-select">
+                    <option value="Varna">Varna</option> 
+                    <option value="Plovdiv">Plovdiv</option> 
+                    <option value="Burgas">Burgas</option> 
+                    <option value="Sofia">Sofia</option> 
+                    <option value="Pleven">Pleven</option>
+                </select>
+                <p>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" min="18" max="70">
+                </p>
+                <p>
+                    <label for="language-select">Programming language</label>
+                    <input list="languages" id="language-select" name="language-select">
+                    <datalist id="languages">
+                        <option value="Java"></option> 
+                        <option value="PHP"></option> 
+                        <option value="C#"></option> 
+                        <option value="JavaScript"></option> 
+                        <option value="Python"></option> 
+                        <option value="Ruby"></option> 
+                        <option value="Other"></option>
+                    </datalist>
+                </p>
+                <textarea name="more-info" id="more-info" cols="20" rows="5" placeholder="More information..."></textarea>
+                <p>
+                    <input type="checkbox" name="tandc" id="tandc">
+                    <label for="tandc">I agree the Terms and Conditions</label>
+                </p>
+                <p>
+                    <input type="submit" value="Send">
+                    <input type="reset">
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>
