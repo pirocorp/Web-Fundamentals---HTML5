@@ -1,4 +1,13 @@
+html{
+    font-family: sans-serif;
+    size: 24px;
+    line-height: 1.4;
+}
+
 body{
     background-color: rgb(51, 102, 153);
     color: rgb(255, 255, 255);
+    padding: 1em 2em;
+    width: 60rem;
+    margin: 0 auto;
 }
