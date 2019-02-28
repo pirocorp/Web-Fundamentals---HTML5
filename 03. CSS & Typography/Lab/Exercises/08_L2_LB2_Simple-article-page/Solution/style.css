@@ -15,3 +15,7 @@ body{
 img{
     width: 60%;
 }
+
+article header{
+    border-bottom: 2px solid #333;
+}
