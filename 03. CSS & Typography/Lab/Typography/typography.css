@@ -10,6 +10,12 @@ html{
     /* font: 16px/1.5 PT Sans, Helvetica, Verdana, sans-serif; */
 }
 
+body{
+    padding: 1em 2em;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
 p{
     /* pixels are abstract and their size is defined by the OS Example: 
     In High resolution(retina display) mobile devices 1px may have size of 4 display pixels */
