@@ -1,0 +1,23 @@
+/* Import web Fonts from Google */
+@import url('https://fonts.googleapis.com/css?family=Srisakdi');
+
+html{
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body{
+    padding: 5em;
+    /* padding: 1rem 2rem; */
+    /* max-width: 60rem; */
+    /* margin: 0 auto; */
+}
+
+ol{
+    list-style-type: decimal;
+}
+
+ul > li{
+    list-style-type: square;
+}
