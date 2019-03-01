@@ -1,0 +1,33 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid rgb(221, 221, 221);
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: rgb(221, 221, 221);
+    text-align: left;
+}
+
+table td, table th{
+    border: 1px solid rgb(221, 221, 221);    
+    padding: 0.3em; 
+}
+
+table tr:nth-child(odd) td{
+    background-color: rgb(241, 241, 241);
+}
+
+table tr:hover td{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color: transparent;
+}
