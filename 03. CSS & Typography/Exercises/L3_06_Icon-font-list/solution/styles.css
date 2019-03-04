@@ -1,0 +1,17 @@
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
+html{
+    font: 16px/1.5 Verdana, sans-serif;
+}
+
+body{
+
+}
+
+ul{
+    padding: 0;
+}
+
+ul li{
+    list-style: none outside;
+}
