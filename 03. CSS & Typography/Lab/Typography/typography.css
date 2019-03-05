@@ -1,3 +1,24 @@
+/* Import PT Sans */
+@import url("@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');");
+/* Import PT Serif */
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
+/* Reset.css */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Box sizing */
+html {
+    box-sizing:  border-box;
+}
+
+*, *:before, *:after {
+    box-sizing:  inherit;
+}
+
+/*  */
 html{
     /* Search for font is done for every character */
     /* Google Fonts allows to load only specified characters from font Example: Only numbers*/
