@@ -1,0 +1,76 @@
+/* Import font awesome */
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+@import url("reset.css");
+@import url("typography.css");
+
+body {
+    padding: 3rem;
+    /* background-image: linear-gradient(to top, #AAA, #FFF); */
+    /* background-image: url('https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   */
+}
+
+/* style for entire ul (wrapper) */
+ul.gallery {
+    /* changing defined padding-left for ul elements in typography */
+    padding-left: 0;
+}
+
+/* An inline element does not start on a new line and only takes up as much width as necessary. */
+
+/* Compared to display: inline, the major difference is that 
+display: inline-block allows to set a width and height on the element.
+Also, with display: inline-block, the top and bottom margins/paddings are respected, 
+but with display: inline they are not.
+Compared to display: block, the major difference is that 
+display: inline-block does not add a line-break after the element, 
+so the element can sit next to other elements. */
+/* every li is a wrapper box and controls the size of img */
+ul.gallery li {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+/* A block-level element always starts on a new line and takes up the full width available 
+(stretches out to the left and right as far as it can). */
+/* Despite what block element is we can have several images on same row because 
+they are available space in one li */
+ul.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0.5rem solid #000;
+    padding: 1rem;
+    background: #FFF;
+    /* Outline and box shadow doesn't takes space on page? so they stacked */
+    outline: 0.2rem solid #FFF;
+    box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.6);
+    /* transperancy */
+    opacity: 0.5;
+}
+
+ul.gallery li:hover img {
+    opacity: 1;
+}
+
+ul.icons li{
+    /* set list bullets to none and set list style position to outside */
+    list-style: none outside;
+}
+
+/* pseudo element inserted before li element */
+/* adds green checks before list items */
+ul.icons li::before{
+    display: inline-block;
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-right: 0.5rem;
+    opacity: 0.5;
+    color: #0A0;
+}

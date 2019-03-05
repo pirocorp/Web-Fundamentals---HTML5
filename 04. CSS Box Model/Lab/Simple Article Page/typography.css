@@ -1,0 +1,107 @@
+/* Typography Global styles */
+html {
+    /*
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    */
+    /* Alternative Syntax */
+    font: normal 16px/1.5 Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Here we can add elements which do not inherit font property */
+/* Like table, form, input, select, textarea */
+body, table, form, input, select, textarea {
+    font: inherit;
+}
+
+/* Makeing padding area after p, ul, ol relative to root element size */
+p, ul, ol {
+    padding-bottom: 1.5rem;
+}
+
+/* Makeing padding area on the left of ul, ol relative to root element size */
+ul, ol {
+    padding-left: 2rem;
+}
+
+/* Makeing margin area above and bellow the hr relative to root element size */
+/* Added only here by me */
+hr {
+    margin-top: 1.5rem; 
+    margin-bottom: 1.5rem;
+}
+
+/* Font-family Font-weight can be changed*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* Makeing padding area under heading relative to heading size */
+    padding-bottom: 0.3em;
+    /* Makeing padding area above heading relative to heading size */
+    padding-top: 0.5em;
+}
+
+/* All heading are in matematical proportions */
+h1 {font-size: 3.052rem;}
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
+h6 {font-size: 1rem;}
+
+/* Makeing padding area above and bellow nested in li - ul, ol relative to root element size */
+li ul, li ol {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* defineing lyst styles for 3 lvls nests */
+ul > li { list-style: disc; }
+ul > li > ul > li { list-style: circle; }
+ul > li > ul > li > ul > li{ list-style: square; }
+
+blockquote {
+    padding-left: 2rem;
+    /* Addjusting line height for pseudo elements */
+    line-height: 1.8rem;
+}
+
+/* not selector is like ! in C# */
+/* selects all p in blockquote which are not last child */
+/* both :last-child and :not are so called pseudo selectors */
+/* they select elements based on their state */
+blockquote p:not(:last-child ){
+    font-style: italic;
+}
+
+/* :first-child is pseudo selector as described above */
+/* ::before is pseudo element this are elements which are not present in HTML */
+/* and can be created with css in this case before selected element*/
+blockquote p:first-child::before {
+    display: inline-block;
+    /* content of the created element */
+    content: '"';
+    font-size: 2rem;
+    line-height: 1;
+    padding-right: 1rem;
+}
+
+/* works simillar to upper selector */
+/* nth-last-child counts from last child to first child */
+/* creates and inserts element after the child before last-child in blockquote */
+blockquote p:nth-last-child(2)::after {
+    display: inline-block;
+    /* content of the created element */
+    content: '"';
+    font-size: 2rem;
+    line-height: 0;
+    padding-right: 1rem;
+}
+
+/* selects only p which is last childe in blockquote */
+blockquote p:last-child {
+    font-weight: bold;
+    text-align: right;
+}
