@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(238, 238, 238);
+    padding: 5rem;
+}
+
+
+ul.gallery {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul.gallery li {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.4rem solid rgb(0, 0, 0);
+}
+
+ul.gallery li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
