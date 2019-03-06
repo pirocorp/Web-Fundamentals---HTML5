@@ -1,0 +1,51 @@
+@import url('typography.css');
+
+html {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+    /* for passing test in judge */
+	/*font: 16px/1.5 Helvetica, sans-serif;*/
+}
+
+body {
+    padding: 5rem;
+}
+
+ul, ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
+}
+
+header nav {
+    display: inline-block;
+    padding-left: 2rem;
+    /* border: 1px solid black; */
+}
+
+header nav ul li a {
+    padding: 0.8rem 1rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    color: rgb(0, 153, 0);
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    /* border: 1px solid black; */
+}
+
+body > header:first-of-type {
+    border-bottom: 2px solid #000;
+}
+
+header nav ul li a:focus,
+header nav ul li a:hover {
+	outline: none;
+	background: rgb(0, 153, 0);
+	color: #FFF;
+}
