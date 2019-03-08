@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LinkedIn</title>
+</head>
+<body>
+    <header>
+        <h1>LinkedIn</h1>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What is LinkedIn?</a></li>
+                <li><a href="#">Join Today</a></li>
+                <li>
+                    <form action="/LogIn" method="POST">
+                        <fieldset>
+                            <legend>Sign In</legend>
+                            <ul>
+                                <li>
+                                    <Label for="email">Email:</Label>
+                                    <input type="email" name="email" id="email">
+                                </li>
+                                <li>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password">
+                                </li>
+                                <li>
+                                    <input type="submit" value="Sign In">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <hr>
+    <main>
+        <h2>Over 175 million....</h2>
+        <ul>
+            <li>Bla bla bla</li>
+            <li>Bla bla bla Bla bla bla</li>
+            <li>Bla bla bla Bla bla bla Bla bla bla</li>
+        </ul>
+        <section>
+            <h1>Join LinkedIn Today</h1>
+            <form action="/Register" method="POST">
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <ul>
+                        <li>
+                            <Label for="first-name">First Name:</Label>
+                            <input type="text" name="first-name" id="first-name">
+                        </li>
+                        <li>
+                            <Label for="last-name">Last Name:</Label>
+                            <input type="text" name="last-name" id="last-name">
+                        </li>
+                        <li>
+                            <Label for="email-sign-up">Email:</Label>
+                            <input type="email" name="email" id="email-sign-up">
+                        </li>
+                        <li>
+                            <label for="password-sign-up">Password</label>
+                            <input type="password" name="password" id="password-sign-up">
+                        </li>
+                    </ul>
+                    <p>6 or more characters</p>
+                    <input type="button" value="Join Now">
+                    <p>Already on LinkedIn? <a href="#">Sign in.</a></p>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h3>Search for someone by name:</h3>
+            <form action="/Search" method="GET">
+                <ul>
+                    <li>
+                        <Label for="first-name-search">First Name:</Label>
+                        <input type="text" name="first-name" id="first-name-search">
+                    </li>
+                    <li>
+                        <Label for="last-name-search">Last Name:</Label>
+                        <input type="text" name="last-name" id="last-name-search">
+                    </li>
+                </ul>
+                <input type="submit" value="Go">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

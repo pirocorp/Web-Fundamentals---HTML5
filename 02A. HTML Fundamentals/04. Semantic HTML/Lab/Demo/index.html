@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Semantic HTML Make the content understandable for computers -->
+        <!-- A way to show the search engines the correct content -->
+        <!-- Search engines use so-called “crawlers” to get the content of the page and index it
+        The crawlers weigh the data on the page
+        <title>, page URL and headings have great weight
+        Links from highly valued pages to your page increase its value (Google Page Rank)
+        Add alt text to images
+        Use relevant keywords in the content and <meta> tags
+        No SEO technique will replace good content -->
+        <title>Semantic HTML</title>
+    </head>
+    <!-- HTML5 semantic tags -->
+    <!-- <header>, <nav>, <main>, <section>, <article>, <aside>, <footer> -->
+    <!-- Use Headings when you need to structure the content into sub-headings 
+        In increasing order, staring with <h1> Do not use empty tags Like a clearing <div> -->
+    <body>
+        <!-- Headings Always use headings (<h1> – <h6>) when you need a heading or title
+        Like in a MS Word document Google uses it to mark important content -->
+        <h1>…</h1>
+        <h2>…</h2>
+        <h3>…</h3>
+        <h4>…</h1>
+        <h5>…</h5>
+        <h6>…</h6>
+        <!-- Site header or section header or article header Could include navigation (<nav>) -->
+        <header> … </header>
+        <!-- Defines a set of navigation links. E.g. site navigation (usually in the header) -->
+        <nav> … </nav>
+        <!-- Specifies the main content of a document (info) 
+        There must not be more than one <main> element in a document-->
+        <!-- One important facet of <main> is that it can only be used once per page. -->
+        <!-- <main> is that it can’t be used as a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element. -->
+        <main> … </main>
+        <!-- <article> Independent content such as blog post or an article (e.g. news item) -->
+        <article> 
+            <!-- Strong <strong> vs. Bold <b>
+            <b> does not mean anything It just makes the text bolder
+            <strong> marks the text is "stronger" than the other, surrounding text -->
+            <strong></strong>
+            <!-- Emphasis <em> vs. Italic <i> Emphasis does not always mean, 
+            that the code should be italic It could be bolder, italic and underlined
+            The styles for the emphasis text should be set with CSS Not by HTML -->
+            <em></em>
+            <!-- Specifies additional details that the user can view or hide on demand (accordion-like widget) -->
+            <details>…</details> + <summary>…</summary>
+            <!-- Specifies date / time (for a post / article / news) -->
+            <time>…</time>
+            <!-- Defines marked/highlighted text -->
+            <mark>…</mark>
+            <!-- Grouping stand-alone content (video or image)
+            Figure (a figure, e.g. inside an article) -->
+            <figure>
+                <!-- A caption of a figure (inside the <figure> tag) -->
+                <figcaption>…</figcaption>
+            </figure>
+            <!-- Video element (uses the built-in player) -->
+            <!-- The controls attribute adds video controls.
+            It is a good idea to always include width and height attributes. 
+            The <source> element allows you to specify alternative video files
+            The text between the <video> and </video> tags will be displayed in 
+            browsers that do not support the <video> element. -->
+            <video>…</video>
+            <!--  A standard for playing audio files (built-in player) -->
+            <!-- Simmilary to video -->
+            <audio>…</audio>
+            <!-- Defines a dialog box or window -->
+            <dialog>…</dialog>
+            <!-- Defines a scalar measurement within a known range (a gauge) or task progress -->
+            <meter>…</meter> / <progress>…</progress>
+            <!-- Defines the result of a calculation -->
+            <output>…</output>
+            <!-- The <wbr> (Word Break Opportunity) tag specifies where in a 
+            text it would be ok to add a line-break.-->
+            <wbr>
+        </article>
+        <!-- Grouping of content usually with a heading, similar to chapters
+        Site section (e.g. news, comments, links, …) -->
+        <section> … </section>
+        <!-- Content slightly related to primary content E.g. sidebar (usually on the left or on the right) -->
+        <aside> … </aside>
+        <!-- Site footer (sometime can be a section footer) Providing author, copyright data, etc. -->
+        <footer> … </footer>
+    </body>
+</html>
