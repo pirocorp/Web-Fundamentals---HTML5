@@ -1,0 +1,92 @@
+<!-- Some elements are essential to each HTML Document: html, head, body, DOCTYPE -->
+<!-- Doctype is kind of the validator of the page -->
+<!-- Tells the browser in which version of HTML the page is written -->
+<!-- In this case HTML 5 Doctype -->
+<!DOCTYPE html>
+<!-- The html element Used to mark the beginning and ending of a HTML document-->
+<!-- All the content of the web page is inside this tag -->
+<html lang="en">
+     <!-- content goes here -->
+     <!-- The head tag contains markup that is not visible to the user -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Demo</title>
+    </head>
+    <!-- body element contains all the visible to the user markup -->
+    <body>
+        <!-- HTML Elements are combination of tags and attributes -->
+        <!-- There are some attributes that are common for every HTML element -->
+        <!-- id, class, name, style -->
+        <!-- makes a hyperlink to Google-->
+        <a href="http://google.com"> go to Google</a>
+    
+        <!-- makes a horizontal line -->
+        <hr width="95%" size="3px"/>
+    
+        <!-- adds an image in the web page -->
+        <img src="images/SEB-Ninja.png" alt="logo"/>
+
+        <!-- Text formatting tags modify the text between the opening tag and the closing tag -->
+        <!-- formatting tags are deprecated Use CSS instead -->
+        <!--<b></b><i></i><u></u><sup></sup><sub></sub><pre></pre> -->
+        <b>Hello</b>
+        <!-- Text formatting tags -->
+        <!-- Paragraph Tags -->
+        <p>This text is <em>emphasized.</em></p>
+        <p>This one is <strong>more emphasized.</strong></p>
+        <!-- Heading Tags (h1 – h6) -->
+        <h1>Heading 1</h1>
+        <h2>Sub heading 2</h2>
+        <h3>Sub heading 3</h3>
+        <!-- Create an Ordered List using <ol></ol>: -->
+        <!-- Attribute values for type are 1, A, a, I, or i -->
+        <ol type="1">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Grapefruit</li>
+        </ol>
+        <!-- Create an Unordered List using <ul></ul>: -->
+        <!-- Attribute values for type are: disc, circle or square -->
+        <ul type="circle">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Grapefruit</li>
+        </ul>
+        <!-- Create definition lists using <dl></dl>  -->
+        <!-- Pairs of text and associated definition; text is in <dt></dt> tag, definition in <dd></dd> tag -->
+        <!-- Renders without bullets -->
+        <!-- Definition is indented -->
+        <dl>
+            <dt>HTML</dt>
+            <dd>A markup language …</dd>
+            <dd>A markup language …</dd>
+            <dd>A markup language …</dd>
+            <dt>CSS</dt>
+            <dd>Language used to …</dd>
+            <dd>Language used to …</dd>
+            <dd>Language used to …</dd>
+        </dl>
+        <!-- Section ElementsThe <div> and the <span> -->
+        <!-- <div> creates logical divisions within a page Block element Used with CSS -->
+        <div style="font-size:24px; color:red">DIV example</div>
+        <p>This span is
+            <!-- The <span> Tag Inline element Useful for modifying a specific portion of text -->
+            <!-- Don't use it to create a separate area (paragraph) in the document -->
+            <span style="color:red; font-weight:bold">only a test</span>.
+        </p>
+        <!-- In HTML5 there are semantic tags for layout -->
+        <!-- <nav>, <header>, <footer>, <section> -->
+        <html>        
+        <head> … </head>        
+        <body>
+            <header id="header"> … </header>
+            <nav id="navigation"> … </nav>
+            <aside id="sidebar"> … </aside>
+            <main id="content"> … </main>
+            <footer id="footer"> … </footer>
+        </body>        
+        </html>
+    </body>
+</html>
