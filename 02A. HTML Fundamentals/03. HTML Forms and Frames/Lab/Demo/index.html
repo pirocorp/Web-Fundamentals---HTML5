@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!-- Create a form block -->
+    <!-- The "method" attribute tells how the form data should be sent – via GET or POST request -->
+    <!-- The "action" attribute tells where the form data should be sent -->
+    <!-- With post method form is sent like collection of key-value pairs -->
+    <form name="myForm" method="post" action="path/register">
+        <fieldset>
+            <!-- Text input fields: -->
+            <legend>Text input fields:</legend>
+            <p>
+                <!-- Lable binds for attribute whith coresponding id attribute in input tag -->
+                <!-- Labels are used to associate an explanatory text to a form field using the field's ID -->
+                <!-- Clicking on a label focuses its associated field Checkboxes are toggled Radio buttons are checked -->
+                <label for="FirstName">This is a text field:</label>
+                <!-- name attribute will be the key and input will be value in key-value pair -->
+                <!-- Autocomplete attributte: The browser stores the previously typed values 
+                Brings them back on a later visit -->
+                <input type="text" name="FirstName" id="FirstName" value="This is a text field" autocomplete="given-name"/>
+            </p>
+            <!-- Multi-line text input fields (textarea): -->
+            <p>
+                <label for="Comments">Multi-line text input field:</label>
+                <!-- Autofocus  The field becomes on focus on page load -->
+                <textarea name="Comments" id="Comments" rows="10" cols="30" autofocus>This is a multi-line text field</textarea>
+            </p>
+            <!-- Password input – a text field which masks the entered text with * signs -->
+            <p>
+                <label for="Password">Password input</label>
+                <!-- Required The field is required to be filled/selected -->
+                <input type="password" name="pass" id="Password" value="password" required/>
+            </p>
+        </fieldset>
+        <!-- Fieldsets are used to enclose a group of related form fields: -->
+        <fieldset>
+            <!-- The <legend> is the fieldset's title -->
+            <legend>Buttons</legend>
+            <!-- Submit button -->
+            <input type="submit" name="submitBtn" value="Submit" />
+            <!-- Reset button – brings the form to its initial state -->
+            <input type="reset" name="resetBtn" value="Reset the form" />
+            <!-- Image button – acts like submit but image is displayed and click coordinates are sent -->
+            <input type="image" src="submit.gif" value="click me" alt="Submit" />
+            <!-- Ordinary button – no default action, used with JS -->
+            <input type="button" value="Apply Now" />
+        </fieldset>
+        <fieldset>
+            <!-- Checkboxes and Radio Buttons -->
+            <legend>Checkboxes and Radio Buttons</legend>
+            <!-- Radio buttons: -->
+            <!-- Radio buttons can be grouped, allowing only one to be selected from a group: -->
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="Female" />
+            <br>
+            <!-- Checkboxes: -->
+            <label for="fruit">Checkbox</label>
+            <input type="checkbox" name="fruit" value="apple" />
+        </fieldset>
+        <fieldset>
+            <!-- Select Fields -->
+            <legend>Select Fields</legend>        
+            <!-- Dropdown menus: -->
+            <p>
+                <label for="gender-dropdown">Dropdown:</label>
+                <select name="gender" id="gender-dropdown">
+                    <option value="Value 1" selected="selected">Male</option>
+                    <option value="Value 2">Female</option>
+                    <option value="Value 3">Other</option>
+                </select>
+            </p>
+            <!-- Multiple-choice menus: -->
+            <p>
+                <label for="multiple">Multiple choise:</label>
+                <select name="products" id="multiple" multiple="multiple">
+                    <option value="Value 1" selected=" selected">keyboard</option>
+                    <option value="Value 2">mouse</option>
+                    <option value="Value 2">hdd</option>
+                    <option value="Value 2">ssd</option>
+                    <option value="Value 2">cpu</option>
+                    <option value="Value 2">MB</option>
+                    <option value="Value 2">VGA</option>
+                    <option value="Value 2">RAM</option>
+                </select>
+            </p>
+        </fieldset>
+        <!-- Hidden fields contain invisible data -->
+        <input type="hidden" name="Account" value=" This is a hidden text field" />
+        <fieldset>
+            <legend>Sliders and Spinboxes</legend>
+            <!-- Restricts users to enter only numbers
+            Additional attributes min, max and step and value
+            Can become Spinbox or Slider, depending on the input type -->
+            <!-- Range -->
+            <p>
+                <label for="slider">Slider:</label>
+                <input id="slider" type="range" min="0" max="100"/>
+            </p>
+            <!-- Spinbox -->
+            <p>
+                <label for="spin">Spinbox:</label>
+                <input id="spin" type="number" min="0" max="100" step="0.1" value="9"/>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Input Fields with Validation</legend>
+            <p>
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <!-- Email – provides a simple validation for email
+                Can be passed a pattern for validation REXEX attributte pattern
+                In a mobile device brings the email keyboard -->
+                <!-- Required The field is required to be filled/selected -->
+                <input type="email" required="true" id="email" pattern="[^ @]*@[^ @].[^ @]" value="email"/>
+            </p>
+            <p>
+                <!-- URL -->
+                <label for="url">Url:</label>
+                <!-- URL – has validation for url In a mobile device brings the url keyboard-->
+                <!-- The tabindex HTML attribute controls the order in which form fields and hyperlinks are 
+                    focused when repeatedly pressing the TAB key -->
+                <!-- tabindex=0 (zero) – "natural" order -->
+                <!-- If X < Y, then elements with tabindex="X" are iterated before elements with tabindex="Y" -->
+                <!-- Elements with negative tabindex are skipped, however, this is not defined in the standard -->
+                <input type="url" id="url" required="true" tabindex="0"/>
+            </p>
+            <p>
+                <!-- Telephone -->
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required="true" />
+            </p>
+
+        </fieldset>
+    </form>
+</body>
+</html>
