@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laptop</title>
+    <style>
+        nav {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        nav a {
+            color: rgb(72, 180, 230);
+        }
+
+        hr {
+            border: none;
+            height: 0.2em;
+            background-color: #333;
+        }
+
+        table, aside {
+            display: inline-block;
+        }
+
+        aside {
+            vertical-align: top;
+        }
+
+        input[type="range"]{
+            width: 200px;
+        }
+    </style>
+    <script>
+        function updateTextInput(val, element) {
+                document.getElementById(element).value = val;
+            }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#">Apple</a>
+        <a href="#">Toshiba</a>
+        <a href="#">Lenovo</a>
+        <a href="#">Dell</a>
+        <a href="#">Asus</a>
+        <a href="#">Acer</a>
+        <a href="#">HP</a>
+    </nav>
+    <hr>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Apple MacBook Air</legend>
+                        <img src="macBook.png" alt="Apple MacBook Air">
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <aside>
+            <section>
+                <label for="min-value">Min price: </label>
+                <input type="text" name="minInput" id="minInput" value="5000">
+                <br>
+                <input type="range" min="0" max="10000" name="min-value" id="min-value" onchange="updateTextInput(this.value, 'minInput');"/>
+            </section>
+            <section>
+                <label for="max-value">Max price: </label>
+                <input type="text" name="maxInput" id="maxInput" value="5000">
+                <br>
+                <input type="range" min="0" max="10000" name="max-value" id="max-value" onchange="updateTextInput(this.value, 'maxInput');" />
+            </section>
+            <section>
+                <label for="min-ram">Min ram: </label>
+                <input type="text" name="minRamInput" id="minRamInput" value="32">
+                <br>
+                <input type="range" min="8" max="64" name="min-ram" id="min-ram"
+                    onchange="updateTextInput(this.value, 'minRamInput');" />
+            </section>
+            <section>
+                <label for="max-ram">Max ram: </label>
+                <input type="text" name="maxRamInput" id="maxRamInput" value="32">
+                <br>
+                <input type="range" min="8" max="64" name="max-ram" id="max-ram"
+                    onchange="updateTextInput(this.value, 'maxRamInput');" />
+            </section>
+        </aside>
+    </main>
+</body>
+</html>
