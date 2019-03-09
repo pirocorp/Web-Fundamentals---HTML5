@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overflow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- When you set the size of a box with absolute values (e.g. a fixed pixel width/height),
+        the content may not fit within the allowed size, in which case the content overflows
+        the box. To control what happens in such cases, we can use the overflow property. 
+        It takes several possible values, but the most common are:
+    auto: If there is too much content, the overflowing content is hidden and scroll 
+        bars are shown to let the user scroll to see all the content.
+    hidden: If there is too much content, the overflowing content is hidden.
+    visible: If there is too much content, the overflowing content is shown 
+        outside of the box (this is usually the default behavior.)-->
+    <p class="autoscroll">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris tempus turpis id ante mollis dignissim. Nam sed
+        dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+        iaculis tincidunt augue. Integer efficitur sem eget risus
+        cursus, ornare venenatis augue hendrerit. Praesent non elit
+        metus. Morbi vel sodales ligula.
+    </p>
+    
+    <p class="clipped">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris tempus turpis id ante mollis dignissim. Nam sed
+        dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+        iaculis tincidunt augue. Integer efficitur sem eget risus
+        cursus, ornare venenatis augue hendrerit. Praesent non elit
+        metus. Morbi vel sodales ligula.
+    </p>
+    
+    <p class="default">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris tempus turpis id ante mollis dignissim. Nam sed
+        dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+        iaculis tincidunt augue. Integer efficitur sem eget risus
+        cursus, ornare venenatis augue hendrerit. Praesent non elit
+        metus. Morbi vel sodales ligula.
+    </p>
+</body>
+</html>

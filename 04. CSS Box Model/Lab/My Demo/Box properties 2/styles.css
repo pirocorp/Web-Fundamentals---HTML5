@@ -1,0 +1,40 @@
+/* General styles */
+
+body {
+  margin: 0;
+  /* You should have noticed that the total width of a box is the sum of its width, 
+  padding-right, padding-left, border-right, and border-left properties. */
+  /* To avoid such problems, it's possible to tweak the box model with the property box-sizing.
+  With the value border-box, it changes the box model to this that height and width includes
+  padding and border */
+  box-sizing: border-box;
+}
+
+body > * {
+  padding: 10px;
+  font-size: 20px;
+  border: 20px solid rgba(0,0,0,0.5);
+}
+
+/* specific boxes */
+
+header, footer {
+  background-color: blue;
+  color: white;
+}
+
+main {
+  background-color: yellow;
+  padding: 5%;
+  margin: 5%;
+}
+
+header {
+
+}
+
+footer {
+    /* margin collapsing in action; the smaller margin's effective width is 
+    reduced to 0, leaving only the larger margin. */
+    margin-top: 3%;
+}
