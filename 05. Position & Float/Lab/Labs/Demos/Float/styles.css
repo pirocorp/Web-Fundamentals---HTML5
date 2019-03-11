@@ -1,0 +1,35 @@
+body {
+    padding: 4rem;
+}
+
+.site {
+    background: red;
+    padding-bottom: 2rem;
+}
+
+/* this cleans float elements and resultat of this is taht render engine
+calculates sizes of float elements as part of their parent */
+.cleaner {
+    /* clear: both; */
+}
+
+/* Another method of clearing float */
+.site::after {
+    display: block;
+    height: 0;
+    content: '';
+    clear: both;
+}
+
+/* float element is not linked to the size of it's parent */
+main {
+    background: #DDC;
+    float: left;
+    /* visibility: hidden; */
+    width: 100px;
+    height: 200px;
+}
+
+aside {
+    background: #CDD;
+}

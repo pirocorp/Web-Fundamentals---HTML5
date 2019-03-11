@@ -1,0 +1,45 @@
+/* All elements width and height will include pading and border */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 4rem;
+}
+
+.site {
+    background: red;
+    /* padding-bottom: 2rem; */
+}
+
+/* Clearing floats so their sizes to be linked to size of their parent */
+.site::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+main, aside {
+    /* callulate height with standart box sizing */
+    /* height: calc(200px - 4rem); */
+    height: 200px;
+    padding: 2rem;
+}
+
+/* float element is not linked to the size of it's parent */
+main {
+    /* callulate width with standart box sizing */
+    /* width: calc(70% - 4rem); */
+    width: 70%;
+    float: left;
+    background: #DDC;
+}
+
+/* float element is not linked to the size of it's parent */
+aside {
+    /* callulate width with standart box sizing */
+    /* width: calc(30% - 4rem); */
+    width: 30%;
+    float: left;
+    background: #CDD;
+}

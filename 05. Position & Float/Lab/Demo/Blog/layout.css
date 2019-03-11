@@ -1,0 +1,40 @@
+/* Layout  */
+body{
+    padding: 2rem;
+}
+
+.site{
+    max-width: 80rem;
+    /* When we have auto margin on element wit set in this case width element will be centered */
+    margin: 0 auto;
+}
+
+.site-content {
+    /* border: 4px solid #000; */
+}
+
+/* this entire section is just for clearing float */
+.site-content::after{
+    display: block;
+    height: 0;
+    content: '';
+    clear: both;
+}
+
+.main-content,
+.main-sidebar{
+    float: left;
+}
+
+.main-content {
+    /* border: 4px solid #F00; */
+    padding-right: 2rem;
+    width: 70%;
+}
+
+.main-sidebar{
+    /* border: 4px solid #00F; */
+    padding-left: 1rem;
+    width: 29%;
+    vertical-align: top;    
+}

@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+}
+
+.container {
+    background-color:  #F00;
+    padding: 2rem;
+    /* vh - view port height 90% from view port height */
+    /* view port height is height of the window */
+    height: 300vh;
+
+    /* this act as position context */
+    /* first found position relative going from child to parent is the context */    
+    position: relative;
+}
+
+.box {
+    width: 30vw;
+    height: 30vh;
+    overflow: hidden;
+
+    background-color: #00F;
+    color: #FFF;
+    padding: 2rem;
+
+    /* as with float when we use position absolute element is detached from parent sizes */
+    position: absolute;
+    bottom: 0; right: 0;
+
+    /* Element change position to its current position and its arrent dont lose it's sizes  */
+    /* position: relative;
+    bottom: 0; right: 0; */
+
+    /* position based on viewport (window) not on container and container has it's sizes */
+    /* position: fixed;
+    top: 0; right: 0; */
+
+    /* putting element on top of other element */
+    /* -1 put element under all other elements */
+    /* z-index: 10; */
+}
