@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;   
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #24437C;
+}
+
+/* Navigation Section */
+nav {
+    padding: 2rem;
+    /* this is used to move ul to the right */
+    text-align: justify; 
+}
+
+/* this is used to move ul to the right */
+nav::after {    
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    font-size:0;
+    line-height:0;
+}
+
+nav img {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    /* padding-left: 30rem; */
+    display: inline-block;    
+    vertical-align: baseline;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a.cta-btn,
+.cta-btn a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #3DC1EF;
+}
+
+/* Central Section .header-title .header-subtitle and button-container */
+/* h1 */
+.header-title {
+    text-transform: capitalize;
+    color: #FFF;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 5%;
+    padding-bottom: 1.5rem;
+}
+
+/* h2 */
+.header-subtitle {
+    text-transform: capitalize;
+    color: #4E7C9A;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+/* button */
+#button-container {
+    text-align: center;
+}
+
+.header-btn {
+    display: inline-block;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+/* services section ul */
+.header-services {
+    padding: 5rem 15rem;
+}
+
+.service-title {
+    font-weight: normal;
+    padding-bottom: 2rem;
+}
+
+li.service {
+    display: inline-block;
+    width: 20%;
+    color: #FFF;
+    padding: 4rem 2rem;
+    margin-left: 10%;
+    vertical-align: top;    
+}
+
+li.service:hover {
+    background-color: #3DC1EF;
+}
+
+.service-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 1rem;
+}
