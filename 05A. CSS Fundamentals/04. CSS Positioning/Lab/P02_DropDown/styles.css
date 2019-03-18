@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #1d211e;
+    color: #FFF;
+}
+
+nav {
+    margin-top: 30px;
+    background: #e67c1f;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.main-nav {
+    display: inline-block;
+}
+
+ul li {
+    padding: 20px;
+    background: #e67c1f;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+}
+
+ul li:hover > ul {
+    display: block;
+}
+
+ul li:hover > ul > li {
+    display: block; 
+    position: relative;
+    top: 20px;
+    left: -20px;
+}
+
+ul li ul li:hover ul li {
+    position: relative;
+    left: 85px;
+    top: -15px;
+}
+
+nav ul li:hover {
+    background: black;
+    color: #FFF;
+}
