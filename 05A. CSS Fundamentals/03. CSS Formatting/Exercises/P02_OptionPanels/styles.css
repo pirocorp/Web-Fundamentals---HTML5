@@ -1,0 +1,100 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general styles */
+body {
+    width: 1000px;
+    margin: 60px  auto 0;
+    font-family: Tahoma, Arial sans-serif;
+    color: #191923;
+    background: #CACAC9;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+/* navigation styles */
+nav ul {
+    background: #FFF;
+    list-style-type: none;
+    padding: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+nav ul li:first-of-type {
+    padding-left: 0;
+}
+
+nav ul li a {
+    color: #423F69;
+    text-transform: uppercase;
+}
+
+nav ul li:first-of-type a {
+    text-transform: capitalize;
+    color:  #BF1363;
+}
+
+nav ul li a:hover {
+    color: #BF1363;
+}
+
+/* main styles */
+main {
+
+}
+
+/* article styles */
+main article {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 15px;    
+}
+
+main article:last-of-type {
+    padding-right: 0;
+}
+
+main article a {
+    color: #191923;
+}
+
+section {
+    opacity: inherit;
+}
+
+main article a:hover {
+    opacity: 0.8;
+}
+
+main article img {
+    width: 100%;
+    height: 160px;
+}
+
+main article section {
+    background: #FFF;
+    height: 140px;
+    padding: 10px;
+}
+
+main article section h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
