@@ -45,11 +45,15 @@ ul li:hover > ul > li {
 
 ul li ul li:hover ul li {
     position: relative;
-    left: 85px;
+    left: 100px;
     top: -15px;
 }
 
 nav ul li:hover {
     background: black;
     color: #FFF;
+}
+
+ul li ul {
+    width: 120px;
 }
