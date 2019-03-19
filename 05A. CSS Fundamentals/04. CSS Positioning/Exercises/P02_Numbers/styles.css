@@ -1,0 +1,86 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-top: 100px;
+    text-transform: capitalize;
+    text-align: center;
+    background: #DDDDDD;
+    color: #9470DC;
+    font-weight: normal;
+    padding: 20px 0;
+    border-radius: 15px;
+}
+
+/* Layout */
+main {
+    /* border: 1px solid black; */
+    padding: 30px 15px;
+}
+
+main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+article {
+    float: left;
+    width: 22%;
+    background: #EEEEEE;
+    margin-right: 4%;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+article:last-of-type {
+    margin-right: 0%;
+}
+
+article div {
+    display: inline-block;
+    background: #9470DC; 
+    color: #FFF;
+    padding: 60px 70px;   
+    border-radius: 100px;
+    font-size: 30px;
+}
+
+article div:hover {
+    color: #9470DC;
+    background: #FFF;
+    cursor: pointer;
+}
+
+article p {
+    padding-top: 20px;
+    color: #999999;
+}
+
+article button {
+    background: #DDDDDD;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+article button:hover {
+    background: #FFF;
+    cursor: pointer;
+}
