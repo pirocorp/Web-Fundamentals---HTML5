@@ -199,6 +199,7 @@ section header h3 {
     padding-top: 20px;
     padding-bottom: 10px;
     box-shadow: 8px 6px 17px -1px rgba(0,0,0,0.26);
+    border-radius: 10px;
 }
 
 .status {
