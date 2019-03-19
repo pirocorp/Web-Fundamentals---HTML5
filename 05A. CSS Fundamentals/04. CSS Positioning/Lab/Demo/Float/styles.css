@@ -1,0 +1,117 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* auto-margins for center alignment */
+.page {
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.container {
+  /* By adding an overflow: hidden declaration to a container div, 
+    we’re telling it to recognize the height of any floated elements it contains.  */
+  overflow: hidden;             /* Add this */
+  background-color: #EAEDF0;    /* Add this */
+}
+
+/* Inline boxes are aligned with the text-align property */
+/* floats for left/right alignment and auto-margins for center alignment.
+    Remember that this only applies to block boxes. */
+ /* Floated boxes always align to the left or right of their parent element. */
+ /* floated boxes are removed from the normal flow of the page. */
+ /* There are two ways to fix this: clearing a float and hiding overflow. */
+ /* “Clearing” a float is when we tell a block to ignore any floats that appear before it. 
+    Instead of flowing around the floated box, a cleared element always appears after any floats. 
+    It’s like forcing a box back into the default vertical flow of the page. */
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  float: left;                  /* Add this */
+  height: 300px;
+  width: 200px;                
+  background-color: #F09A9D;    /* Red */
+}
+
+.content {
+  /* we actually want the content block to be next to the sidebar instead of flowing around it.
+  For this, we need to tell the content block to float left, too.  */
+  float: left;
+  width: 650px;                 /* Add this */
+  height: 500px;
+  background-color: #F5CF8E;    /* Yellow */
+}
+
+/* The height of our floated elements don’t contribute to the vertical position of the footer, 
+so it simply sticks itself below the last element that wasn’t floated. */
+/* Clearing floats only fixes the height issue when there’s an element inside the container 
+    element that we can add a clear property to. Now that our footer is outside .page, we need a 
+    new way to make floated elements contribute to the height of their container. */
+.footer {
+  /* “Clearing” a float is when we tell a block to ignore any floats that appear before it.  */
+  /* Usually, you want to clear both left and right floats as we did here, but you can choose 
+    to clear only one or the other with the left or right values. Note that the red border now 
+    wraps all the way around the footer, indicating that the floated elements indeed count towards
+    the height of the .page container: */
+  /* clear: both; */            /* Add this */
+  overflow: hidden;
+  background-color: #D6E9FE;    /* Light blue */
+}
+
+/* Floats for Equal-Width Columns */
+/* Floats for Grids */
+/* When there isn’t enough room to stack a floated element horizontally, it pops down to the next line.  */
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+/* Styling elements in .content */
+.content {
+  padding: 20px;
+}
+
+.article-image {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Styling elements in Grid in Footer */
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+
+.username {
+  margin-top: 30px;
+}
+
+.comment {
+  margin: 10px;
+  /* Without it, the last line of the .comment text would hang underneath the image. */
+  /* In other words, overflow: hidden breaks the magazine-style 
+  layout from the previous section, but in a very useful way */
+  overflow: hidden;  /* This is important */
+}
