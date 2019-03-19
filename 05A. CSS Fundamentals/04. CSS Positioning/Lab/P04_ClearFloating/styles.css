@@ -1,0 +1,67 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+ul {
+    list-style-type: none;
+}
+
+/* Header Styles */
+header {
+    padding: 10px;
+}
+
+header h1 {
+    background: #8B603D;
+    color: #FFF;
+    padding: 40px 0 40px 10px;
+    border: 2px solid black;
+}
+
+/* Main Styles */
+aside {
+    padding: 10px 15px 10px 25px;
+    width: 150px;
+    float: left;
+}
+
+article {
+    padding-top: 10px; 
+}
+
+    /* clear float after main section */
+    main::after {
+        content: '';
+        height: 0;
+        display: block;
+        clear: both;
+    }
+
+    /* Aside Styles */
+    aside ul li {
+        background: #33B5E5;
+        color: #FFF;
+        padding: 10px 5px;
+        margin-bottom: 5px;
+    }
+
+    /* Article Styles */
+    article h2,
+    article p {
+        padding-bottom: 20px;
+    }
+
+/* Footer Styles */
+footer {
+    padding: 10px;
+}
+
+footer p {
+    background: #8B603D;
+    color: #FFF;
+    padding: 40px 0 40px 10px;
+    border: 2px solid black;
+}
