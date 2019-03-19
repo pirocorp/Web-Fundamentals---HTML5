@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Open+Sans:400,700');
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 14px "Open Sans", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Comfortaa, sans-serif;     
+}
+
+/* General Layout */
+aside, main {
+    float: left;
+}
+
+aside {
+    width: 15%;
+    background: #FFF;
+}
+
+main {
+    width: 85%;
+}
+
+/* Main Layout */
+main {
+    background: #f3f5f7;
+}
+/* Header Layout */
+main > header {
+    /* background: red; */
+}
+
+main header h1 {
+    float: left;
+    color: #384850
+}
+
+main header h1 span {
+    color: #91a5af;
+}
+
+main header button {
+    float: right;
+    margin-right: 80px;
+}
+
+/* Section Layout */
+main section {
+    /* background: yellowgreen;
+    border: 1px solid black; */
+}
+
+.article-container {
+    float: left;
+    margin-right: 30px;
+}
+
+/* Clear float */
+/* this will clear the float and resize container to integrate size of float children */
+main header::after,
+main section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Style Elements */
+/* Aside Styles */
+aside {
+    padding: 30px 10px 0 10px;
+}
+
+aside h1 {
+    text-align: center;  
+    font-size: 28px; 
+}
+
+aside figure {
+    padding-top: 20px;    
+}
+
+aside img {
+    width: 80px;
+    border-radius: 50%;
+    margin: 0% auto;
+    display: block;
+}
+
+aside figure figcaption{
+    text-transform: uppercase;
+    text-align: center;
+    color: #b1bfc6;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside ul li {
+    padding-top: 20px;
+}
+
+aside ul li:hover a {
+    color: #333;
+}
+
+aside ul li a {
+    color: #b1bfc6;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+aside ul li a i {
+    margin-right: 5px;
+}
+
+/* Main Styles */
+main {
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+/* Main Header Styles */
+main header h1 {
+    font-weight: normal;
+    font-size: 24px;
+    padding-bottom: 30px;
+}
+
+main header button {
+    background: #ff7739;
+    border: 2px solid #ff7739;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+main header button:hover {
+    color: #ff7739;
+    background: #f3f5f7;
+    border: 2px solid #ff7739;
+    cursor: pointer;
+}
+
+main header button i {
+    margin-left: 5px;
+}
+
+/* Section Styles */
+main section {
+    padding-bottom: 40px;
+}
+
+/* Section Header Styles */
+section header {
+    padding-bottom: 20px;
+}
+
+section header h2 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+section header h3 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+/* article-container Styles */
+.article-container {
+    background: #FFF;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: 8px 6px 17px -1px rgba(0,0,0,0.26);
+}
+
+.status {
+    position: relative;
+    top: 60px;
+    left: -20px;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 20px;
+    background: black;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.status-rented {
+    background: #B8C5CC;
+}
+
+.status-listed {
+    background: #68bc69;
+}
+
+.status-draft {
+    background: #91a5af;
+}
+
+.article-container p {
+    padding: 10px 20px;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.article-container:hover {
+    opacity: 0.7;
+}
