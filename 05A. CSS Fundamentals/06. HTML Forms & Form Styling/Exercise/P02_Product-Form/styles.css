@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    margin-top: 35%;    
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+}
+
+body {
+    background: #FAFAFA;
+    height: 100%;
+}
+
+main {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto ;
+    padding: 10% 0;
+}
+
+article {
+    background: #FFF;
+    height: 100%;  
+    border-radius: 30px;  
+    box-shadow: 3px 3px 50px -20px #42C9CA;
+}
+
+article::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+article section.section-image {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: linear-gradient(to bottom, #6afdc9 0%,#42c9ca 100%);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+article section.section-description {
+    width: 70%;
+    float: right;
+    padding: 80px 40px; 
+}
+
+section.section-description h1 {
+    font-family: Anton, serif;
+    font-size: 42px;
+}
+
+section.section-description h2 {
+    font-family: Anton, serif;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+section.section-description form {
+    margin-top: 25px;
+}
+
+section.section-description form div.input-container {
+    margin-bottom: 20px;
+}
+
+section.section-description form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+section.section-description form select, 
+section.section-description form input {
+    margin-left: 10px;
+    height: 25px;
+    width: 200px;
+}
+
+section.section-description form select {
+    background: #42C9CA;
+    color: #FFF;
+    outline: none;
+}
+
+section.section-description form input {
+    border: none;
+    border-bottom: 3px solid #42c9ca;
+}
+
+section.section-description form input::placeholder {
+    color: #42C9CA;
+}
+
+section.section-description form button {
+    margin-top: 20px;
+    border: 2px solid #42C9CA;
+    padding: 10px 30px;
+    background: #FFF;
+    color: #42C9CA;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+section.section-description form button:hover {
+    cursor: pointer;
+    background: #42C9CA;
+    color: #FFF;
+}
