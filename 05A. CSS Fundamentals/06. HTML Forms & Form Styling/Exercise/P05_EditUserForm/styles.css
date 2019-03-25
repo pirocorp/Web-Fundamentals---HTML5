@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px "Roboto", Helvetica, sans-serif;
+    color: #1E1917;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+a {
+    color: #136F63;
+    font-size: 15px;
+}
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    background: #EEEEEE;
+}
+
+/* Header Styles */
+body header {
+    margin-top: 20px;
+    padding: 30px 40px;
+    background: #FFFFFF;
+    border-top: 10px solid #324E5B;
+    border-right: 10px solid #324E5B;
+}
+
+body header h1 {
+    text-transform: uppercase;
+    color: #324E5B
+}
+
+form {
+    width: 600px;
+}
+
+/* Form Styles */
+body main {
+    margin: 40px 0 40px 40px;
+}
+
+.input-container label {
+    display: block;
+    margin: 10px 0;
+}
+
+.input-container input {
+    width: 600px;
+    height: 35px;
+    border-top: 4px solid #324E5B;
+    border-left: 4px solid #324E5B;
+    padding-left: 5px;
+}
+
+/* clear float */
+.radio-container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.radio-container > label {
+    display: block;
+    margin: 10px 0;
+}
+
+.radio-container .radio-option {
+    width: 50%;
+    float: left;
+}
+
+.groups-container {
+    margin: 10px 0;    
+}
+
+.groups-container .groups {
+    background: #FFFFFF;
+    border-top: 4px solid #324E5B;
+    border-left: 4px solid #324E5B;
+    padding-left: 15px;
+    width: 600px;
+    padding-bottom: 5px
+}
+
+.groups-container .groups .check-box-container {
+    margin: 10px 0;
+}
+
+.contacts {
+    margin: 30px 0;
+}
+
+.contacts label {
+    display: block;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    background: #EEEEEE;
+    padding: 10px 100px; 
+    margin-left: 30px;   
+}
+
+.cancel {
+    border-bottom: 4px solid #FF4A19;
+    border-right: 4px solid #FF4A19;
+    color: #FF4A19;
+}
+
+.save {
+    border-bottom: 4px solid #036659;
+    border-right: 4px solid #036659;
+    color: #036659;
+}

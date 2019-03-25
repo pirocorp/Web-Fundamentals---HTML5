@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit User Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>edit user</h1>
+    </header>
+
+    <main>
+        <form action="#" method="POST">
+
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="input-container">
+                <label for="phone">Phone number</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+
+            <div class="radio-container">
+                <label for="type">User type</label>
+                <div class="radio-option">
+                    <input type="radio" name="type" id="broadband" value="1">
+                    <label for="broadband">Broadband</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="type" id="radio" value="2">
+                    <label for="radio">Radio</label>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Change Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="groups-container">
+                <label for="groups">Groups</label>
+                <div class="groups">
+                    <div class="check-box-container">
+                        <input type="checkbox" name="all-groups" id="all-groups">
+                        <label for="all-groups"><span>All groups</span></label>
+                    </div>
+
+                    <div class="check-box-container">
+                        <input type="checkbox" name="group1" id="group1">
+                        <label for="group1"><span>Group 1</span></label>
+                    </div>
+                    
+                    <div class="check-box-container">
+                        <input type="checkbox" name="group2" id="group2">
+                        <label for="group2"><span>Group 2</span></label>
+                    </div>
+
+                    <div class="check-box-container">
+                        <input type="checkbox" name="group3" id="group3">
+                        <label for="group3"><span>Group 3</span></label>
+                    </div>
+
+                    <div class="check-box-container">
+                        <input type="checkbox" name="group4" id="group4">
+                        <label for="group4"><span>Group 4</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts">
+                <label for="contacts">Contacts</label>
+                <a href="#">See Contacts list</a>
+            </div>
+
+            <div class="buttons">
+                <button type="reset" class="btn cancel">CANCEL</button>
+                <button type="submit" class="btn save">SAVE</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
