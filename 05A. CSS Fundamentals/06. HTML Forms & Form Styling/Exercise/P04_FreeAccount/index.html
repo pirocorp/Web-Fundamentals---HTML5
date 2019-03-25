@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Free Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login or Create a Free Account!</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+    </header>
+    <main>
+        <section class="new-account">
+            <header>
+                <h2>New Account:</h2>
+            </header>
+
+            <form action="#" method="POST">
+                <div class="input-container correct">
+                    <input type="text" name="username" id="username-register" placeholder="Username">
+                </div>
+                <div class="input-container correct">
+                    <input type="email" name="emil" id="emil" placeholder="E-Mail">
+                </div>
+                <div class="input-container not-correct">
+                    <input type="password" name="password" id="password-register" placeholder="Password">
+                </div>
+                <div class="input-container not-correct">
+                    <input type="password" name="password-repeat" id="password-repeat" placeholder="Repeat Password">
+                </div>
+    
+                <div class="check-box-container">
+                    <input type="checkbox" name="promo" id="promo">
+                    <label for="promo"><span>Please inform me of upcoming freebies, promotions and news</span></label>
+                </div>
+
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+
+        <section class="login">
+            <header>
+                <h2>Login:</h2>
+            </header>
+
+            <form action="#" method="POST">
+                <div class="input-container correct">
+                    <input type="text" name="username" id="username-login" placeholder="Username">
+                </div>
+                <div class="input-container not-correct">
+                    <input type="password" name="password" id="password-login" placeholder="Password">
+                </div>
+                <a href="#">I Forgot my Password!</a>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+html {
+    font-family: Tahoma, Helvetica, sans-serif;     
+}
+
+body {
+    width: 800px;
+    margin: 50px auto;
+}
+
+/* Page Header Styles */
+body > header {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+}
+
+body > header h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+body > header p {
+    margin-bottom: 30px;
+}
+
+/* Forms Styles */
+main section {
+    width: 50%;
+    float: left;
+    padding: 0 30px;
+}
+
+/* clear float */
+main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.input-container > input {
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 60px;   
+    position: relative;
+    border: 2px solid #EAEAEA;
+    border-radius: 5px;
+}
+
+.input-container > input::placeholder {
+    color: #B8BEBF;
+}
+
+.input-container::after {
+    font-family: 'Font Awesome 5 Free', serif;
+    font-size: 18px;    
+    font-weight: bold;
+    color: #FFF;    
+    padding: 5px;
+    position: relative;
+    top: -30px;
+    left: 300px;
+}
+
+.correct::after {
+    content:'\f00c';
+    background: #00FF00;
+}
+
+.not-correct::after {
+    content:'\f00d';
+    background: #FF0500;
+    padding: 5px 10px;
+}
+
+#promo {
+    transform: scale(1.5);  
+    vertical-align: top;  
+}
+
+.check-box-container label span {
+    padding-left: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+.new-account form button {
+    margin-top: 20px;
+}
+
+form button {
+    padding: 10px 30px;
+    border: none;
+    background: #AFDF67;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px #AAA;
+    cursor: pointer;
+}
+
+.login form a {
+    display: block;
+    color: #EE88B5;
+    margin-bottom: 20px;
+}
