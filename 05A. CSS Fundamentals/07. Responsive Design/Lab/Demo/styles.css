@@ -1,12 +1,201 @@
-.box {
-    border: 1px solid green;
-    background: red;
+ /* Media queries allow different CSS fordifferent screen sizes */
+ /* Media Query Example Styles */
+ .media-query-example .box {
     display: inline-block;
-    width: 300px;
+    background: #ff882e;
+    text-align: center;
+    line-height: 2.5em;
+    color: #ffffff;
+    font-size: 2em;
+    width: 245px;
+    height: 245px;
+}
+
+@media screen and (max-width: 1024px) {
+    .media-query-example .box {
+        width: 200px;
+        height: 200px;
+        background: #143cff;
+  }
+}
+
+@media screen and (max-width: 830px) {
+    .media-query-example .box {
+        width: 150px;
+        height: 150px;
+        background: greenyellow;
+  }
+}
+
+@media screen and (max-width: 630px) {
+    .media-query-example .box {
+        width: calc(50% - 10px);
+        border: 1px solid #1907ff;
+        background: #a97c36;
+        height: 80px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+    .media-query-example .box {
+        display: block;
+        width: 100%;
+        background: #fff60e;
+        color: #1907ff;
+  }
+}
+
+/* Flex box is powerful tool for layout */
+/* Flex Container Properties: Flex */
+.flex .flex-container {
+    display: flex; 
+    border: 2px solid black;
+}
+
+.flex .flex-container .flex-item {
+    margin-right: 5px;
+    padding: 20px;
+    background: #ff882e; 
+}
+
+/* Flex Container Properties: Inline Flex */
+.inline-flex .flex-container {
+    display: inline-flex; 
+    border: 2px solid black;
+}
+
+.inline-flex .flex-container .flex-item {
+    margin-right: 5px;
+    padding: 20px;
+    background: #ff882e; 
+}
+
+/* Flex Direction */
+.flex-direction .flex-container {
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 400px) {
+    .inline-flex .flex-container,
+    .flex .flex-container {
+        flex-direction: column;
+    }
+}
+
+/* Flex Container Properties: Flex Wrap */
+.flex-wrap .flex-container {
+    display: flex;
+    /* no-wrap / wrap /wrap-reverse */
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.flex-wrap .flex-item {
+    margin: 5px;
+    padding: 20px;
+    background: #ff882e;
+}
+
+/* Flex Container Properties: Justify Content */
+.flex-justify .flex-container {
+    display: flex;
+    /* Align along the main axis */
+    justify-content: center;
+    border: 1px solid black;
     margin: 10px;
 }
 
-.container {
+.flex-justify .flex-item {
+    margin: 5px;
+    padding: 20px;
+    background: #ff882e;
+}
+
+/* Flex Container Properties: Align Items */
+.flex-align .flex-container {
     display: flex;
-    justify-content: center;
+    /* Align along the cross axis */
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px; 
+}
+
+.flex-align .flex-item {
+    margin: 5px;
+    padding: 20px;
+    background: #ff882e;
+}
+
+/* Children Flexbox Properties: Order */
+.flex-order .flex-container {
+    border: 1px solid black;
+    display: flex;
+}
+
+.flex-order .flex-item {
+    margin: 5px;
+    padding: 20px;
+    background: #ff882e; 
+}
+
+.flex-order .item-1 {
+    order: 2;
+}
+
+.flex-order .item-2 {
+    order: 3;
+}
+
+/* Children Properties: Grow and Shrink */
+.flex-grow-and-shrink .flex-container {
+  display: flex;
+  border: 1px solid black; 
+}
+
+.flex-grow-and-shrink .flex-item {
+  margin: 5px;
+  padding: 20px;
+  background: #ff882e; 
+}
+
+.flex-grow-and-shrink .item-1 {
+    flex-grow: 1;
+}
+
+/* Children Properties: Grow and Shrink Second Example*/
+.flex-grow-and-shrink .example-1 {
+    /* Take 20% of the spare space */
+    flex-grow: 20; 
+}
+
+.flex-grow-and-shrink .example-2 {
+    /* Take 80% of the spare space */
+    flex-grow: 80; 
+}
+
+.flex-grow-and-shrink .example-3 {
+    flex-grow: 0; 
+}
+
+/* Flexible Images */
+.flexible-image .image-container {
+    border: 2px solid black;
+    width: 20%;
+}
+
+.flexible-image img {
+    /* max-width overrides the width property */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexible Fonts: Use "em" */
+.flexible-font .body {
+    font-size: 20px;
+}
+
+.flexible-font .body .header {
+    /* Size relative to parent element */
+    font-size: 1.5em;
 }
