@@ -1,0 +1,12 @@
+.box {
+    border: 1px solid green;
+    background: red;
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
