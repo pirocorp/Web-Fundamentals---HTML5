@@ -1,0 +1,151 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+}
+
+/* Flexbox uses two types of boxes that we’ve never seen before: “flex containers” and 
+“flex items”. The job of a flex container is to group a bunch of flex items together and 
+define how they’re positioned. */
+/* Every HTML element that’s a direct child of a flex container is an “item”. */
+/* Flex items can be manipulated individually, but for the most part, it’s up to the 
+container to determine their layout. */
+/* The main purpose of flex items are to let their container know how many things it
+ needs to position. */
+
+.menu-container {
+    /* flex container */
+    display: flex;
+    /* define the horizontal alignment of its items */
+    /* This has the same effect as adding a margin: 0 auto declaration to the .menu element. */
+    /* center / flex-start / flex-end / space-around / space-between */
+    justify-content: center; 
+}
+
+.menu {
+    /* border: 1px solid #fff; */
+    /* padding: 5px 10px; */
+    width: 900px;
+    display: flex;
+    justify-content: space-between;    
+    
+}
+
+.links {
+    /* border: 1px solid #fff; */  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px;
+}
+
+.signup {
+    /* Think of auto-margins as a “divider” for flex items in the same container. */
+    /* layout by sticking an auto-margin between the items we want to separate, like so: */
+    /* Auto-margins eat up all the extra space in a flex container, so instead of
+    distributing items equally, this moves the .signup and any following items 
+    (.login) to the right side of the container. */
+  margin-left: auto;
+}
+
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    /* The available options for align-items is similar to justify-content: */
+    /* center / flex-start (top) / flex-end (bottom) / stretch / baseline */
+    align-items: center;
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;    
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+}
+
+.first-item {
+    order: 1;
+}
+
+.last-item {
+    order: -1;
+}
+
+.social,
+.subscribe {
+    /* You can align elements in other ways using the same values as the align-items property */
+    /* center \ flex-start (top) \ flex-end (bottom) \ stretch \ baseline */
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+/* The flex property defines the width of individual items in a flex container. 
+Or, more accurately, it allows them to have flexible widths. It works as a weight 
+that tells the flex container how to distribute extra space to each item. For example, 
+an item with a flex value of 2 will grow twice as fast as items with the 
+default value of 1. */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    /* That flex: 1; line tells the items to stretch to match the width of .footer. 
+    Since they all have the same weight, they’ll stretch equally: */
+    flex: 1;
+}
+
+.footer-one,
+.footer-three {
+    background-color: #5995DA;
+    /* flex: initial falls back to the item’s explicit width property. */
+    /* Without that flex: initial; line, the flex: 1; declaration would be
+    inherited from the .footer-item rule, causing the width properties to be ignored. */
+    flex: initial;
+    width: 300px;
+}
+
+/* Summary */
+/* Use display: flex; to create a flex container. */
+/* Use justify-content to define the horizontal alignment of items. */
+/* Use align-items to define the vertical alignment of items. */
+/* Use flex-direction if you need columns instead of rows. */
+/* Use the row-reverse or column-reverse values to flip item order. */
+/* Use order to customize the order of individual elements. */
+/* Use align-self to vertically align individual items. */
+/* Use flex to create flexible boxes that can stretch and shrink. */
