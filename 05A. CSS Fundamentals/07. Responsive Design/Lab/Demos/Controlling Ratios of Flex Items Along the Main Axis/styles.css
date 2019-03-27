@@ -1,0 +1,116 @@
+/* Global Styles */
+.box {
+    border: 2px dotted #608BA8;
+}
+
+.box div {
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+}
+
+/* Item sizing */
+.item-sizing .min-content {
+    width: min-content;
+    border: 2px dotted rgb(96, 139, 168);
+}
+
+.item-sizing .max-content {
+    width: max-content;
+    border: 2px dotted rgb(96, 139, 168);
+}
+
+/* The flex-basis property */
+.flex-basis .box {
+    display: flex;
+}
+
+.flex-basis .box div:nth-of-type(1) {
+    width: 150px;
+}
+
+.flex-basis .box > * {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 0 0 auto;
+}
+
+/* Combining flex-grow and flex-basis */
+.flex-grow .box {
+    display: flex;
+    width: 400px;
+}
+
+.flex-grow .box > * {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 0;
+}
+
+/* Giving items different flex-grow factors */
+.flex-grow-factor .box {
+    display: flex;
+    width: 400px;
+}
+
+.flex-grow-factor .one {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 0;
+}
+
+.flex-grow-factor .two {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 0;
+}
+
+.flex-grow-factor .three {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 2 1 0;
+}
+
+/* The flex-shrink property */
+.flex-shrink .box {
+    display: flex;
+    width: 400px;
+}
+
+.flex-shrink .box > * {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 0 0 auto;
+    width: 200px;
+}
+
+/* Combining flex-shrink and flex-basis */
+.shring-factor .box {    
+    width: 400px;
+    display: flex;
+}
+
+.shring-factor .box > * {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 auto;
+}
+
+/* Giving items different flex-shrink factors */
+.diferent-shrink-factors .box {
+    display: flex;
+    width: 300px;
+}
+
+.diferent-shrink-factors .box > * {
+    /* makes all flex-elements 200px width */
+    width: 200px;
+}
+
+.diferent-shrink-factors .one {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 auto;
+}
+
+.diferent-shrink-factors .two {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 0 auto;
+}
+
+.diferent-shrink-factors .three {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 2 4 auto;
+}

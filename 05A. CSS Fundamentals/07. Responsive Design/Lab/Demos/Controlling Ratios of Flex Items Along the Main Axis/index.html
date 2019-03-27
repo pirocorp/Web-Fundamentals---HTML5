@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controlling Ratios of Flex Items Along the Main Axis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controlling Ratios of Flex Items Along the Main Axis</h1>
+    </header>
+    <main>
+        <section class="item-sizing">
+            <header>
+                <h2>Item sizing</h2>
+            </header>
+                <p class="min-content">I am sized with min-content and so I will take all of the soft-wrapping opportunities.</p>
+                <p class="max-content">I am sized with max-content and so I will take none of the soft-wrapping opportunities.</p>
+        </section>
+        <hr>
+        <section class="flex-basis">
+            <header>
+                <h2>The flex-basis property</h2>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+            </div>
+        </section>
+        <hr>
+        <section class="flex-grow">
+            <header>
+                <h2>Combining flex-grow and flex-basis</h2>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three has more content</div>
+            </div>
+        </section>
+        <hr>
+        <section class="flex-grow-factor">
+            <header>
+                <h2>Giving items different flex-grow factors</h2>
+            </header>
+
+            <div class="box">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+            </div>
+        </section>
+        <hr>
+        <section class="flex-shrink">
+            <header>
+                <h2>The flex-shrink property</h2>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three has more content</div>
+            </div>
+        </section>
+        <hr>
+        <section class="shring-factor">
+            <header>
+                <h2>Combining flex-shrink and flex-basis</h2>
+                <p>Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes
+                negative space in proportion to how much the item is able to shrink, so that e.g. a small item won’t shrink to zero
+                before a larger item has been noticeably reduced.</p>
+                <p>The second reason is that flexbox prevents small items from shrinking to zero size during this removal of negative free
+                space. The items will be floored at their min-content size — the size that they become if they take advantage of any
+                soft wrapping opportunities available to them</p>
+            </header>
+
+            <div class="box">
+                <div>Item One</div>
+                <div>Item Two</div>
+                <div>Item Three has more content and so has a larger size</div>
+            </div>
+        </section>
+        <hr>
+        <section class="diferent-shrink-factors">
+            <header>
+                <h2>Giving items different flex-shrink factors</h2>
+            </header>
+
+            <div class="box">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
