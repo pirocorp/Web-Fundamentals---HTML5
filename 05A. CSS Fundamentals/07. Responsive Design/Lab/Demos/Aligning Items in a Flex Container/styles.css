@@ -1,0 +1,127 @@
+/* Global Styles */
+html {
+    font-family: Helvetica, sans-serif
+}
+
+.box {
+  border: 2px dotted #608BA8;
+  width: 500px;
+  height: 300px;
+  /* padding: 20px; */
+}
+
+.box div {
+  background: #DFE8EE;
+  border: 2px solid #608BA8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Center a Box */
+.align .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align .box div {
+  width: 100px;
+  height: 100px;
+}
+
+/* The Cross Axis */
+.cross-axis .box {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Align Self */
+.align-self .box {
+  display: flex;
+  align-items: flex-start;
+  height: 200px;
+}
+.align-self .box>*:first-child {
+    align-self: stretch;
+}
+.align-self .box .selected {
+    align-self: center;
+}
+
+/* Change the main axis */
+.main-axis .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+}
+.main-axis .box>*:first-child {
+    align-self: stretch;
+}
+.main-axis .box .selected {
+    align-self: center;
+}
+
+/* Aligning content on the cross axis — the align-content property */
+.cross-axis .box {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 200px;
+  align-content: space-between;
+}
+
+/* Switch our flex-direction to column when we are working by column. */
+.switch-direction .box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  align-content: space-between;
+}
+
+.switch-direction .box div {
+    height: 150px;
+}
+
+/* Aligning content on the main axis */
+.align-main .box {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+/* Main axis is in the block direction. */
+.main-change-direction .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+/* Alignment and Writing Modes */
+.writing-modes .box {
+  direction: rtl;
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+}
+
+/* Alignment and flex-direction */
+.flex-direction .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: auto;
+}
+
+/* Using auto margins for main axis alignment */
+.main-axis-alignment .box {
+  display: flex;
+  height: auto;
+}
+.main-axis-alignment .push {
+    margin-left: auto;
+}
