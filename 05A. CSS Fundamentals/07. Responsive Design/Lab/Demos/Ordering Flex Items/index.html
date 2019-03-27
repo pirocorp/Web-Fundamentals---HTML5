@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordering Flex Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ordering Flex Items</h1>
+    </header>
+    <main>
+        <section class="default-order">
+            <header>
+                <h2>Reversing the display of items</h2>
+                <p>Remember that the start line relates to writing modes.</p>
+                <p>The order property is designed to lay the items out in ordinal groups. What this means is that items are assigned an integer that represents their group. The items are then placed in the visual order according to that integer, lowest values first. If more than one item has the same integer value, then within that group the items are laid out as per source order.</p>
+                <p>Flex items have a default order value of 0, therefore items with an integer value greater than 0 will be displayed after
+                any items that have not been given an explicit order value.</p>
+            </header>
+
+            <div class="box">
+                <div><a href="#">1</a></div>
+                <div><a href="#">2</a></div>
+                <div><a href="#">3</a></div>
+                <div><a href="#">4</a></div>
+                <div><a href="#">5</a></div>
+            </div>
+        </section>
+        <hr>
+        <section class="flex-direction">
+            <header>
+                <h2>Flex-direction</h2>
+            </header>
+            <div class="box">
+                <div><a href="#">One</a></div>
+                <div><a href="#">Two</a></div>
+                <div><a href="#">Three</a></div>
+            </div>
+        </section>
+        <hr>
+        <section class="order">
+            <header>
+                <h2>The order property</h2>
+            </header>
+            <div class="box">
+                <div><a href="#">1</a></div>
+                <div class="active"><a href="#">2</a></div>
+                <div><a href="#">3</a></div>
+                <div><a href="#">4</a></div>
+                <div><a href="#">5</a></div>
+            </div>
+        </section>
+        <hr>
+        <section class="use-case">
+            <header>
+                <h2>Use cases for order</h2>
+            </header>
+
+            <div class="wrapper">
+                <div class="card">
+                    <h3>News item title</h3>
+                    <div class="date">1 Nov 2017</div>
+                    <p>This is the content of my news item. Very newsworthy.</p>
+                </div>
+                <div class="card">
+                    <h3>Another title</h3>
+                    <div class="date">6 Nov 2017</div>
+                    <p>This is the content of my news item. Very newsworthy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

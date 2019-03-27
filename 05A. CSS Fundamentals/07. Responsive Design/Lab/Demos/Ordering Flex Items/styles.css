@@ -1,0 +1,86 @@
+/* Reset css */
+* {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+.box {
+    border: 2px dotted #608BA8;
+    width: 500px;
+}
+
+.box div {
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.box div a:focus {
+    background: yellow;    
+}
+
+p {
+    width: 500px;
+}
+
+/* Reversing the display of items */
+.default-order .box {
+    display: flex;
+    flex-direction: row;
+}
+
+.default-order .box div {
+    font-size: 24px;
+}
+
+.default-order .box :nth-child(1) { order: 2; }
+.default-order .box :nth-child(2) { order: 3; }
+.default-order .box :nth-child(3) { order: 1; }
+.default-order .box :nth-child(4) { order: 3; }
+.default-order .box :nth-child(5) { order: 1; }
+
+/* Flex-direction */
+.flex-direction .box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* The order property */
+.order .box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.order .active {
+    order: -1;
+    flex: 1 0 100%;
+}
+
+/* Use cases for order */
+.use-case .wrapper {
+    width: 500px;
+    display: flex;
+    border: 2px dotted #608BA8;
+    padding: 10px;
+}
+
+.use-case .card {
+    display: flex;    
+    flex-direction: column;    
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.use-case .card p {
+    max-width: 100%;
+}
+
+.use-case .date {
+        order: -1;
+        text-align: right;
+}
