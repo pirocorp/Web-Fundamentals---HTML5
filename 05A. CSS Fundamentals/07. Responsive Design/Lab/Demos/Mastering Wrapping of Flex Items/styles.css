@@ -1,0 +1,110 @@
+/* Reset css */
+* {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+.box {
+    border: 2px dotted #608BA8;
+    width: 500px;
+}
+
+.box div {
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+}
+
+p {
+    width: 500px;
+}
+
+/* Making things wrap Row */
+.row-wrap .box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row-wrap .box>* {
+    flex: 1 1 160px;
+}
+
+/* Making things wrap Col */
+.col-wrap .box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.col-wrap .box>* {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 1 1 80px;
+}
+
+/* Wrapping and flex-direction */
+.flex-direction .box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.flex-direction .box>* {
+    flex: 1 1 160px;
+}
+
+/* Single-dimensional layout explained */
+.grid .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+}
+
+/* How do flexbox-based grid systems work? */
+.flexbox-grid .box {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox-grid .box>* {
+    /* flex-grow, flex-shrink, flex-basis */
+    flex: 0 0 33.3333%;
+}
+
+/* Creating gutters between items */
+.gutters .wrapper {
+    border: 2px dotted orange;
+    width: 500px;
+}
+
+.gutters .box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.gutters .box>* {
+    flex: 1 1 160px;
+    margin: 10px;
+}
+
+/* Collapsed items */
+.collapse .box {
+    display: flex;
+}
+.collapse .box>* {
+    flex: 1 1 200px;
+}
+.collapse .hide {
+    visibility: collapse;
+}
+
+/* Collapsed items 2 */
+.collapse-2 .box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.collapse-2 .box>* {
+    flex: 1 1 auto;
+}
+.collapse-2 .hide {
+    visibility: collapse;
+}

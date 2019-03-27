@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mastering Wrapping of Flex Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mastering Wrapping of Flex Items</h1>
+    </header>
+    <main>
+        <section class="row-wrap">
+            <header>
+                <h2>Making things wrap: Row</h2>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+        <section class="col-wrap">
+            <header>
+                <h2>Making things wrap: Column</h2>
+            </header>
+        
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+        <hr>
+        <section class="flex-direction">
+            <header>
+                <h2>Wrapping and flex-direction</h2>
+                <p>Note that the reversing is only happening in the inline, row direction.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+        <hr>
+        <section class="grid">
+            <header>
+                <h2>Single-dimensional layout explained</h2>
+                <p>The following sample uses CSS Grid Layout to create a layout in this case the items stay in their grid and don’t stretch out when there are fewer of them on the final row.</p>
+                <p>This is the difference between one and two-dimensional layout. In a one dimensional method like flexbox, we only control the row or column. In two dimensional layout like grid we control both at the same time. If you want the space distribution row by row, use flexbox. If you don’t, use Grid.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+        <hr>
+        <section class="flexbox-grid">
+            <header>
+                <h2>How do flexbox-based grid systems work?</h2>
+                <p>Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as flex-basis or by adding a width to the item itself leaving the value of flex-basis as auto — you can get the impression of a two dimensional layout. You can see this working in the example below</p>
+                <p>Here I have set flex-grow and flex-shrink to 0 to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.</p>
+                <p>If you need flex items to line up in the cross axis, controlling the width in this way will achieve that. In most cases however, adding widths to flex items in this way demonstrates that you would probably be better served by switching to grid layout for that component.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+        <hr>
+        <section class="gutters">
+            <header>
+                <h2>Creating gutters between items</h2>
+            </header>
+
+            <div class="wrapper">
+                <div class="box">
+                    <div>One</div>
+                    <div>Two</div>
+                    <div>Three</div>
+                    <div>Four</div>
+                    <div>Five</div>
+                    <div>Six</div>
+                    <div>Seven</div>
+                    <div>Eight</div>
+                    <div>Nine</div>
+                    <div>Ten</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="collapse">
+            <header>
+                <h2>Collapsed items</h2>
+                <p>When you set an item to display: none in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using visibility: hidden keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can’t see it.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div class="hide">Three
+                    <br>has
+                    <br>extra
+                    <br>text
+                </div>
+            </div>
+        </section>
+        <section class="collapse-2">
+            <header>
+                <h2>Another Example of Collapsing</h2>
+            </header>
+            <div class="box">
+                <div>One</div>
+                <div>Add more text to this box to make it grow</div>
+                <div class="hide">Three
+                    <br>has
+                    <br>extra
+                    <br>text
+                </div>
+                <div>Four</div>
+                <div>Five</div>
+                <div>Six</div>
+                <div>Seven</div>
+                <div>Eight</div>
+                <div>Nine</div>
+                <div>Ten</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
