@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Typical use cases of Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Typical use cases of Flexbox</h1>
+    </header>
+    <main>
+        <section class="navigation">
+            <header>
+                <h2>Navigation</h2>
+                <p>In a perfect world of browser support, the reason you'd choose to use flexbox is because you want to lay a collection of items out in one direction or another. As you lay out your items you want to control the dimensions of the items in that one dimension, or control the spacing between items. These are the uses that flexbox was designed for.</p>
+                <p>A common pattern for navigation is to have a list of items displayed as a horizontal bar. This pattern, as basic as it seems, was difficult to achieve before flexbox. It forms the most simple of flexbox examples, and could be considered the ideal flexbox use case.</p>
+            </header>
+
+            <section class="space-distribution-outside">
+                <header>
+                    <h3>Space distributed outside the items</h3>
+                    <p>To distribute the space between or around the items we use the alignment properties in flexbox, and the justify-content property</p>
+                </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3 is longer</a></li>
+                        <li><a href="#">Page 4</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="space-distribution-within">
+                <header>
+                    <h3>Space distributed within the items</h3>
+                    <p>A different pattern for navigation would be to distribute the available space within the items themselves, rather than create space between them. In this case we would use the flex properties to allow items to grow and shrink in proportion to one another.</p>
+                </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3 is longer</a></li>
+                        <li><a href="#">Page 4</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+        <hr>
+        <section class="split-navigation">
+            <header>
+                <h2>Split navigation</h2>
+                <p>Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right.</p>
+                <p>The items are aligned on the main axis with flex-start as this is the initial behaviour of flexbox, and we are aligning the item on the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.</p>
+                <p>Also in this example we are using margins on the flex items to create a gap between items, and a negative margin on the container in order that the items still remain flush with the right and left edges. Until the gap properties from the Box Alignment specification are implemented in flexbox, we have to use margins in this way if we want to create a gutter between items.</p>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3 is longer</a></li>
+                    <li class="push-right"><a href="#">Page 4</a></li>
+                </ul>
+            </nav>
+        </section>
+        <hr>
+        <section class="center-item">
+            <header>
+                <h2>Center item</h2>
+                <p>In the future we may not need to make a container a flex container just to centre a single item, as the Box Alignment properties will ultimately be implemented in Block layout. For now however, if you need to properly centre one thing inside another, flexbox is the way to do it. As in the bellow example, make a container into a flex container, and then use either align-items on the parent element or target the flex item itself with align-self.</p>
+            </header>
+
+            <div class="box">
+                <div></div>
+            </div>
+        </section>
+        <hr>
+        <section class="card-layout">
+            <header>
+                <h2>Card layout pushing footer down</h2>
+                <p>Whether you use flexbox or CSS Grid to lay out a list of card components, these layout methods only work on direct children of the flex or grid component. This means that if you have variable amounts of content, the card will stretch to the height of the grid area or flex container. Any content inside uses regular block layout, meaning that on a card with less content the footer will rise up to the bottom of the content rather than stick to the bottom of the card.</p>
+            </header>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="content">
+                        <p>This card doesn't have much content.</p>
+                    </div>
+                    <footer>Card footer</footer>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <p>This card has a lot more content which means that it defines the height of the container the cards are
+                            in. I've laid the cards out using grid layout, so the cards themselves will stretch to the same height.
+                        </p>
+                    </div>
+                    <footer>Card footer</footer>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="media-object">
+            <header>
+                <h2>Media objects</h2>
+                <p>The media object is a common pattern in web design — this pattern has an image or other element to one side and text to the right. Ideally a media object should be able to be flipped — moving the image from left to right.</p>
+                <p>We see this pattern everywhere, used for comments, and anywhere we need to display images and descriptions. With flexbox we can allow the part of the media object containing the image to take its sizing information from the image, and then the body of the media object flexes to take up the remaining space.</p>
+            </header>
+
+            <div class="media">
+                <div class="image"><img src="https://placehold.it/60x60" alt="placeholder"></div>
+                <div class="content">
+                    This is the content of my media object. Items directly inside the flex container will be aligned to flex-start.
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="flipping-media">
+            <header>
+                <h2>Flipping the media object</h2>
+            </header>
+
+            <div class="media flipped">
+                <div class="image"><img src="https://placehold.it/60x60" alt="placeholder"></div>
+                <div class="content">This is the content of my media object. Items directly inside the flex container will be
+                    aligned to flex-start.</div>
+            </div>
+        </section>
+        <hr>
+        <section class="form-controls">
+            <header>
+                <h2>Form controls</h2>
+            </header>
+            
+            <section class="submit-field">
+                <header>
+                    <h3>Submit Field</h3>
+                    <p>Flexbox is particularly useful when it comes to styling form controls. Forms have lots of markup and lots of small elements that we typically want to align with each other. A common pattern is to have an &lt;input&gt; element paired with a &lt;button&gt;, perhaps for a search form or where you simply want your visitor to enter an email address.</p>
+                </header>
+
+                <form class="example">
+                    <div class="wrapper">
+                        <input type="text" id="text">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </section>
+
+            <section class="label-form">
+                <header>
+                    <h3>Label Input Form</h3>
+                </header>
+
+                <form class="example">
+                    <div class="wrapper">
+                        <label for="text">Label</label>
+                        <input type="text" id="text">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

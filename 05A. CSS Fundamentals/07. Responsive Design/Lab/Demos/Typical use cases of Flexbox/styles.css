@@ -1,0 +1,231 @@
+/* Reset css */
+* {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+.box {
+    border: 2px dotted #608BA8;
+    width: 500px;
+    height: 300px;
+}
+
+.box div {
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+}
+
+nav {
+    border: 2px dotted #608BA8;
+    width: 500px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    max-width: 500px;
+}
+
+/* Navigation */
+/* Space distributed outside the items */
+.navigation .space-distribution-outside nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Space distributed within the items */
+.navigation .space-distribution-within nav ul {
+    display: flex;
+}
+
+.navigation .space-distribution-within nav li {
+    /* flex-grow, flex-shrink, flex-basis */
+    /* shorthand for flex: 1 1 auto */
+    flex: auto;
+}
+
+/* Split navigation */
+.split-navigation nav ul {
+    display: flex;
+    margin: 0 -10px;
+}
+.split-navigation nav li {
+    margin: 0 10px;
+}
+.split-navigation .push-right {
+    margin-left: auto;
+}
+
+/* Center item */
+.center-item .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-item .box div {
+    width: 100px;
+    height: 100px;
+}
+
+/* Card layout pushing footer down */
+.card-layout .cards {
+    border: 1px solid black;
+    width: 500px;    
+    display: flex;
+
+    padding: 0 5px;
+}
+
+.card-layout .card {
+    /* flex-grow, flex-shrink, flex-basis */
+    /* flex: 1 1 0 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+    margin: 10px 5px; 
+}
+
+.card-layout .card .content {
+    /* flex-grow, flex-shrink, flex-basis */
+    /* This pushing footer down */
+    flex: 1 1 auto;
+
+    padding: 0 10px;
+}
+
+.card-layout .card footer {
+    background: #DFE8EE;
+    
+    padding: 10px;
+}
+
+/* Media objects */
+.media-object .media {
+    display: flex;
+    align-items: flex-start;
+
+    width: 250px;
+    border: 2px dotted #608BA8;
+}
+.media-object .media .content {
+    /* flex: 1; */
+    /* This will mean they use a flex-basis of 0 but distribute that space at different 
+    rates according to the flex-grow factor you have assigned.  */
+    flex: 3;
+    padding: 10px;
+}
+
+.media-object  .image {
+    /* they will grow and shrink from a flex-basis of 0, 
+    so you will end up with two equal-sized columns. */
+    flex: 1;
+}
+
+.media-object .image img {
+    /* Any width or max-width applied to the image will become the flex-basis. */
+    max-width: 100px;    
+}
+
+/* Flipping the media object */
+.flipping-media .media {
+    display: flex; 
+
+    width: 250px;
+    border: 2px dotted #608BA8;
+}
+
+.flipping-media .media.flipped {
+    flex-direction: row-reverse;
+}
+
+.flipping-media .media .content {
+    flex: 1;
+    padding: 10px;    
+}
+
+/* Form controls */
+/* Submit Field */
+.submit-field .example {
+    width: 500px;
+}
+
+.submit-field .wrapper {
+  display: flex;
+}
+
+.submit-field .wrapper input[type="text"] {
+    flex: 1 1 auto;
+
+    background: #AFC5D3;
+    border: 1px solid #608BA8;
+}
+
+.submit-field .wrapper input[type="submit"] {
+    background: #608BA8;
+    border: 1px solid #608BA8;
+    color: #FFFFFF;
+
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Label Form */
+.label-form .example {
+    width: 500px;
+}
+
+.label-form .wrapper {
+  display: flex;
+
+}
+
+.label-form .wrapper input[type="text"] {
+    flex: 1 1 auto;
+
+    border: 1px solid #608BA8;
+    border-left: none;
+
+    background: #AFC5D3;    
+} 
+
+.label-form .wrapper input[type="submit"] {
+    border: 1px solid #608BA8;
+
+    background: #608BA8;    
+    color: #FFFFFF;
+
+    padding: 10px;
+    font-size: 20px;
+}
+
+.label-form .wrapper label {
+    border: 1px solid #608BA8;
+    border-right: none;
+
+    background: #666666;
+    color: #FFFFFF;
+
+    padding: 10px;
+    font-size: 20px;
+}
