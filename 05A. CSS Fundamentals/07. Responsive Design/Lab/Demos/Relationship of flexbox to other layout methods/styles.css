@@ -1,0 +1,56 @@
+/* Reset css */
+* {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+.box {
+    border: 2px dotted #608BA8;
+    width: 500px;
+}
+
+.box div {
+    background: #DFE8EE;
+    border: 2px solid #608BA8;
+    border-radius: 5px;
+}
+
+p {
+    width: 500px;
+}
+
+/* Flexbox and other layout methods */
+.floats .box>* {
+    float: left;
+}
+
+.floats .box {
+    display: flex;
+}
+
+/* Flexbox and Grid Layout */
+/* Flexbox Layout */
+.layouts .flexbox-layout .box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layouts .flexbox-layout .box>* {
+    flex: 1 1 200px;
+}
+
+/* Grid Layout */
+.layouts .grid-layout .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+}
+
+/* Flexbox and display: contents */
+.contents .box {
+    display: flex;
+}
+
+.contents .nested {
+    background-color: orange;
+    display: contents;
+}

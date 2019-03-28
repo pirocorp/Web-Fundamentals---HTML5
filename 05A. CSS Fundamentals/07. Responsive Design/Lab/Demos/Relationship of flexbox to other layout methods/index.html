@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relationship of flexbox to other layout methods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Relationship of flexbox to other layout methods</h1>
+    </header>
+    <main>
+        <section class="floats">
+            <header>
+                <h2>Flexbox and other layout methods</h2>
+                <p>An element set to display: flex behaves in most ways like any other block level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.</p>
+                <p>With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having display: flex applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the vertical-align property, as used with inline-block or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.</p>
+                <p>In this next live example the child elements have been floated, and then their container has had display: flex added. If you remove display: flex, you should see that the .box element collapses as we have no clearing applied. This demonstrates that the float is happening. Re-apply display: flex and the collapsing does not happen. This is because the items no longer have a float applied, as they have been transformed into flex items.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div>Three</div>
+            </div>
+        </section>
+        <hr>
+        <section class="layouts">
+            <header>
+                <h2>Flexbox and Grid Layout</h2>
+                <p>You can use the Box Alignment properties across both layout methods, so using flexbox as a fallback for grid layout can work very well.</p>
+                <p>Flexbox is a one-dimensional layout method whereas Grid Layout is a two-dimensional layout method.</p>
+                <p>Flex items can be allowed to wrap but, once they do so, each line becomes a flex container of its own.</p>
+            </header>
+
+            <section class="flexbox-layout">
+                <header>
+                    <h2>Flexbox Layout</h2>
+                </header>
+    
+                <div class="box">
+                    <div>One</div>
+                    <div>Two</div>
+                    <div>Three</div>
+                    <div>Four</div>
+                    <div>Five</div>
+                    <div>Six</div>
+                    <div>Seven</div>
+                </div>
+            </section>
+
+            <section class="grid-layout">
+                <header>
+                    <h2>Grid Layout</h2>
+                    <p>If we create a very similar layout using Grid, we can control the layout in both rows and columns.</p>
+                    <p>These examples point to another key difference between these layout methods. In Grid Layout you do the majority of sizing specification on the container, setting up tracks and then placing items into them. In flexbox, while you create a flex container and set the direction at that level, any control over item sizing needs to happen on the items themselves.</p>
+                    <p>As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout.</p>
+                </header>
+
+                <div class="box">
+                    <div>One</div>
+                    <div>Two</div>
+                    <div>Three</div>
+                    <div>Four</div>
+                    <div>Five</div>
+                    <div>Six</div>
+                    <div>Seven</div>
+                </div>
+            </section>
+        </section>
+        <hr>
+        <section class="contents">
+            <header>
+                <h2>Flexbox and display: contents</h2>
+                <p>“The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”</p>
+                <p>Browser support for display:contents is limited and required for this demo to work.</p>
+            </header>
+
+            <div class="box">
+                <div>One</div>
+                <div>Two</div>
+                <div class="nested">
+                    <div>Sub-item 1</div>
+                    <div>Sub-item 2</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
