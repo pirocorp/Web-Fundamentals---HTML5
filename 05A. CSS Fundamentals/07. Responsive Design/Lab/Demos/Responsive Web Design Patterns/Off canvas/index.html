@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Web Design Pattern: Off Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" role="main">
+        <div class="c1" id="leftDrawer">
+        </div>
+        <div class="c2" id="mainPanel">
+            Click the <code>div</code>'s to change views
+        </div>
+        <div class="c3" id="rightDrawer">
+        </div>
+    </div>
+
+    <!-- This script is displaing or hiding divs adding or removing to them class open -->
+    <script type="text/javascript">
+        var position = 0;
+        var mainPanel = document.getElementById("mainPanel");
+        var leftDrawer = document.getElementById("leftDrawer");
+        var rightDrawer = document.getElementById("rightDrawer");
+
+        function toggle(evt) {
+            position++;
+            if (position % 3 == 0) {
+                leftDrawer.classList.remove("open");
+                rightDrawer.classList.remove("open");
+            } else if (position % 3 == 1) {
+                leftDrawer.classList.add("open");
+                rightDrawer.classList.remove("open");
+            } else {
+                leftDrawer.classList.remove("open");
+                rightDrawer.classList.add("open");
+            }
+        }
+
+        mainPanel.addEventListener("click", toggle);
+        leftDrawer.addEventListener("click", toggle);
+        rightDrawer.addEventListener("click", toggle);
+
+    </script>
+</body>
+</html>
