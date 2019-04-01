@@ -1,0 +1,66 @@
+.wrap > section,
+.wrap > footer {
+    padding-left: 20px;
+}
+
+.hero-head .goal::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .button-list {
+        display: flex;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main-head {
+        padding-left: 0px;
+    }
+    
+    .hero-head h1 {
+        font-size: 32px;
+        line-height: 1.2em;
+    }
+
+    .hero-head .goal {
+        font-size: 16px;
+        line-height: 1.2em;
+    }
+
+    .main-nav ul {
+        margin-right: 0;
+    }
+
+    .main-nav ul li a {
+        padding: 5px;
+    }
+
+    .content-wrap {
+        display: block;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .main-foot .wrapper {
+        flex-wrap: wrap;
+    }
+
+    
+    .main-foot address, 
+    .main-foot nav {
+        min-width: 45%;
+    }
+}
