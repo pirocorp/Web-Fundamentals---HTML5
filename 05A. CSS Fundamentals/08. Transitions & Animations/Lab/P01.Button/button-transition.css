@@ -1,0 +1,19 @@
+.btn {
+    width: 100px;
+    height: 50px;
+    background: rgb(28, 184, 65);
+    color: white;
+    border-radius: 4px;
+    margin: 300px 800px;
+
+    /* Timing function defines how the transitions speed changes over the time 
+    (e.g. start fast, end slow) */
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    width: 200px;
+    height: 100px;
+    background: #589ffd;
+    font-size: 25px;
+}
