@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Roboto';
+  /* relative path to the .css file—not the HTML document. */
+  src: url('Fonts/Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-LightItalic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-Bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* This will only work in Firefox */
+em, strong {
+  font-synthesis: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+    Use a font-size between 14px and 20px for the body element.
+    Use “curly quotes” and apostrophes with the &rsquo;, &lsquo;, &rdquo;, and &ldquo; 
+        HTML entities.
+    Use proper dashes (&ndash;, &mdash;) and other symbols (&copy;).
+    Don’t use text-decoration: underline except for hover states.
+    Use real italic fonts over synthesized ones if not it’s too much of a performance burden.
+ */
+
+/*  The four most important typographic choices you make in any document are point size, 
+        line spacing, line length, and font (see font recommendations), 
+        because those choices determine how the body text looks.
+
+    Point size should be 10–12 points in printed documents, 15-25 pixels on the web.
+
+    Line spacing should be 120–145% of the point size.
+
+    The average line length should be 45–90 characters (including spaces).
+
+    The easiest and most visible improvement you can make to your typography is to use a 
+        professional font, like those found in font recommendations.
+
+    Avoid goofy fonts, monospaced fonts, most free fonts, and system fonts—especially 
+        Times New Roman and Arial.
+
+    Use curly quotation marks, not straight ones (see straight and curly quotes).
+
+    Put only one space between sentences.
+
+    Don’t use multiple word spaces or other white-space characters in a row.
+
+    Never use underlining, except perhaps for web links.
+
+    Use centered text sparingly.
+
+    Use bold or italic as little as possible.
+
+    All caps are fine for less than one line of text.
+
+    If you don’t have real small caps, don’t use them at all.
+
+    Use 5–12% extra letterspacing with all caps and small caps.
+
+    Kerning should always be turned on.
+
+    Use first-line indents that are one to four times the point size of the text, 
+    or use 4–10 points of space between paragraphs. But don’t use both.
+
+    If you use justified text, also turn on hyphenation.
+
+    Don’t confuse hyphens and dashes, and don’t use multiple hyphens as a dash.
+
+    Use ampersands sparingly, unless included in a proper name.
+
+    In a document longer than three pages, one exclamation point is plenty 
+    (see question marks and exclamation points).
+
+    Use proper trademark and copyright symbols—not alphabetic approximations.
+
+    Put a nonbreaking space after paragraph and section marks.
+
+    Make ellipses using the proper character, not periods and spaces.
+
+    Make sure apostrophes point downward.
+
+    Make sure foot and inch marks are straight, not curly. */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #5D6063;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;  /* Or 700 */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+header {
+  text-align: center;
+  color: #FFF;
+}
+
+nav {
+  background-color: #54575A;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav li {
+  list-style-type: none;
+
+  width: 50%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+
+  border-top: 1px solid #888F95;
+}
+
+nav li:nth-of-type(1),
+nav li:nth-of-type(2) {
+  border-top: none;
+}
+
+nav li:nth-of-type(2n) {
+  border-left: 1px solid #888F95;
+}
+
+nav li.selected {
+  color: #54A5C4;
+}
+
+nav a:link,
+nav a:visited {
+  color: #888F95;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:visited:hover,
+nav a:active,
+nav a:visited:active {
+  color: #54A5C4;
+  text-decoration: underline;
+}
+
+
+.hero {
+  padding-top: 9em;
+  padding-bottom: 9em;
+  background-color: #5D6063;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+
+.section {
+  padding: 4em 1em;
+
+  margin: 0 auto;
+  max-width: 540px;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: .7em;
+}
+
+.section--gray {
+  border-top: 1px solid #D6D9DC;
+}
+
+.section--blue {
+  border-top: 1px solid #B2D6FF;
+}
+
+.section--blue h2 {
+  color: #5995DA;
+}
+
+.section--red {
+  border-top: 1px solid #F09A9D;
+}
+
+.section--red h2 {
+  color: #D55C5F;
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.section p,
+.section ul,
+.section ol,
+.section figure {
+  margin-bottom: 1em;
+}
+
+.section p:last-child,
+.section ul:last-child,
+.section ol:last-child,
+.section figure:last-child {
+  margin-bottom: 0;
+}
+
+.button:link,
+.button:visited {
+  display: block;
+  text-decoration: none;
+
+  color: #FFF;
+  background-color: #4A90E2;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+
+  margin: 1.8em auto;
+}
+
+.button:hover,
+.button:visited:hover {
+  color: #FFF;
+  background-color: #6AA9F4;
+}
+
+.button:active,
+.button:visited:active {
+  color: #FFF;
+  background-color: #3F7CC4;
+}
+
+
+@media only screen and (min-width: 580px) {
+  .section {
+    margin: 4em auto;
+    padding: 2.5em 3em;
+  }
+  .section--gray:first-of-type,
+  .section--gray {
+    border: 1px solid #D6D9DC;
+  }
+  .section--blue:first-of-type,
+  .section--blue {
+    border: 1px solid #B2D6FF;
+  }
+  .section--red:first-of-type,
+  .section--red {
+    border: 1px solid #F09A9D;
+  }
+}
+
+
+@media only screen and (min-width: 750px) {
+  nav {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  nav li {
+    width: auto;
+    border-top: none;
+  }
+
+  nav li:nth-of-type(2n) {
+    border-left: none;
+  }
+}
