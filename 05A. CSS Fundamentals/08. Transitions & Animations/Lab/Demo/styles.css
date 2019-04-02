@@ -1,0 +1,126 @@
+/* Transition Syntax */
+/* div {
+  transition: [property][duration][timing-function][delay]
+} */
+
+body {
+    padding-left: 20px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+#transition-example div {
+    transition: width 2s;
+}
+
+/* CSS transitions animate elements when changing CSS properties */
+#transition-example div:hover { 
+  width: 300px; 
+}
+
+#skew-x .skew-x {
+    margin-left: 50px;
+    transform: skewX(20deg);
+}
+
+#skew-y .skew-y {
+    margin-left: 50px;
+    transform: skewY(20deg);
+}
+
+#scale-transform .scale-x {
+    margin: 0 100px;
+    transform: scaleX(2);
+}
+
+#scale-transform .scale-y {
+    margin: 100px 50px;
+    transform: scaleY(2);
+}
+
+#scale-transform .scale-div {
+    margin: 100px;
+    transform: scale(2);
+}
+
+#rotate-transform .rotate-x img {
+    transform: rotateX(45deg);
+}
+
+#rotate-transform .rotate-y img {
+    transform: rotateY(45deg);    
+}
+
+#rotate-transform .rotate img {
+    margin-top: 50px;
+    transform: rotate(45deg);
+    transform: rotateZ(45deg);
+}
+
+#translate-transform {
+    margin-top: 50px;
+}
+
+#translate-transform .translate-x img {
+    transform: translateX(50%);
+}
+
+#translate-transform .translate-y img {
+    transform: translateY(50%);
+}
+
+#translate-transform .translate {
+    margin-top: 70px;
+}
+
+#translate-transform .translate img {
+    transform: translate(50%);
+}
+
+
+
+.example {
+    margin: 50px;
+
+    /*animation-name: example;
+    /*animation-duration: 1.5s; /* or: Xms */
+    /*animation-timing-function:ease-out; /*or:ease, ease-in, ease-in-out,linear*/
+    /*animation-delay: 0s; /* or: Xms */
+    /*animation-iteration-count: infinite;
+    /*animation-direction: alternate; /* or: normal */    
+    /*animation-fill-mode: none; /* or: backwards, both, forwards */
+    /*animation-play-state: running; /* paused, running, running */
+
+    /* ShortHand Property */
+    /* The animation shorthand CSS property sets an animated transition between styles. 
+    It is a shorthand for animation-name, animation-duration, animation-timing-function, 
+    animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, 
+    and animation-play-state. */
+    animation: example 1.5s ease-out 0s infinite alternate none running;
+}
+
+@keyframes example {
+    0% {
+        transform: scale(.3);
+        background-color: red;
+        border-radius: 100%;
+    }
+
+    50% {
+        background-color: orange;
+    }
+
+    100% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+}
