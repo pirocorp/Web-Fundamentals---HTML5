@@ -1,0 +1,565 @@
+/* CSS Grid Layout is the most powerful layout system available in CSS. 
+It is a 2-dimensional system, meaning it can handle both columns and rows, 
+unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by 
+applying CSS rules both to a parent element (which becomes the Grid Container) 
+and to that element's children (which become Grid Items). */
+
+/* Grid Container
+The element on which display: grid is applied. It's the direct parent of all the grid items. */
+
+/* Grid Item
+The children (i.e. direct descendants) of the grid container. */
+
+/* Grid Line
+The dividing lines that make up the structure of the grid. They can be either vertical 
+("column grid lines") or horizontal ("row grid lines") and reside on either side of a 
+row or column.  */
+
+/* Grid Track
+The space between two adjacent grid lines. You can think of them like the columns 
+or rows of the grid.  */
+
+/* Grid Cell
+The space between two adjacent row and two adjacent column grid lines. 
+It's a single "unit" of the grid. */
+
+/* Grid Area
+The total space surrounded by four grid lines. A grid area may be comprised of
+any number of grid cells.  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+p {
+    margin: 1em 0;
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+div {
+    padding: 20px;
+    background: #F79125;
+}
+
+.container {
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+.display .grid .container {
+    display: grid;
+}
+
+.display .inline-grid .container {
+    display: inline-grid;
+}
+
+/* Grid Container */
+/* The fr unit allows you to set the size of a track as a 
+fraction of the free space of the grid container. */
+/* The free space is calculated after any non-flexible items. */
+.example .container {
+    /* Container element as a grid with display: grid */
+    display: grid;
+    /* Set the column sizes with grid-template-columns */
+    /* You can choose to explicitly name the Grid Lines: */
+    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    /* Set the row sizes with grid-template-rows */
+    /* Note that a line can have more than one name. 
+    For example, here the second line will have two names: row1-end and row2-start: */
+    grid-template-rows: [row1-start] 25% [row1-end row2-start] 100px [third-line] auto [last-line];
+
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+}
+
+.template-areas .item-a {
+    grid-area: header;
+    background: #F89426;
+}
+
+.template-areas .item-b {
+    grid-area: main;
+    background: #3CBEE6;
+}
+
+.template-areas .item-c {
+    grid-area: sidebar;
+    background: #EB7171;
+}
+
+.template-areas .item-d {
+    grid-area: footer;
+    background: #73C575;
+}
+
+/* Notice that you're not naming lines with this syntax, just areas. 
+When you use this syntax the lines on either end of the areas are actually 
+getting named automatically. */
+/* Name of your grid area dash start or end */
+/*  This means that some lines might have multiple names, 
+such as the far left line in the above example, which will have three names: 
+header-start, main-start, and footer-start. */
+.template-areas .container {
+    display: inline-grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "main main . sidebar"
+        "footer footer footer footer";
+
+    /* grid-template A shorthand for setting grid-template-rows, grid-template-columns, 
+    and grid-template-areas in a single declaration. */
+    grid-template: [row1-start] "header header header header" auto [row1-end]
+                   [row2-start] "main main . sidebar" auto [row2-end]
+                   [row3-start] "footer footer footer footer" auto [row3-end]
+                   / 50px 50px 50px 50px;
+
+    /* Since grid-template doesn't reset the implicit grid properties 
+    (grid-auto-columns, grid-auto-rows, and grid-auto-flow), 
+    which is probably what you want to do in most cases, 
+    it's recommended to use the grid property instead of grid-template. */
+    grid: [row1-start] "header header header header" auto [row1-end]
+          [row2-start] "main main . sidebar" auto [row2-end]
+          [row3-start] "footer footer footer footer" auto [row3-end]
+          / 50px 50px 50px 50px;
+}
+
+/* The gutters are only created between the columns/rows, not on the outer edges. */
+/* Note: The grid- prefix will be removed and grid-gap renamed to gap 
+    and grid-column-gap and grid-row-gap renamed to column-gap and row-gap. */
+.gaps .container {
+    display: inline-grid;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+
+    /* A shorthand for grid-row-gap and grid-column-gap */
+    /* grid-gap: <grid-row-gap> <grid-column-gap>; */
+    /* If no grid-row-gap is specified, it's set to the same value as grid-column-gap */
+    grid-gap: 15px 10px;
+}
+
+.justify-items .container div,
+.align-items .container div,
+.justify-content .container div,
+.align-content .container div {
+    text-align: center;
+}
+
+.justify-items .container,
+.align-items .container {
+    display: inline-grid;
+    grid: repeat(3, 60px) / repeat(3, 150px);   
+    grid-gap: 5px;
+
+    background: #EB7171;        
+}
+
+.align-items .container {
+    grid: repeat(3, 150px) / repeat(3, 60px);
+}
+
+/* This behavior can also be set on individual grid items via the justify-self property */
+.justify-items .start .container {
+    justify-items: start;
+}
+
+.justify-items .end .container {
+    justify-items: end;
+}
+
+.justify-items .center .container {
+    justify-items: center;
+}
+
+.justify-items .stretch .container {
+    justify-items: stretch;
+}
+
+/* This behavior can also be set on individual grid items via the align-self property. */
+.align-items .start .container {
+    align-items: start;
+}
+
+.align-items .end .container {
+    align-items: end;
+}
+
+.align-items .center .container {
+    align-items: center;
+}
+
+.align-items .stretch .container {
+    align-items: stretch;
+    /* place-items sets both the align-items and justify-items properties 
+    in a single declaration. */
+
+    /* <align-items> / <justify-items> - The first value sets align-items, 
+    the second value justify-items. If the second value is omitted, the first 
+    value is assigned to both properties.
+    All major browsers except Edge support the place-items shorthand property. */
+    place-items: stretch;
+}
+
+.justify-content .container div {
+    min-width: 100px;
+}
+
+.justify-content .container {
+    /* height: 600px; */
+
+    display: grid;
+    grid: repeat(3, auto) / repeat(3, auto);   
+    grid-gap: 5px;
+
+    background: #EB7171; 
+    border: 1px solid black;
+}
+
+.justify-content .start .container {
+    justify-content: start;
+}
+
+.justify-content .end .container {
+    justify-content: end;
+}
+
+.justify-content .center .container {
+    justify-content: center;
+}
+
+.justify-content .stretch .container {
+    justify-content: stretch;
+}
+
+.justify-content .space-around .container {
+    justify-content: space-around;
+}
+
+.justify-content .space-between .container {
+    justify-content: space-between;
+}
+
+.justify-content .space-evenly .container {
+    justify-content: space-evenly;
+}
+
+/* ---------------------------------------- */
+.align-content .container div {
+    min-height: 60px;
+}
+
+.align-content .container {
+    height: 600px;
+
+    display: grid;
+    grid: repeat(3, auto) / repeat(3, auto);
+    grid-gap: 5px;
+
+    background: #EB7171; 
+    border: 1px solid black;
+}
+
+.align-content .start .container {
+    align-content: start;
+}
+
+.align-content .end .container {
+    align-content: end;
+}
+
+.align-content .center .container {
+    align-content: center;
+}
+
+.align-content .stretch .container {
+    align-content: stretch;
+    /* place-content sets both the align-content and 
+    justify-content properties in a single declaration.  */
+    /* <align-content> / <justify-content> - The first value sets align-content, 
+    the second value justify-content. If the second value is omitted, the first 
+    value is assigned to both properties.
+    All major browsers except Edge support the place-content shorthand property. */
+    place-content: stretch;
+}
+
+.align-content .space-around .container {
+    align-content: space-around;
+}
+
+.align-content .space-between .container {
+    align-content: space-between;
+}
+
+.align-content .space-evenly .container {
+    align-content: space-evenly;
+}
+
+/* ---------------------------------------- */
+.auto .container div {
+    border: 1px solid black;
+}
+
+.auto .container {
+    display: inline-grid;
+    grid-template-columns: 60px 60px;
+    grid-template-rows: 90px 90px;   
+    
+    /* We can use grid-auto-columns and grid-auto-rows to specify 
+    the widths of implicit tracks: */
+    grid-auto-columns: 60px;
+
+    border: 1px solid black;
+}
+
+/* place child elements into the grid with grid-column and grid-row. */
+.auto .container .item-a {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+} 
+
+/* We told .item-b to start on column line 5 and end at column line 6, 
+but we never defined a column line 5 or 6. Because we referenced lines that don't exist, 
+implicit tracks with widths of 0 if not specified are created to fill in the gaps */
+.auto .container .item-b {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+
+/* -------------------------------------------- */
+.flow .container div {
+    padding: 5px;
+}
+
+.flow .container {
+    display: inline-grid;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 30px 30px;
+    
+    grid-gap: 5px;
+    border: 1px solid black;
+}
+
+.flow .item-a {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+.flow .item-e {
+    grid-column: 5;
+    grid-row: 1 / 3;
+}
+
+.flow .row .container {
+    grid-auto-flow: row;
+}
+
+.flow .column .container {
+    grid-auto-flow: column;
+}
+
+/* --------------------------------------------------- */
+/* grid */
+/* A shorthand for setting all of the following properties in a single declaration: 
+grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, 
+grid-auto-columns, and grid-auto-flow */
+
+.shorthand .container div {
+    padding: 5px;
+}
+
+.shorthand .container {
+    display: inline-grid;
+
+    grid-gap: 5px;
+    border: 1px solid black
+}
+
+.shorthand .example-1 .container {    
+    grid-template-rows: 100px 300px;
+    grid-template-columns: 3fr 1fr;
+
+    /* Shorthand for the above */
+    grid: 100px 300px / 3fr 1fr;
+}
+
+.shorthand .example-2 .container {
+    grid-auto-flow: row;
+    grid-template-columns: 200px 1fr; 
+
+    /* Shorthand for the above */
+    grid: auto-flow / 200px 1fr;
+}
+
+.shorthand .example-3 .container {
+    grid-auto-flow: row dense;
+    grid-auto-rows: 100px;
+    grid-template-columns: 1fr 2fr;
+
+    /* Shorthand for the above */
+    grid: auto-flow dense 100px / 1fr 2fr;
+}
+
+.shorthand .example-4 .container {
+    grid-template-rows: 100px 300px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+
+    /* Shorthand for the above */
+    grid: 100px 300px / auto-flow 200px;
+}
+
+.shorthand .example-5 .container {
+    grid-template-areas: 
+        "header header header"
+        "footer footer footer";
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
+    grid-template-columns: auto 50px auto; 
+
+    /* Shorthand for the above */
+    grid:   [row1-start] "header header header" 1fr [row1-end]
+            [row2-start] "footer footer footer" 25px [row2-end]
+            / auto 50px auto;
+}
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+.grid-child div {
+    border: 1px solid black;
+}
+
+.grid-child .empty-container {
+    background: white;
+} 
+
+.grid-child .container {
+    display: inline-grid;
+    grid: [row1-start] 50px 
+        [row1-end row2-start] 80px 
+        [row2-end row3-start] 100px 
+        [row3-end last-line] 
+        / 
+        [col1-start] 40px
+        [col1-end col2-start] 50px 
+        [col2-end col3-start] 150px 
+        [col3-end col4-start] 50px 
+        [col4-end col5-start] 40px
+        [col5-end];
+
+    background: black;
+}
+
+/* ------------------------------------------------ */
+.element-position .item-a .item {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: row1-start;
+    grid-row-end: 3;  
+}
+
+.element-position .item-b .item {
+    grid-column-start: 1;
+    grid-column-end: span col4-start;
+    grid-row-start: 2;
+    grid-row-end: span 2; 
+    
+    background: #3CBEE6;
+}
+
+/* ---------------------------------------------- */
+.shorthand-position .item {
+    grid-column: 3 / span 2;
+    grid-row: row3-start / 4;
+}
+
+/* ---------------------------------------------- */
+.grid-area .item {
+    /* As a way to assign a name to the item: */
+    grid-area: header;
+    
+    /* As the short-shorthand for grid-row-start + grid-column-start + 
+    grid-row-end + grid-column-end: */
+    /* grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>; */
+    grid-area: 1 / col4-start / last-line / 6;
+}
+
+/* -------------------------------------------------- */
+.justify-self .item {
+    /* height: 10px; */
+}
+
+.justify-self .start .item {
+    justify-self: start;
+}
+
+.justify-self .end .item {
+    justify-self: end;
+}
+
+.justify-self .center .item {
+    justify-self: center;
+}
+
+.justify-self .stretch .item {
+    justify-self: stretch;
+}
+
+/* -------------------------------------------------------- */
+.align-self .start .item {
+    align-self: start;
+}
+
+.align-self .end .item {
+    align-self: end;
+}
+
+.align-self .center .item {
+    align-self: center;
+}
+
+.align-self .stretch .item {
+    align-self: stretch;
+}
+
+/* ----------------------------------------------------------- */
+/* place-self sets both the align-self and justify-self properties in a single declaration.  */
+.place-self .start .item {
+    place-self: start;
+}
+
+.place-self .end .item {
+    place-self: end;
+}
+
+.place-self .center .item {
+    place-self: center;
+}
+
+.place-self .stretch .item {
+    place-self: stretch;
+}
