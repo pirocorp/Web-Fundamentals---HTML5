@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Collection of Interesting Facts about CSS Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="negative-end">
+        <header>
+            <h2>Negative values lower than -1 may be used for grid-row-end and grid-column-end</h2>
+            <p>In a lot of code examples and tutorials you will see that you can use grid-column-start: 1 and grid-column-end: -1 (or the shorthand grid-column: 1 / -1) to span an element from the first line to the last. It's possible to use lower values than -1 as well.</p>
+        </header>
+        <div class="grid">
+            <article class="item item-1">
+                <h2>Element 1</h2>
+            </article>
+            <article class="item item-2">
+                <h2>Element 2</h2>
+            </article>
+            <div class="no-item"></div>
+            <article class="item item-3">
+                <h2>Element 3</h2>
+            </article>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="negative-start">
+        <header>
+            <h2>It's possible to use negative values in grid-column/row-start</h2>
+        </header>
+        <P>Another interesting thing about negative values is that you can use them on grid-column/row-start as well. The difference between positive and negative values is that with negative values the placement will come from the opposite side. If you set grid-column-start: -2 the item will be placed on the second to last line.</P>
+        <div class="grid">
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <article class="item item-1">
+                <h2>Element 1</h2>
+            </article>
+            <div class="no-item"></div>
+            <article class="item item-2">
+                <h2>Element 2</h2>
+            </article>
+            <div class="no-item"></div>
+            <article class="item item-3">
+                <h2>Element 3</h2>
+            </article>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="pseudo-elements">
+        <header>
+            <h2>Generated content pseudo-elements (::before and ::after) are treated as grid items</h2>
+        </header>
+        <p>It may seem obvious that pseudo-elements generated with CSS become grid items if they're within a grid container, but I wasn't sure about that. So I created a quick demo to verify it. In the following Pen you can see that generated elements become grid- and flex-items if they are within a corresponding container.</p>
+        <h3>Grid</h>
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+        </section>
+        
+        <h3>Flexbox</h3>
+        <section class="flex">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+        </section>
+    </section>
+</body>
+</html>
