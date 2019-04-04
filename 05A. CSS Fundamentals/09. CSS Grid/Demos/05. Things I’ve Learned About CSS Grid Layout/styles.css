@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.item {
+    padding: 10px;
+
+    background: #D93932;
+    color: #FFFFFF;
+}
+
+.no-item {
+    background: #FFFFFF;
+}
+
+.grid {
+    border: 1px solid black;
+    background: darkgray;
+    grid-gap: 20px;
+}
+
+/* ------------------------------------------- */
+.flex-grid .item {
+    min-height: 100px;
+}
+
+.flex-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(auto-fill, 100px);
+}
+
+.flex-grid .item {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* --------------------------------------------------- */
+.absolute-position .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 100px);
+    position: relative;
+    z-index: -2;
+    justify-content: center;
+}
+
+.absolute-position .item {
+    background-color: blue;
+}
+
+.absolute-position .bg1 {
+    background: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    z-index: -1;
+}
+
+.absolute-position .bg2 {
+    background: yellow;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    grid-row: 2 / 4;
+    grid-column: 5 / -1;
+    z-index: -1;
+}
+
+/* ---------------------------------------------------------- */
+.fr-vs-percent .grid .item {
+  background-color: red;
+}
+.fr-vs-percent .grid2 .item {
+  background-color: green;
+}
+
+.fr-vs-percent .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-column-gap: 10px;
+    grid-template-rows: 100px;
+
+    margin-bottom: 50px;
+    border: 5px solid black;
+}
+
+.fr-vs-percent .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-column-gap: 10px;
+
+    border: 5px solid black;
+}

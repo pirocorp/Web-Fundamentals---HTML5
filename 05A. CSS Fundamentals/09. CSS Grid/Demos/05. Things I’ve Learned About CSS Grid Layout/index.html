@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Things I’ve Learned About CSS Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="flex-grid">
+        <header>
+            <h2>Grid is designed to be used with flexbox, not instead of it</h2>
+        </header>
+        <section class="grid">
+            <div class="item">Element 1</div>
+            <div class="item">Element 2</div>
+            <div class="item">Element 3</div>
+            <div class="item">Element 4</div>
+            <div class="item">Element 5</div>
+            <div class="item">Element 6</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="absolute-position">
+        <header>
+            <h2>Absolute positioning</h2>
+            <p>When you absolutely position a grid item, rather than its positioning context being its container (i.e. the entire grid) we can position it in relation to its specified grid-column and grid-row start and end lines. As usual, position: absolute removes an element from the flow of the document (i.e. it is ignored by other elements). This makes absolute positioning useful if you want to overlap grid items without disrupting the grids auto-placement algorithm. Auto-placement goes out of its way not to overlap items unless you explicitly declare both a grid-column-start and grid-row-start value for every item.</p>
+            <p>Try deleting position: absolute; from the div in this example and think about how many items you'd have to define grid-column and grid-row properties for!</p>
+        </header>
+        <div class="grid">        
+            <div class="item"></div>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>        
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="fr-vs-percent">
+        <header>
+            <h2>The fr unit removes the need for calc</h2>
+            <p>Let's say we want to split our grid into four equal columns. It's easy to work out the percentages. We just write grid-template-columns: 25% 25% 25% 25%.</p>
+            <p>What if we then want to make use of the grid-gap property? grid-gap: 10px. We have three gaps between our columns, so our grid width will now be 100% + 30px and unwanted horizontal scrolling will appear with some content overspilling the screen on the right side. We could make use of calc to solve our problem, but using the fr unit is far easier: grid-template-columns: 1fr 1fr 1fr 1fr.</p>
+        </header>
+        <div class="grid">
+            <div class="item">25%</div>
+            <div class="item">25%</div>
+            <div class="item">25%</div>
+            <div class="item">25%</div>
+        </div>
+        <div class="grid2">
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+        </div>
+    </section>
+</body>
+</html>
