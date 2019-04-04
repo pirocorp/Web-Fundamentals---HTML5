@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Difference Between Explicit and Implicit Grids</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="explicit-grid">
+        <header>
+            <h2>An explicit grid with 4 vertical tracks (columns) and 2 horizontal tracks (rows).</h2>
+        </header>
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="track-list">
+        <header>
+            <h2>Repeating tracks</h2>
+            <p>A track list? Yes, you can actually repeat multiple tracks.</p>
+        </header>
+
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+            <div class="item">item8</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="track-reeat">
+        <header>
+            <h2>Repetition of tracks</h2>
+            <p>On the other hand, if a fixed number of vertical tracks is used in the repeat notation and the number of items exceeds this value more rows are added. You can read more about that in the next section: implicit grids.</p>
+        </header>
+    
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="track-auto-filling">
+        <header>
+            <h2>Auto-filling tracks</h2>
+            <p>The repeat notation is quite useful, but it can be automated even further. Instead of setting a fixed number of repetitions we can use the auto-fill and auto-fit keywords.</p>
+            <p>The auto-fill keyword creates as many tracks as fit into the grid container without causing the grid to overflow it.</p>
+        </header>
+    
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="track-auto-fit">
+        <header>
+            <h2>Auto-fitting tracks</h2>
+            <p>The auto-fit keyword behaves the same way as auto-fill, except that after grid item placement it will only create as many tracks as needed and any empty repeated track collapses.</p>
+            <p>If there are more items, auto-fit creates more columns.</p>
+        </header>
+
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="row-col">
+        <header>
+            <h2>Example with repeat and auto-fill on both rows and cols</h2>
+            <p>All rules also apply to grid-template-rows.</p>
+        </header>
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="implicit-grid">
+        <header>
+            <h2>Implicit Grids</h2>
+            <p>If there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks by adding grid lines to the grid. The explicit grid together with these additional implicit tracks and lines forms the so called implicit grid.</p>
+        </header>
+        <p>Two items placed outside of the explicit grid causing the creation of implicit lines and trackss</p>
+        <section class="grid">
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-1 item">item1</div>            
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-2 item">item2</div>
+        </section>
+
+        <p>The widths and heights of the implicit tracks are set automatically. They are only big enough to fit the placed grid items, but it's possible to change this default behavior.</p>
+    </section>
+
+    <hr>
+
+    <section class="sizing-implicit-tracks">
+        <header>
+            <h2>Sizing implicit tracks</h2>
+            <p>The grid-auto-rows and grid-auto-columns properties give us control over the size of implicit tracks.</p>
+        </header>
+        <p>Implicit tracks are now at least 300px wide and 60px high, but will expand if the content demands it.</p>
+        <section class="grid">
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-1 item">item1</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-2 item">item2</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="extending-grid-start">
+        <header>
+            <h2>Extending the grid to the start</h2>
+            <p>Implicit tracks may not just be added to the end of the explicit grid. It may also happen that the explicit grid needs to be extended to the start.</p>
+        </header>
+        <section class="grid">
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-1 item">item1</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item-2 item">item2</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+        <p>Each item ends on the second line and spans 2 cells (one vertically, the other horizontally). Since there is only one cell before the second line respectively another implicit track is added to the grid at the start of each side.</p>
+    </section>
+
+    <hr>
+
+    <section class="automatic-placement">
+        <header>
+            <h2>Automatic Placement</h2>
+            <p>As already mentioned, implicit tracks are also added if the number of items exceeds the number of cells. By default, the auto-placement algorithm places items by filling each row consecutively, adding new rows as necessary. We can specify how auto-placed items get flowed into the grid by using the grid-auto-flow property.</p>
+        </header>
+        <h3>Instead of rows, new columns are added if the number of items exceeds the number of cells</h3>
+        <section class="grid">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="no-explicit-grid">
+        <header>
+            <h2>Not defining an explicit grid</h2>
+            <p>Due to the fact that it's possible to automatically size cells using grid-auto-rows and grid-auto-columns it's not obligatory to define an explicit grid.</p>
+        </header>
+        <h3>An implicit grid without explicit lines and tracks</h3>
+        <section class="grid">
+            <div class="item item-1">item1</div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="no-item"></div>
+            <div class="item item-2">item2</div>
+            <div class="item item-3">item3</div>
+            <div class="item item-4">item4</div>
+            <div class="no-item"></div>
+            <div class="item item-5">item5</div>            
+        </section>
+        <p>Relying solely on the implicit grid can get confusing and difficult to understand in combination with explicit placement. In this example the first item is placed auto and spans 2 rows, the second item is placed explicitly in the first column and spans 2 columns creating a second vertical track. The third and fourth item would actually both be placed automatically in the fourth row, but the fifth item is placed explicitly in the previously non-existent third column. This creates a third vertical track and due to Grids auto-placement, the third item moves up a row to fill the space.</p>
+    </section>
+
+</body>
+</html>
