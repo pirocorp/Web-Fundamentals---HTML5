@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box alignment in CSS Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Box alignment in CSS Grid Layout</h1>
+        <p>This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox. Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axes that we deal with when aligning things in a grid.</p>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <h2>The two axes of a grid layout</h2>
+                <p>When working with grid layout you have two axes available to align things against – the block axis and the inline axis. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis.</p>
+                <img src="https://mdn.mozillademos.org/files/15963/Block_Axis.png" alt="block axis">
+                <p>The inline axis runs across the block axis, it is the direction in which text in regular inline flow runs.</p>
+                <img src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" alt="inline axis">
+                <p>We are able to align the content inside grid areas, and the grid tracks themselves on these two axes.</p>
+            </header>
+        </section>
+
+        <hr>
+
+        <section class="aligning-block-axis">
+            <header>
+                <h2>Aligning items on the Block Axis</h2>
+            </header>
+            <p>The align-self and align-items properties control alignment on the block axis. When we use these properties, we are changing the alignment of the item within the grid area you have placed it.</p>
+            <p>In the following example, I have four grid areas within my grid. I can use the align-items property on the grid container, to align the items using one of the following values:</p>
+            <ul>
+                <li>auto</li>
+                <li>normal</li>
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>baseline</li>
+                <li>first baseline</li>
+                <li>last baseline</li>
+            </ul>
+            <div class="wrapper">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+            <p>Keep in mind that once you set align-self: start, the height of each child &lt;div&gt; will be determined by the contents of the &lt;div&gt;. This is in contrast to omitting align-self completely, in which case the height of each &lt;div&gt; stretches to fill its grid area.</p>
+            <p>The align-items property sets the align-self property for all of the child grid items. This means that you can set the property individually, by using align-self on a grid item.</p>
+            <p>In this next example, I am using the align-self property, to demonstrate the different alignment values. The first area, is showing the default behavior of align-self, which is to stretch. The second item, has an align-self value of start, the third end and the fourth center.</p>
+            <div class="wrapper-2">
+                <div class="item1">Stretch</div>
+                <div class="item2">Start</div>
+                <div class="item3">Center</div>
+                <div class="item4">End</div>
+            </div>
+            <h3>Items with an intrinsic aspect ratio</h3>
+            <p>The specification details that the default behavior in align-self is to stretch, except for items which have an intrinsic aspect ratio, in this case they behave as start. The reason for this, is that if items with an aspect ratio are set to stretch, this default would distort them.</p>
+            <p>This behavior has now been clarified in the specification, with browsers yet to implement the correct behavior. Until that happens, you can ensure that items do not stretch, such as images, which are direct children of the grid, by setting align-self and justify-self to start. This will mimic the correct behavior once implemented.</p>
+        </section>
+
+        <hr>
+
+        <section class="justify-items">
+            <header>
+                <h2>Justifying Items on the Inline Axis</h2>
+            </header>
+            <p>As align-items and align-self deal with the alignment of items on the block axis, justify-items and justify-self do the same job on the inline axis. The values you can choose from are the same as for align-self.</p>
+            <ul>
+                <li>auto</li>
+                <li>normal</li>
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>baseline</li>
+                <li>first baseline</li>
+                <li>last baseline</li>
+            </ul>
+            <p>You can see the same example as used for align-items, below. This time we are applying the justify-self property.</p>
+            <p>Once again the default is stretch, other than for items with an intrinsic aspect ratio. This means that by default, grid items will cover their grid area, unless you change that by setting alignment. The first item in the example demonstrates this default alignment:</p>
+            <div class="wrapper">
+                <div class="item1">Stretch</div>
+                <div class="item2">Start</div>
+                <div class="item3">End</div>
+                <div class="item4">Center</div>
+            </div>
+            <p>As with align-self and align-items, you can apply justify-items to the grid container, to set the justify-self value for all items.</p>
+            <p>The justify-self and justify-items properties are not implemented in flexbox. This is due to the one-dimensional nature of flexbox, and that there may be multiple items along the axis, making it impossible to justify a single item. To align items along the main, inline axis in flexbox you use the justify-content property.</p>
+        </section>
+
+        <hr>
+
+        <section class="center-item">
+            <header>
+                <h2>Center an item in the area</h2>
+                <p>By combining the align and justify properties we can easily center an item inside a grid area.</p>
+            </header>
+            <div class="wrapper">
+                <div class="item1">Item 1</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="align-grid-tracks-ob-block-axis">
+            <header>
+                <h2>Aligning the grid tracks on the block axis</h2>
+            </header>
+            <p>If you have a situation where your grid tracks use an area that is smaller than the grid container, then you can align the grid tracks themselves, inside that container. Once again, this operates on the block and inline axes, with align-content aligning tracks on the block axis, and justify-content performing alignment on the inline axis. The values for align-content and justify-content are:</p>
+            <ul>
+                <li>auto</li>
+                <li>normal</li>
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>baseline</li>
+                <li>first baseline</li>
+                <li>last baseline</li>
+            </ul>
+            <p>In the below example I have a grid container of 500 pixels by 500 pixels. I have defined 3 row and column tracks each of 100 pixels with a 10 pixel gutter. This means that there is space inside the grid container both in the block and inline directions.</p>
+            <p>The align-content property is applied to the grid container as it works on the entire grid. The default behavior in grid layout is start, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:</p>
+            <div class="wrapper">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+            <p>If I add align-content to my container, with a value of end, the tracks all move to the end line of the grid container in the block dimension:</p>
+            <div class="wrapper align-end">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+            <p>We can also use values for this property that you may be familiar with from flexbox; the space distribution values of space-between, space-around and space-evenly. If we update align-content to space-between, you can see how the elements on our grid space out:</p>
+            <div class="wrapper space-between">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+            <p>It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.</p>
+            <p>In the below image I have placed the grid with align-content, with a value of start alongside the grid when align-content has a value of space-between. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:</p>
+            <img src="https://mdn.mozillademos.org/files/14729/7_space-between.png" alt="diff">
+        </section>
+
+        <hr>
+
+        <section class="justify-grid-tracks">
+            <header>
+                <h2>Justifying the grid tracks on the row axis</h2>
+            </header>
+            <p>On the inline axis, we can use justify-content to perform the same type of alignment that we used align-content for in the block axis.</p>
+            <p>Using the same example, I am setting justify-content to space-around. This once again causes tracks which span more than one column track to gain extra space:</p>
+            <div class="wrapper">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="auto-margin">
+            <header>
+                <h2>Alignment and auto margins</h2>
+            </header>
+            <p>Another way to align items inside their area, is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to auto, you know that an auto margin absorbs all of the available space. By setting the margin to auto on both sides, it pushes the block into the middle as both margins attempt to take all of the space.</p>
+            <p>In this next example, I have given item 1 a left margin of auto. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:</p>
+            <div class="wrapper">
+                <div class="item1">Item 1</div>
+                <div class="item2">Item 2</div>
+                <div class="item3">Item 3</div>
+                <div class="item4">Item 4</div>
+            </div>
+            <img src="https://mdn.mozillademos.org/files/14731/7_auto_margins.png" alt="result">
+        </section>
+    </main>
+    
+</body>
+</html>
