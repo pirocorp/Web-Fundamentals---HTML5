@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.wrapper,
+.wrapper-2,
+.wrapper-3,
+.wrapper-4,
+.wrapper-5   {
+    grid-gap: 10px;
+
+    background: #FFF4E6;
+
+    border: 2px solid #F76707;
+    border-radius: 5px;
+
+    margin-bottom: 50px;
+}
+
+.wrapper > div,
+.wrapper-2 > div,
+.wrapper-3 > div,
+.wrapper-4 > div,
+.wrapper-5 > div {
+    padding: 20px;
+
+    background: #FFD8A8;
+    color: #DC4838;
+
+    border: 2px solid #FFA94D;
+    border-radius: 5px;
+}
+
+.nested {
+    padding: 20px;
+
+    background: #FFFAD9;
+    color: #DC4838;
+
+    border: 2px solid #FFEC8F;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------------------ */
+.grid-container .wrapper {
+    display: grid;
+}
+
+/* ------------------------------------------------------------ */
+.grid-tracks .wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+/* ------------------------------------------------------------ */
+.fr-unit .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.fr-unit .wrapper-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.fr-unit .wrapper-3 {
+    display: grid;
+    grid-template-columns: 500px 1fr 2fr;
+}
+
+/* ---------------------------------------------------------------- */
+.repeat-notation .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.repeat-notation .wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.repeat-notation .wrapper-3 {
+    display: grid;
+    grid-template-columns: 80px repeat(6, 1fr) 80px;
+}
+
+.repeat-notation .wrapper-4 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr 2fr);
+}
+
+/* ----------------------------------------------------------------- */
+.implicit-explicit-grid .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;    
+}
+
+/* ----------------------------------------------------------------- */
+.minmax .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/* ------------------------------------------------------------------ */
+.grid-lines .wrapper {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: 100px; 
+}
+
+.grid-lines .box1 { 
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+    grid-row-start: 1; 
+    grid-row-end: 3; 
+}
+
+.grid-lines .box2 { 
+    grid-column-start: 1; 
+    grid-row-start: 3; 
+    grid-row-end: 5; 
+}
+
+/* ------------------------------------------------------------------- */
+.nested-grid .wrapper {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: minmax(100px auto);
+}
+
+.nested-grid .box1 { 
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+    grid-row-start: 1; 
+    grid-row-end: 3; 
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------------------------------------------------------------------- */
+.z-index .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+}
+
+.z-index .wrapper .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.z-index .wrapper .box2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* ----- */
+.z-index .wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+}
+
+.z-index .wrapper-2 .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* Difference from previous example */
+    z-index: 2;
+}
+
+.z-index .wrapper-2 .box2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /* Difference from previous example */
+    z-index: 1;
+}
