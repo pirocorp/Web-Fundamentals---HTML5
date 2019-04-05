@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+img {
+    max-width: 100%;    
+}
+
+ul {
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+.wrapper,
+.wrapper-2,
+.wrapper-3,
+.wrapper-4,
+.wrapper-5   {
+    grid-gap: 10px;
+
+    background: #FFF4E6;
+
+    border: 2px solid #F76707;
+    border-radius: 5px;
+
+    margin-bottom: 50px;
+}
+
+.wrapper > div,
+.wrapper-2 > div,
+.wrapper-3 > div,
+.wrapper-4 > div,
+.wrapper-5 > div {
+    padding: 20px;
+
+    background: #FFD8A8;
+    color: #DC4838;
+
+    border: 2px solid #FFA94D;
+    border-radius: 5px;
+}
+
+.nested {
+    padding: 20px;
+
+    background: #FFFAD9;
+    color: #DC4838;
+
+    border: 2px solid #FFEC8F;
+    border-radius: 5px;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+.sidebar {
+    grid-area: sd;
+}
+
+.content {
+    grid-area: main;
+}
+
+/* ----------------------------------------------------------------------------- */
+.naming-lines .wrapper {
+    display: grid;
+    grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+    grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+}
+
+.naming-lines .box1 {
+    grid-column-start: main-start;
+    grid-row-start: main-start;
+    grid-row-end: main-end;
+}
+
+.naming-lines .box2 {
+    grid-column-start: content-end;
+    grid-row-start: main-start;
+    grid-row-end: content-end;
+}
+
+.naming-lines .box3 {
+    grid-column-start: content-start;
+    grid-row-start: main-start;
+}
+
+.naming-lines .box4 {
+    grid-column-start: content-start;
+    grid-column-end: main-end;
+    grid-row-start: content-end;
+}
+
+/* --------------------------------------------------------------------------------- */
+.named-area .wrapper {
+    display: grid;
+    grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+    grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+}
+
+.named-area .thing {
+  grid-area: content;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.imlicit-grid-lines .wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+        "hd   hd   hd   hd   hd   hd   hd   hd   hd"
+        "sd   sd   sd   main main main main main main"
+        "ft   ft   ft   ft   ft   ft   ft   ft   ft";
+}
+
+.imlicit-grid-lines .wrapper > div.overlay {
+    z-index: 10;
+    grid-column: main-start / main-end;
+    grid-row: hd-start / ft-end;
+    border: 4px solid rgb(92,148,13);
+    background-color: rgba(92,148,13,.4);
+    color: rgb(92,148,13);
+    font-size: 150%;
+}
+
+.content {
+    /* z-index: 20; */
+}
+
+/* ------------------------------------------------------------------------------------ */
+.repeat .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+}
+
+.repeat .wrapper .item1 {
+    grid-column: col-start / col-start 5
+}
+
+.repeat .wrapper .item2 {
+    grid-column: col-start 7 / span 3;
+}
+
+/* ------ */
+.repeat .wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
+}
+
+.repeat .wrapper-2 .item1 {
+    grid-column: col1-start / col2-start 2
+}
+
+.repeat .wrapper-2 .item2 {
+    grid-row: 2;
+    grid-column: col1-start 2 / span 2 col1-start;
+}
+
+/* ------ */
+.repeat .wrapper-3 header,
+.repeat .wrapper-3 aside,
+.repeat .wrapper-3 article,
+.repeat .wrapper-3 footer {
+    padding: 20px;
+
+    background: #FFD8A8;
+    color: #DC4838;
+
+    border: 2px solid #FFA94D;
+    border-radius: 5px;
+}
+
+.repeat .wrapper-3 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+}
+
+.repeat .wrapper-3 .main-header,
+.repeat .wrapper-3 .main-footer  {
+    grid-column: col-start / span 12;
+}
+
+.repeat .wrapper-3 .side1 {
+    grid-column: col-start / span 3;
+    grid-row: 2;
+}
+
+.repeat .wrapper-3 .content {
+  grid-column: col-start 4 / span 6; 
+  grid-row: 2;
+}
+
+.repeat .wrapper-3 .side2 {
+  grid-column: col-start 10 / span 3;
+  grid-row: 2;
+}
