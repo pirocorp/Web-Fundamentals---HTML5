@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Line-based placement with CSS Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Line-based placement with CSS Grid</h1>
+        <p>Starting your exploration of grid with numbered lines is the most logical place to begin, as when you use grid layout you always have numbered lines. The lines are numbered for columns and rows, and are indexed from 1. Note that grid is indexed according to the writing mode of the document. In a left to right language such as English line 1 is on the left-hand side of the grid. If you are working in a right-to-left language then line 1 will be the far right of the grid.</p>
+    </header>
+
+    <main>
+        <section class="basic-example">
+            <header>
+                <h2>As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.</h2>
+                <p>Inside our grid container I have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells.</p>
+            </header>
+            <div class="wrapper">
+                <div class="box1">One</div>
+                <div class="box2">Two</div>
+                <div class="box3">Three</div>
+                <div class="box4">Four</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="position-by-number">
+            <header>
+                <h2>Positioning items by line number</h2>
+                <p>We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.</p>
+                <p>As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.</p>
+                <p>Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.</p>
+            </header>
+            <div class="wrapper">
+                <div class="box1">One</div>
+                <div class="box2">Two</div>
+                <div class="box3">Three</div>
+                <div class="box4">Four</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="stretch">
+            <header>
+                <h2>Stretching an item across the grid</h2>
+            </header>
+            <div class="wrapper">
+                <div class="box1">One</div>
+                <div class="box2">Two</div>
+                <div class="box3">Three</div>
+                <div class="box4">Four</div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
