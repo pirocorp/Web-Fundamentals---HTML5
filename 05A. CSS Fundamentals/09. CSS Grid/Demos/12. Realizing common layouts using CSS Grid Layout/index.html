@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Realizing common layouts using CSS Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Realizing common layouts using CSS Grid Layout</h1>
+    </header>
+
+    <main>
+        <section class="responsive-layout">
+            <header>
+                <h2>A responsive layout with 1 to 3 fluid columns using grid-template-areas</h2>
+                <p>Many websites are a variation of this type of layout, with content, sidebars, a header and a footer. In a responsive design, you may want to display the layout as a single column, adding a sidebar at a certain breakpoint and then bring in a three-column layout for wider screens.</p>
+                <p>As we are using grid-template-areas to create the layout. Outside of any media queries I need to name the areas. We name areas using the grid-area property.</p>
+            </header>
+            <div class="wrapper">
+                <header class="main-head">The header</header>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="">Nav 1</a></li>
+                        <li><a href="">Nav 2</a></li>
+                        <li><a href="">Nav 3</a></li>
+                    </ul>
+                </nav>
+                <article class="content">
+                    <h1>Main article area</h1>
+                    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+                </article>
+                <aside class="side">Sidebar</aside>
+                <div class="ad">Advertising</div>
+                <footer class="main-footer">The footer</footer>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="flexible-layout">
+            <header>
+                <h2>A flexible 12-column layout</h2>
+                <p>If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS Grid Layout. As a simple example, I am creating a 12-column flexible grid that has 12 1fr-unit column tracks, they all have a start line named col-start. This means that we will have twelve grid lines named col-start.</p>
+            </header>
+            <div class="wrapper">
+                <div class="item1">Start column line 1, span 3 column tracks.</div>
+                <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+                <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
+                <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+            </div>
+
+            <hr>
+
+            <div class="wrapper-2">
+                <header class="main-head">The header</header>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="">Nav 1</a></li>
+                        <li><a href="">Nav 2</a></li>
+                        <li><a href="">Nav 3</a></li>
+                    </ul>
+                </nav>
+                <article class="content">
+                    <h1>Main article area</h1>
+                    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two
+                        column layout, and then to a three column layout by redefining the grid, and the placement of items on the
+                        grid.</p>
+                </article>
+                <aside class="side">Sidebar</aside>
+                <div class="ad">Advertising</div>
+                <footer class="main-footer">The footer</footer>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="listing-layout">
+            <header>
+                <h2>A product listing with auto-placement</h2>
+                <p>Many layouts are essentially sets of “cards” – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add media queries to make it so. In this next example I’m combining CSS Grid and Flexbox Layouts to make a simple product listing layout.</p>
+                <p>The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.</p>
+            </header>
+            <ul class="listing">
+                <li>
+                    <h2>Item One</h2>
+                    <div class="body">
+                        <p>The content of this listing item goes here.</p>
+                    </div>
+                    <div class="cta"><a href="">Call to action!</a></div>
+                </li>
+                <li>
+                    <h2>Item Two</h2>
+                    <div class="body">
+                        <p>The content of this listing item goes here.</p>
+                    </div>
+                    <div class="cta"><a href="">Call to action!</a></div>
+                </li>
+                <li class="wide">
+                    <h2>Item Three</h2>
+                    <div class="body">
+                        <p>The content of this listing item goes here.</p>
+                        <p>This one has more text than the other items.</p>
+                        <p>Quite a lot more</p>
+                        <p>Perhaps we could do something different with it?</p>
+                    </div>
+                    <div class="cta"><a href="">Call to action!</a></div>
+                </li>
+                <li>
+                    <h2>Item Four</h2>
+                    <div class="body">
+                        <p>The content of this listing item goes here.</p>
+                    </div>
+                    <div class="cta"><a href="">Call to action!</a></div>
+                </li>
+                <li>
+                    <h2>Item Five</h2>
+                    <div class="body">
+                        <p>The content of this listing item goes here.</p>
+                    </div>
+                    <div class="cta"><a href="">Call to action!</a></div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
