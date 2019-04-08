@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.6rem;
+    letter-spacing: -0.04em;
+}
+
+p {
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.grid {
+    padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: [start] minmax(20px, 1fr) [wrapper-start] repeat(12, minmax(0, 70px)) [wrapper-end] minmax(20px, 1fr) [end];
+        grid-gap: 20px;
+    }
+}
+
+.grid__media {
+    grid-column: var(--mediaStart, wrapper-start)/var(--mediaEnd, 8);
+}
+
+.grid__text {
+    grid-column: var(--textStart, 8)/span var(--textSpan, 6);
+    padding: 20px;
+}
+@media (min-width: 768px) {
+    .grid__text {
+        padding: 0;
+    }
+}
+
+.grid__media,
+.grid__text {
+    grid-row: 1;
+}
+
+.grid--2,
+.grid--4 {
+    --mediaStart: 8;
+    --mediaEnd: 14;
+    --textStart: wrapper-start;
+}
+
+@media (min-width: 960px) {
+    .grid {
+        --mediaStart: wrapper-start;
+        --mediaEnd: 9;
+        --textStart: 10;
+        --textSpan: 4;
+    }
+
+    .grid--2 {
+        --mediaStart: 9;
+        --mediaEnd: end;
+        --textStart: wrapper-start;
+    }
+
+    .grid--2,
+    .grid--4 {
+        --mediaStart: 8;
+    }
+
+    .grid--3 {
+        --mediaStart: start;
+    }
+
+    .grid--4 {
+        --mediaEnd: wrapper-end;
+        --textStart: 3;
+    }
+}
+
+.grid--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.grid--bg div {
+    background-color: #ECEFF1;
+}
