@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    
+    grid-gap: 40px;
+
+    background: #DDDDDD;
+
+    padding: 100px 50px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+    background: #FFFFFF;
+
+    border-radius: 20px; 
+    text-align: center;  
+    
+    padding: 40px;
+
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.5);
+}
+
+section > * {
+    width: 100%;
+}
+
+section > img {
+    margin: 0 auto 30px;
+    object-fit: scale-down;
+    padding: 20px;
+}
+
+section > h2 {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+section > p {
+    margin-bottom: 60px;
+}
+
+section > button {
+    width: auto;
+    margin: 0 auto;
+
+    padding: 10px 30px;
+    background: #FFFFFF;
+
+    border: 2px solid #000000;
+    border-radius: 30px;
+}
+
+section > button > span {
+    font-weight: 900;
+}
