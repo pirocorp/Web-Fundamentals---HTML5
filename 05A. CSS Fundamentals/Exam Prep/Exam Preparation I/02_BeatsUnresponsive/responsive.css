@@ -1,0 +1,39 @@
+@media all and (max-width: 640px) {
+    .nav-primary {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;        
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .nav-item a {
+        margin: 0;
+    }
+
+    .solo {        
+        text-align: center;
+    }
+
+    .second-row {
+        flex-direction: column;
+    }
+
+    .second-row > div {
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .studio {
+        text-align: center;
+    }
+
+    .grid-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
