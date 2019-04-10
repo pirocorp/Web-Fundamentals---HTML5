@@ -13,10 +13,6 @@ html {
     color: #3D3D3D;
 }
 
-body > * {
-    
-}
-
 button {
     border: 2px solid #FF0000;
     border-radius: 30px;
