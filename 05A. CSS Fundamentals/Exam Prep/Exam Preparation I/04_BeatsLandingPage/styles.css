@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3D3D3D;
+}
+
+body > * {
+    
+}
+
+button {
+    border: 2px solid #FF0000;
+    border-radius: 30px;
+
+    padding: 15px 60px;
+
+    background: #FF0000;
+    color: #FFFFFF;
+
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #FFFFFF;
+    color: #FF0000;
+    cursor: pointer;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 52px;
+    letter-spacing: 1px;
+    font-weight: normal;   
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;  
+    padding: 20px 100px;  
+    border-bottom: 2px solid transparent;
+}
+
+ul li:hover {
+    border-bottom: 2px solid #FF0000;
+}
+
+ul li a {    
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3D3D3D;
+}
+
+.solo {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+    padding: 60px 0;
+}
+
+.solo h2 {
+    padding-bottom: 30px;
+}
+
+.solo div {
+    margin-top: 200px;
+    margin-left: 300px;
+}
+
+.solo p {
+    padding-bottom: 30px;
+}
+
+.solo img {
+    justify-self: end;
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+}
+
+.powerbeats {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+
+    background: #FBFCFF;
+
+    padding: 100px 50px 60px 300px;
+}
+
+.powerbeats header h2 {
+    letter-spacing: 2px;
+}
+
+.powerbeats header {
+    max-width: 350px;
+    padding-bottom: 80px;
+}
+
+.powerbeats header p {
+    text-transform: uppercase;
+    text-align: right;
+
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.powerbeats header p span {
+    font-weight: bold;
+}
+
+.powerbeats p {
+    width: 400px;
+    padding-bottom: 80px;
+}
+
+.powerbeats .price-section {
+    display: flex;
+}
+
+.powerbeats .price {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.powerbeats .price-section button {
+    margin: 10px 0 10px 40px;
+}
+
+.trial {
+    display: flex;
+    flex-flow: column wrap;
+
+    background: #575757;
+    text-align: center;
+
+    padding: 30px;
+}
+
+.trial div {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 30px;
+}
+
+.trial img {
+    max-width: 60px;
+}
+
+.trial p {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #DBDBDB;
+    text-transform: uppercase;
+}
+
+.trial p span {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.trial a {
+    display: block;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+    font-weight: bold;    
+}
+
+.trial a span {
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.trial a span:hover {
+    border-bottom: 1px solid #FF0000;
+}
+
+.beats-red {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    letter-spacing: 0px;
+
+    background: #DADADA;
+}
+
+.beats-red img.girl {
+    margin-top: -3px;
+    max-width: 100%;
+}
+
+.beats-red div {
+    display: flex;
+    flex-flow: column wrap;    
+}
+
+.beats-red div h2 {
+    font-size: 152px;
+    font-weight: bold;
+    
+    line-height: 1;
+
+    text-align: center;
+
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.beats-red div p {
+    font-size: 52px;
+    text-align: center;
+}
+
+.beats-red div p span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FF0000;
+}
+
+.beats-red img.beats {
+    padding-top: 20px;
+}
+
+footer p {
+    text-align: center;
+    padding: 20px 0;
+}
