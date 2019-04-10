@@ -1,0 +1,37 @@
+@import url('typography.css');
+
+body {
+    padding: 50px;
+}
+
+h1 {
+    font-family: PT Sans, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav,
+header h1 {
+    display: inline-block;
+}
+
+header nav {
+    margin-left: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #009952;
+}
+
+nav ul li a {
+    color: #009952;
+}
