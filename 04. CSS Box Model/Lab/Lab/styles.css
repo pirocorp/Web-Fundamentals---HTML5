@@ -3,6 +3,11 @@
 @import url("navigation.css");
 @import url("post.css");
 @import url("sidebar.css");
+@import url("elements.css");
+
+body {
+    background: #EEE;
+}
 
 .site-header{
     border-bottom: 4px solid #333;
