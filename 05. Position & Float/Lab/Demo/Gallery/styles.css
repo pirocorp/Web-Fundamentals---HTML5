@@ -1,0 +1,112 @@
+@import url('typography.css');
+
+body {
+
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery-item:nth-child(1) {
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);
+}
+
+.gallery-item:nth-child(2) {
+    background: linear-gradient(to right, #b92b27, #1565c0);
+}
+
+.gallery-item:nth-child(3) {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+.gallery-item:nth-child(4) {
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.gallery-item:nth-child(5) {
+    background: linear-gradient(to right, #003973, #e5e5be);
+}
+
+.gallery-item figure {
+    width: 40%;
+
+    /* Centering element into its container / parent */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery-item.portrait figure {
+    width: auto;
+    height: 80vh;
+}
+
+.gallery-item figure::after {
+    display: block;
+    content: '';    
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    border-radius: 0.4rem;
+
+    opacity: 0.5;
+}
+
+.gallery-item figure:hover::after,
+.gallery-item figure:hover figcaption {
+    opacity: 0;
+    display: none;
+}
+
+.gallery-item figcaption {
+    font-family: PT Serif, serif;
+    font-style: italic;
+    font-size: 1.2rem;
+
+    padding-top: 0.5rem;
+
+    text-align: center;
+
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: #FFF;    
+
+    z-index: 10;
+}
+
+.gallery-item .image {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.4rem; 
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 1rem rgb(0, 0, 0, 0.5);
+}
+
+/* Box sizes of prtrait images */
+.gallery-item.portrait .image {
+    width: auto;
+    height: 100%;
+}
+
+.gallery-item .image img {
+    display: block;
+    width: 100%;
+    height: auto;    
+}
+
+/* Portrait image sizes */
+.gallery-item.portrait .image img {    
+    width: auto;
+    height: 100%;
+}
