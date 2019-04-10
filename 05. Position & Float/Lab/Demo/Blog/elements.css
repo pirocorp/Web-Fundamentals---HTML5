@@ -42,3 +42,24 @@
      from all is's sides */
     transform: translate(-50%, -50%)
 }
+
+.search {
+    overflow: hidden;
+}
+
+.search header {
+    float: left;
+    padding-right: 1rem;
+}
+
+.search header h4 {
+    margin: 0;
+}
+
+.search input {
+    float: left;
+    padding: 0.5rem 1rem;
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 0.3rem;
+}
