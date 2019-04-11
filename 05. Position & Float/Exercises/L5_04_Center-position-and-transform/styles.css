@@ -1,0 +1,41 @@
+body {
+    background:  rgb(238, 238, 238);    
+}
+
+img {    
+    max-width: 100%;
+}
+
+.card {
+    background: #FFF;
+    max-width: 400px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card .content {
+    padding: 0 20px 20px;
+}
+
+.card button {
+    float: right;
+    background: rgb(0, 153, 0);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+}
+
+.card .content::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.card h2 {
+    font-family: Georgia, sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
