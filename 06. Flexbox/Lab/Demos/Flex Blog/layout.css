@@ -1,0 +1,56 @@
+/* Layout  */
+body{
+    padding: 2rem;
+}
+
+.site{
+    max-width: 80rem;
+    /* When we have auto margin on element wit set in this case width element will be centered */
+    margin: 0 auto;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.site-header .site-title {
+    margin: 0;
+}
+
+.site-header .search {
+    margin-left: auto;
+}
+
+.site-header nav {
+    margin-top: 1rem;
+    flex: 1 0 100%;
+}
+
+.site-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-content,
+.main-sidebar {
+    padding: 4rem 2rem;
+}
+
+.main-content {
+    flex: 1 1 56rem;
+}
+
+.main-sidebar {
+    flex: 1 1 24rem; 
+    display: flex;
+    flex-wrap: wrap;
+
+    /* To condense aside when in two column layout */
+    align-content: flex-start;
+}
+
+.main-sidebar > section {
+    flex: 1 1 19rem;
+}

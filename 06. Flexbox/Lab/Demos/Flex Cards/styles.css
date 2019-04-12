@@ -1,0 +1,93 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('typography.css');
+
+body {
+    padding: 4rem;
+}
+
+.cards-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 0 30%;
+    margin-bottom: 5%;
+    /* border: 1px solid black; */
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+
+    /* For aligning content of card */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-media {
+
+}
+
+.image-main {
+    background: #DDD;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+
+    /* Trim all which is going out of container */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Makes container with 16/9 aspect ratio */
+.image-main::after {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.image-main img {
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
+
+    /* Centering image over container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: opacity 1s linear;
+}
+
+.card-content {
+    border: solid #CCC; 
+    border-width: 1px 0;
+    padding: 1rem 1.5rem;
+
+    /* For aligning content of card */
+    /* All free space is set to .card-content */
+    flex-grow: 1;
+}
+
+.card-main-content p:last-child {
+    padding: 0;
+}
+
+.card-content .category {
+    display: block;
+    color: darkorange;
+    text-decoration: none;
+}
+
+.card-footer {   
+    display: flex;    
+}
+
+.card-footer a {
+    flex-grow: 1;
+    display: block;
+    padding: 1em;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
