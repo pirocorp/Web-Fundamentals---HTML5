@@ -1,0 +1,40 @@
+@import url('typography.css');
+body {
+    display: flex;
+    flex-direction: column;
+    background: #EEEEEE;
+    padding: 4rem;
+}
+
+header,
+main,
+aside,
+footer {
+    background: #FFF;
+    border-radius: 5px; 
+    margin-bottom: 1rem;
+    padding: 1em;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+.content {
+    display: flex;
+}
+
+header {
+    height: 150px;
+}
+
+main,
+aside {
+    flex-grow: 1;
+    height: 500px;
+}
+
+footer {
+    height: 100px;
+}
+
+main {
+    margin-right: 1rem;
+}
