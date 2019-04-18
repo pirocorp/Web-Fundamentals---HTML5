@@ -1,0 +1,29 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('typography.css');
+@import url('layout.css');
+@import url('navigation.css');
+
+a {
+    text-decoration: none;
+}
+
+.menu a,
+.dash-title {
+    padding: 0.5rem 1rem;
+}
+
+.dash-header,
+.dash-footer {
+    background: #444;
+    color: #FFF;
+    line-height: 1;
+}
+
+.dash-main-nav {
+    background: #222;
+    color: #FFF;
+}
+
+.dash-main {    
+    background: #FFF;
+}

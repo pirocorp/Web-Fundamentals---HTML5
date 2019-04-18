@@ -1,0 +1,37 @@
+.menu {
+    position: fixed;
+    width: 10rem;
+    overflow: hidden;
+}
+
+.menu li {
+    list-style: none outside;
+    padding: 0.5rem 0;
+}
+
+.menu a {
+    color:#fff; 
+    text-decoration: none;
+    padding: 0.3em 1em;
+
+    /* Disable text wrapping */
+    white-space: nowrap;
+
+    /* Cut text which overflows the container and adds ... */
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.menu a.fas {
+    font-family: inherit;
+    padding-right: 1rem;
+    font-weight: inherit;
+}
+
+.menu a.fas::before {
+    font-family: 'Font Awesome 5 Free';
+    padding-right: 0.5rem;
+    font-weight: 900;
+}
