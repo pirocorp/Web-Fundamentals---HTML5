@@ -1,0 +1,28 @@
+@import url('typography.css');
+
+body {
+    margin: 4rem;
+}
+
+header {
+    display: flex;
+    border-bottom: 2px solid #000;
+
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header ul {    
+    display: flex;    
+}
+
+header li {
+    list-style-type: none;
+    padding: 0 1em;
+    color: rgb(93, 184, 111);
+}
+
+.site-title {
+    font-size: 52px;
+    text-transform: uppercase;
+}
