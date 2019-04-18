@@ -1,0 +1,58 @@
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+
+body {
+	padding: 5em;
+}
+
+.container{
+    max-width: 15vw;
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+span{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0.3rem;
+    width: 4rem;
+}
+
+.eleventh{
+    order:-10;
+}
+
+.second{
+    order: -9;
+}
+
+.twelfth{
+    order:-8;
+}
+
+.fourth{
+    order: -7;
+}
+
+.eighth{
+    order: -6;
+}
+
+.ninth{
+    order: -5;
+}
+
+.sixth{
+    order: -4;
+}
+
+.fifth{
+    order: -3;
+}
