@@ -1,0 +1,16 @@
+@import url('typography.css');
+
+body {
+    display: flex;
+    background: rgb(238, 238, 238);
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #FFF;
+    width: 25em;
+    padding: 0 2rem;
+    border-radius: 10px;
+}
