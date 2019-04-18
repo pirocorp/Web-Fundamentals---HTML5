@@ -1,0 +1,63 @@
+@import url('typography.css');
+
+a {
+    text-decoration: none;
+    color: rgb(0, 153, 0)
+}
+
+body {
+    margin: 4rem;
+    background: rgb(238, 238, 238);
+    
+}
+
+body > header {
+    border-bottom: 2px solid #000;
+}
+
+.site-title {
+    font-size: 52px;
+    text-transform: uppercase;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page main {
+    flex: 1 1 60em;
+    padding-right: 4em;
+}
+
+.page aside {
+    flex: 1 0 12em;
+}
+
+img {
+    padding: 1rem;
+    background:  rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    border: 5px solid #000;
+}
+
+.first-img {
+    float: right;
+    margin: 0 0 1em 1.5em;
+}
+
+.second-img {
+    float: left;
+    margin: 0 1.5em 0 0;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    float: right;
+    width: 50%;
+}
+
+blockquote p:last-of-type {
+    text-align: right;
+}
