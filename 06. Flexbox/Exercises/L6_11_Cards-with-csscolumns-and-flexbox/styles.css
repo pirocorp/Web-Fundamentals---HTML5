@@ -1,0 +1,71 @@
+@import url('typography.css');
+
+body {
+    margin: 4rem 25rem;
+    background: rgb(238, 238, 238);
+}
+
+img {
+    width: 100%;
+}
+
+.cards-layout {
+    padding: 2rem 0;
+}
+
+/* CSS Columns Layout */
+.masonry .cards-layout {
+    columns: 3;    
+}
+
+.masonry .card {
+    margin-bottom: 5%;  
+}
+
+/* Flexbox layout */
+.flex .cards-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex .card {
+    flex: 0 0 32%;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+.flex .card:nth-of-type(3n){
+    margin-right: 0;
+}
+
+/* Card element */
+.card {  
+    display: flex;
+    flex-direction: column; 
+
+    background: #FFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;    
+
+    overflow: hidden;
+
+    break-inside: avoid;  
+}
+
+.card h4,
+.card p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+.card footer {
+    border-top: 1px solid #CCCCCC;
+    padding-top: 1.5rem;
+}
+
