@@ -1,0 +1,15 @@
+body {
+	padding: 5em;
+}
+
+section{
+    max-width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article{
+    width: 15rem;
+}
