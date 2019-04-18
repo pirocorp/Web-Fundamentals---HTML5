@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10rem 20rem;
+    background: #EEEEEE;
+}
+
+img {
+    height: 400px;
+}
+
+.image-container {
+    display: flex;
+    height: 400px;
+}
+
+.image {
+    overflow: hidden;
+    text-align: center;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+.image {
+    margin-right: 3.33%;
+}
+
+.image:last-of-type {
+    margin-right: 0;
+}
+
+.slim {
+    flex: 0 0 10%;
+
+    position: relative;
+}
+
+.large {
+    flex: 0 0 60%;
+    background: #0D0D0D;
+}
+
+.slim img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, 0);
+}
