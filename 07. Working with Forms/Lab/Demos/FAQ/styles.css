@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.5 Georgia, serif;
+}
+
+body {
+    padding: 2rem;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    padding: 0.5em 1em;
+    background: #369;
+    color: #FFF;
+    border-radius: 0.3em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+ul, li {
+    display: block;
+    border: 1px solid #CCC;
+}
+
+ul li a {
+    display: block;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    /* No mouse events */
+    pointer-events: none
+}
+
+ul li a:hover {
+    background: #369;
+    color: #FFF;
+}
+
+ul li > div {
+    display: block;
+    border-top: 1px solid #CCC;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+#hideanswers {
+    opacity: 0;
+    position: absolute;
+}
+
+#hideanswers:checked + .cnt ul li > div {
+    max-height: 0;
+}
+
+ul li > div p {
+    padding: 0.5em 1em;
+}
+
+#hideanswers:checked + .cnt ul li:target div {
+    max-height: 1300px;    
+}
+
+label .turn_off {
+    display: none;
+}
+
+#hideanswers:checked + .cnt ul li a {
+    pointer-events: inherit;
+}
+
+#hideanswers:checked + .cnt label {
+    background: red;
+}
+
+#hideanswers:checked + .cnt label .turn_on {
+    display: none;
+}
+
+#hideanswers:checked + .cnt label .turn_off {
+    display: inline-block;
+}
