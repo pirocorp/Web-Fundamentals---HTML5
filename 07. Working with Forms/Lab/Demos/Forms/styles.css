@@ -1,0 +1,24 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('forms.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 16px/1.5 Georgia, serif;
+}
+
+/* We must set explisit input and select to inherit otherwise they will not */
+body,
+input,
+select,
+legend {
+    font: inherit;
+}
+
+body {
+    padding: 2rem;
+}
