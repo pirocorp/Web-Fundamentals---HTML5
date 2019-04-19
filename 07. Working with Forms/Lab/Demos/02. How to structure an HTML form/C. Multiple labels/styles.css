@@ -1,0 +1,17 @@
+abbr {
+    text-decoration: none;
+}
+
+div, label {
+    display: flex;
+}
+
+div + div {
+    margin-top: 1em;
+}
+
+div input {
+    order: 10;
+    margin-left: 1em;
+    padding: 0.5em 1em;
+}
