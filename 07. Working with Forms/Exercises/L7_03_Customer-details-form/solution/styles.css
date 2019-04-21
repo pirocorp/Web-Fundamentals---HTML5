@@ -1,0 +1,74 @@
+form{
+    max-width: 30rem;
+    margin: auto;
+    background:rgb(173, 216, 230);
+    padding: 2rem;
+    border-radius: 0.3rem;
+    color: #234465;
+}
+
+form h2{
+    text-align: center;
+    margin: 0 0 2rem 0;
+}
+
+input,
+select,
+textarea{
+    padding: 0.5rem;
+    width: 50%;
+  
+}
+
+select{
+    width: 54%;
+}
+
+label,
+span{
+    padding-right: 0.7rem;
+    display: inline-block;
+    width: 18%;
+}
+
+.gender input,
+.gender label,
+input[type="checkbox"]{
+    width: auto;
+}
+
+
+section{
+    margin-bottom: 0.7rem;
+}
+
+input[type="radio"]
+{
+    margin: 0;
+}
+
+.message{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.message label{
+    padding-right: 1.1rem;
+}
+
+
+input[type="submit"]{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    width: 30%;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 18px;
+    background: #234465;
+    color: white;
+}
+

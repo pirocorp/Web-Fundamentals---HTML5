@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="typography.css">
+    <title>Customer Details Form</title>
+</head>
+
+<body>
+    <form action="#">
+
+        <h2>Customer Details</h2>
+
+        <section class="first-name">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" autofocus="autofocus" placeholder="George">
+        </section>
+
+        <section class="last-name">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Devis">
+        </section>
+
+        <section class="gender">
+            <span>Gender</span>            
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </section>
+
+        <section>
+            <label for="inputEmail">Email</label>
+            <input type="email" name="inputEmail" id="inputEmail" placeholder="your@email.com">
+        </section>
+
+        <section>
+            <label for="inputPhone">Phone</label>
+            <input type="text" name="phone" id="inputPhone" placeholder="+359885236225">
+        </section>
+
+        <section>
+            <span>Town</span>
+            <select name="town">
+                <option value="Varna">Varna</option>
+                <option value="Plovdiv">Plovdiv</option>
+                <option value="Burgas">Burgas</option>
+                <option value="Sofia">Sofia</option>
+                <option value="Pleven">Pleven</option>
+            </select>
+        </section>
+
+        <section>
+            <label for="age">Age</label>
+            <input type="number" id="age" min="18" max="70">
+        </section>
+
+        <section>
+            <label for="languages">Language</label>
+            <input list="languages" name="languages">
+            <datalist id="languages">
+                <option value="Java"></option>
+                <option value="PHP"></option>
+                <option value="C#"></option>
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Ruby"></option>
+                <option value="Other"></option>
+            </datalist>
+        </section>
+
+        <section class="message">
+            <label for="message">Message</label>
+            <textarea name="message" rows="5" cols="35" placeholder="More information..." id="message"></textarea>
+        </section>
+
+
+        <input type="checkbox" name="agreement" value="checked">I agree the Terms and Conditions
+        <input type="submit" value="Send">
+
+    </form>
+</body>
+
+</html>
