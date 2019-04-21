@@ -1,0 +1,108 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 4rem;
+}
+
+.form-wrapper {
+    width: 30rem;    
+
+    margin: 0 auto;
+}
+
+fieldset {      
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+
+legend {
+    border: 1px solid #666666;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    border-radius: 0.3rem;
+    margin-left: -2.1rem;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+
+.field-wrapper {
+    margin-bottom: 2rem;
+}
+
+.field-wrapper label {
+    font-weight: bold;
+    display: block;
+}
+
+.input-wrapper {
+    display: flex;
+    border: 1px solid #CCCCCC;
+    background: #FFF;
+    padding-left: 0.8rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.input-wrapper i {
+    align-self: center;
+}
+
+.input-wrapper input {
+    display: inline-block;  
+    width: 100%;  
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 0.2rem 0.5rem;
+    outline: none;
+}
+
+input[type="submit"]:focus {
+    outline: 1px solid #009900;   
+}
+
+.input-wrapper:focus-within {
+    border-color: #009900;
+}
+
+.input-wrapper:focus-within i {
+    color: #009900;
+}
+
+@media screen and (min-width: 751px) {
+    .field-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    .field-wrapper label {
+        margin-right: 1em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .form-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 4rem 1rem;
+    }
+}
