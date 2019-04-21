@@ -27,7 +27,8 @@ fieldset {
 }
 
 legend {
-    border: 1px solid #000;
+    border: 1px solid #666666;
+    overflow: hidden;
     padding: 0.5rem 1rem;
     width: 10rem;
     border-radius: 0.3rem;
@@ -47,9 +48,11 @@ legend {
 
 .input-wrapper {
     display: flex;
-    border: 1px solid #000;
+    border: 1px solid #CCCCCC;
     background: #FFF;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
 }
 
 .input-wrapper i {
@@ -66,4 +69,17 @@ legend {
 
 input[type="submit"] {
     padding: 0.2rem 0.5rem;
+    outline: none;
+}
+
+input[type="submit"]:focus {
+    outline: 1px solid #009900;   
+}
+
+.input-wrapper:focus-within {
+    border-color: #009900;
+}
+
+.input-wrapper:focus-within i {
+    color: #009900;
 }
