@@ -1,0 +1,122 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserat, sans-serif;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    
+    padding: 4em;
+    background-image: linear-gradient(to right top, #09d3df, #00c6ee, #00b6fb, #00a4ff, #008eff, #4f82ff, #7c72ff, #a35df8, #b854fc, #cd48ff, #e334ff, #f902fe);
+}
+
+.form-wrapper {
+    background: #FFF;
+    border-radius: 0.3em;
+    width: 25em;
+    height: 100%;
+    padding: 3em;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    flex: 1 0 0;
+    display: flex;
+
+    outline: none;
+    
+    border-radius: 0.3em;
+
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.button i {
+    font-size: 1.2em;
+}
+
+.button span {
+    margin-left: 0.7em;
+    font-size: 0.7em;
+}
+
+.button  + .button {
+    margin-left: 1em;
+}
+
+.facebook {
+    background: #3B5998;
+    border: 1px solid transparent;
+    color: #FFF;
+}
+
+.google {
+    color: #555555;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+div + div {
+    margin-top: 2em;
+}
+
+label {
+    display: block;
+    font-size: 0.8em;
+    color: #838383;
+}
+
+input {
+    width: 100%;
+    margin-top: 0.3em;
+    padding: 1em;
+    border: 1px solid #F1F1F1;
+    border-radius: 0.5em;
+    background: #F7F7F7;
+    overflow: hidden;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: #333333;
+    color: #FFF;
+}
+
+input:focus,
+.button:focus {
+    border-color: #FA69FC;
+}
+
+.button:hover {
+    background-image: linear-gradient(to right top, #08d4df, #00c6ee, #00b5fc, #00a1ff, #0089ff, #537cff, #8369ff, #ae4ef8, #be46fb, #cf3cfd, #e02cfe, #f10afe);
+}
+
+.google:hover {
+    color: #FFF;
+}
