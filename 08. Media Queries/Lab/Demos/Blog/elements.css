@@ -1,0 +1,65 @@
+.ar-image-container {
+    /* background: #F00; */
+    /* padding: 2rem; */
+    overflow: hidden;
+    /* positioning image in container */
+    position: relative;
+    border-radius: 0.5rem;
+    /* box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5); */
+}
+
+/* using pseudo element to create aspect ratio for picture */
+.ar-image-container::before {
+    display: block;
+    content: '';
+    /* for 16 : 9 ratio */
+    /* because we use position absolute container will be empty if we do not
+    set padding */
+    padding-top: 56.25%;
+    /* background: #0F0;  */   
+}
+
+.ar-image-container img {
+    display: block;
+    /* display: none; */
+    /* when change width auto height 100% pictures are not croped 
+    because pictures do not overflow */
+    width: auto;
+    height: 100%;
+    /* Makeing icture transerant to see overflow */
+    /* opacity: 0.5; */
+
+     /* positioning image in container */
+     /* position avsolute make element to poition to first parent element 
+     wich have some not static (default) position */
+    position: absolute;
+    /* positioning top left corner of picture in the middle of 
+    the container */
+    top: 50%; left: 50%;
+    /* moving picture half of it's width to the left and
+     half of it's height to the up*/
+     /* effect is that overflow hidden will crop picture equally 
+     from all is's sides */
+    transform: translate(-50%, -50%)
+}
+
+.search {
+    overflow: hidden;
+}
+
+.search header {
+    float: left;
+    padding-right: 1rem;
+}
+
+.search header h4 {
+    margin: 0;
+}
+
+.search input {
+    float: left;
+    padding: 0.5rem 1rem;
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 0.3rem;
+}

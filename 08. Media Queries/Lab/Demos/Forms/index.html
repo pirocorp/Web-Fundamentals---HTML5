@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="#" method="GET">
+
+        <fieldset class="single-line larger reverse">
+
+            <legend>Contact Information</legend>
+            
+            <p>
+                <label for="field_first_name">First Name</label>
+                <span class="input-wrapper">
+                    <input type="text" name="first_name" id="field_first_name" placeholder="Jhon">
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </p>
+        
+            <p>
+                <label for="field_last_name">Last Name</label>
+                <span class="input-wrapper">
+                    <input type="text" name="last_name" id="field_last_name" placeholder="Doe">
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </p>
+
+            <p>
+                <label for="field_email">Email</label>
+                <span class="input-wrapper">
+                    <input type="email" name="email" id="field_email" placeholder="example@abv.bg" required="required">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+
+        </fieldset>
+
+        <fieldset class="single-line larger">
+        
+            <legend>Feedback</legend>
+        
+            <p>
+                <label for="field_age">Age</label>
+                <span class="input-wrapper">
+                    <select name="age" id="field_age">
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                    </select>
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </p>
+        
+            <p>
+                <label for="field_last_name_2">Last Name</label>
+                <span class="input-wrapper">
+                    <input type="text" name="last_name" id="field_last_name_2" placeholder="Doe">
+                    <i class="fas fa-user-edit"></i>
+                </span>
+            </p>
+        
+            <p>
+                <label for="field_email_2">Email</label>
+                <span class="input-wrapper">
+                    <input type="email" name="email" id="field_email_2" placeholder="example@abv.bg" required="required">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+        
+        </fieldset>
+
+        <fieldset class="larger">
+        
+            <legend>Login Information</legend>
+        
+            <p>
+                <label for="field_username">Username</label>
+                <span class="input-wrapper">
+                    <input type="text" name="username" id="field_username" placeholder="piro">
+                    <i class="fas fa-user"></i>
+                </span>
+            </p>
+        
+            <p>
+                <label for="field_password">Password</label>
+                <span class="input-wrapper">
+                    <input type="password" name="password" id="field_password">
+                    <i class="fas fa-key"></i>
+                </span>
+            </p>
+
+        </fieldset>
+
+        <p class="submit">
+            <input type="submit" value="Submit">
+        </p>
+
+    </form>
+</body>
+</html>

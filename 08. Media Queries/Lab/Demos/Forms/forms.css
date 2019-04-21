@@ -1,0 +1,166 @@
+form {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid #CCC;
+
+    padding: 1.5em 2em;    
+}
+
+fieldset + fieldset {
+    margin-top: 2em;
+}
+
+fieldset p {
+    padding-bottom: 1em;
+}
+
+p.submit {
+    margin-top: 2em;
+    text-align: right;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+
+    padding: 0 0.5em;
+}
+
+input,
+select {
+    display: block;
+
+    /* Remove default styles from select */
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
+    border: none;
+    outline: none;
+
+    width: 100%;
+}
+
+select {
+    background: url('chevron-down-solid.svg') right center no-repeat;
+    background-size: 0.8rem auto;
+}
+
+/* Attribute selector */
+input[type="submit"] {
+    display: inline-block;
+    
+    width: auto;
+
+    background: #369;
+    color: #FFF;
+    border-color: #258;
+
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    input[type="submit"] {
+        font-size: 1.2em;
+        padding: 0.8em 1.2em;
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 0.5em 1em 0.5em 2em;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    margin-left: 0.5em;
+}
+
+.no-icon {
+    border: 2px solid #CCC;
+    border-radius: 0.3em;  
+
+    background: #FFF;
+}
+
+/* If we have focus on element whitin */
+.no-icon:focus-within {
+    border-color: #47A;
+}
+
+input:focus,
+select:focus {
+    border-color: #47A;
+}
+
+.input-wrapper i {
+    display: flex;    
+    align-items: center;
+    
+    border: 2px solid #CCC;
+    border-radius: 0.3em;  
+
+    background: #FFF;
+
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+}
+
+.input-wrapper i::before {
+    padding: 0 0.5em; 
+}
+
+input:focus + i,
+select:focus + i {
+    color: #47A;
+    border-color: #47A;
+}
+
+/* single-line */
+@media (min-width: 600px) {
+    
+    fieldset.single-line p {
+        display: flex;
+        align-items: center;
+    }
+
+    fieldset.single-line .input-wrapper {
+        flex: 1 0 auto;
+    }
+
+    fieldset.single-line p > label[for] {
+        display: block;
+        flex: 0 0 30%;
+        text-align: right;
+        padding-right: 0.5em;
+    }
+
+    /* reverse */
+    fieldset.reverse p label {
+        order: 2;
+    }
+
+    fieldset.reverse p .input-wrapper {
+        order: 1;
+    }
+
+    fieldset.reverse.single-line p > label[for] {
+        text-align: left;
+        padding-left: 0.5em;
+    }
+}
+
+/* larger */
+fieldset.larger {
+    font-size: 1.2em;
+}

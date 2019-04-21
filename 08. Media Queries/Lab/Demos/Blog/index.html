@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 1 - Blog Layout with InLine-Block</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="site">
+        <header class="site-header">
+            <h1 class="site-title">
+                <a href="/">Blog title</a>
+            </h1>
+            <section class="search">
+                <header>
+                    <h4>Search</h4>
+                </header>
+                <input type="search">
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Fun</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">History</a></li>
+                            <li>
+                                <a href="#">Work</a>
+                                <ul>
+                                    <li><a href="#">Project Sandstorm</a></li>
+                                    <li>
+                                        <a href="#">Project Genesis</a>
+                                        <ul>
+                                            <li><a href="#">Subject One</a></li>
+                                            <li><a href="#">Subject Two</a></li>
+                                            <li><a href="#">Subject Three</a></li>
+                                            <li><a href="#">Subject Four</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Project Gemini</a></li>
+                                    <li><a href="#">Project Lazarus</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>   
+        <main class="site-content">
+            <section class="main-content">
+                <article class="post">
+                    <section class="image">
+                        <img src="https://images.unsplash.com/photo-1544987796-058485046701?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=974&q=80" alt="river above">
+                    </section>        
+                    <header>
+                        <h3>Article title goes here</h3>
+                        <p class="meta">Published by <a href="#">Piro</a> on <time datetime="2019-03-04">04-03-2019</time></p>
+                    </header>                    
+                    <section class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequuntur quos id ducimus, aut assumenda officia omnis praesentium magni odio obcaecati officiis eligendi non accusantium quisquam, mollitia veritatis laboriosam minus?</p>
+                    </section>
+                    <footer>
+                        <p>Tags: <a href="#">something</a>, <a href="#">else</a>, <a href="#">a lot</a> </p>
+                    </footer>
+                </article> 
+                <article class="post">
+                    <section class="image">
+                        <img src="https://images.unsplash.com/photo-1547973259-530f60421e59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="river above">
+                    </section>
+                    <header>
+                        <h3>Article title goes here</h3>
+                        <p class="meta">Published by <a href="#">Piro</a> on <time datetime="2019-03-04">04-03-2019</time></p>
+                    </header>
+                    <section class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequuntur quos id ducimus, aut assumenda officia omnis praesentium magni odio obcaecati officiis eligendi non accusantium quisquam, mollitia veritatis laboriosam minus?</p>
+                    </section>
+                    <footer>
+                        <p>Tags: <a href="#">something</a>, <a href="#">else</a>, <a href="#">a lot</a> </p>
+                    </footer>
+                </article>    
+                <article class="post">
+                    <section class="image">
+                        <img src="https://images.unsplash.com/photo-1546334699-93704565c7a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="city abovr">
+                    </section>
+                    <header>
+                        <h3>Article title goes here</h3>
+                        <p class="meta">Published by <a href="#">Piro</a> on <time datetime="2019-03-04">04-03-2019</time></p>
+                    </header>
+                    <section class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequuntur quos id ducimus, aut assumenda officia omnis praesentium magni odio obcaecati officiis eligendi non accusantium quisquam, mollitia veritatis laboriosam minus?</p>
+                    </section>
+                    <footer>
+                        <p>Tags: <a href="#">something</a>, <a href="#">else</a>, <a href="#">a lot</a> </p>
+                    </footer>
+                </article>
+            </section>
+            <aside class="main-sidebar">   
+                <section>
+                    <header>
+                        <h4>Latest posts</h4>
+                    </header>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Animi impedit amet exercitationem possimus.</a></li>
+                        <li><a href="#">Cumque impedit obcaecati ad illo velit?</a></li>
+                        <li><a href="#">Possimus corrupti minima molestias rerum vero dolore dignissimos aliquam?</a></li>
+                        <li><a href="#">Quam, recusandae!</a></li>
+                    </ul>
+                </section>    
+                <section>
+                    <header>
+                        <h4>Archive</h4>
+                    </header>
+                    <ul>
+                        <li><a href="#">January 2019</a></li>
+                        <li><a href="#">February 2019</a></li>
+                        <li><a href="#">December 2018</a></li>
+                        <li><a href="#">November 2018</a></li>
+                        <li><a href="#">October 2018</a></li>
+                    </ul>
+                </section>    
+            </aside> 
+        </main>
+        <footer class="site-footer">
+            <p>Blog Title 2000 - 2019 &copy; All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

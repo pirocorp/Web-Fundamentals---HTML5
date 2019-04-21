@@ -1,0 +1,24 @@
+body {
+    font-size: 300%;
+}
+
+@media (max-width: 600px) {
+    p::before {
+        display: block;
+        content: 'Phones';
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    p::before {
+    display: block;
+    content: 'Tablets';
+    }
+}
+
+@media (min-width: 1024px) {
+    p::before {
+    display: block;
+    content: 'Laptops & Desktops';
+    }
+}
