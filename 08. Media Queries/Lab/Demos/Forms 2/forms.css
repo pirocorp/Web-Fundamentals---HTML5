@@ -1,0 +1,109 @@
+form {
+
+}
+
+fieldset,
+fieldset legend {
+    background: #FFF;
+
+    border: 1px solid #000;
+}
+
+fieldset {
+    position: relative;
+
+    padding: 2rem;       
+}
+
+fieldset legend {
+    display: block;
+
+    position: absolute;
+    top: -1.5rem; left: -1px;
+
+    border-radius: 0.2rem;
+    padding: 0.3rem 1.2rem;    
+}
+
+form label {
+    display: block;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+}
+
+.field > label {
+    flex: 0 0 6rem;
+
+    text-align: right;
+
+    padding-right: 0.5rem;
+}
+
+.input {
+    flex: 1 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.input input {
+    flex: 1 0 auto;
+    order: 2;
+
+    border: none;
+    padding: 0.3rem 0.6rem;
+    padding-left: 0;
+
+    background: none;
+    outline: none;
+
+    position: relative;
+    z-index: 3; 
+}
+
+.input .fas {
+    order: 1;
+
+    font-size: 1rem;
+
+    line-height: 1;
+    padding: 0.2rem 0.5rem;
+    padding-left: 0.7rem;
+
+    position: relative;
+    z-index: 2;
+}
+
+.input .actions {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    z-index: 1;
+
+    border: 1px solid #CCC;
+    border-radius: 0.3rem;
+}
+
+.input input:focus + .actions {
+    border-color: #090;
+}
+
+.input input:focus + .actions + .fas {
+    color: #090;
+}
+
+@media screen and (max-width: 800px) {
+    .field {
+        display: block;
+    }
+
+    .field label {
+        width: auto;
+        text-align: left;
+    }
+}
