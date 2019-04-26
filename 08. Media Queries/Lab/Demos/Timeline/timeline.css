@@ -1,0 +1,115 @@
+.timeline {
+    padding-top: 2rem;
+    border: 2px solid #999;
+    border-radius: 0.3rem;
+}
+
+/* Button */
+.timeline > p:first-child {
+    display: inline-block;
+
+    padding: 0;
+    margin: 0 1rem;
+
+    border: 2px solid #999;
+    border-radius: 0.3rem; 
+}
+
+.timeline > p:first-child a {
+    display: block;
+
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+
+    color: #000;
+}
+
+.timeline > p:first-child:focus,
+.timeline > p:first-child:hover {
+    border-color: #000;
+}
+
+.timeline > p:first-child:focus a,
+.timeline > p:first-child:hover a {
+    background: #000;
+    color: #FFF;
+}
+
+/* End Of Button */
+
+/* Article container as Vertical line */
+.timeline .inner {
+    position: relative;  
+    
+    text-align: left;
+     
+    width: 0.5rem;
+    padding: 2rem 0;
+    margin: 0 0 0 2rem;
+
+    background: #999;
+}
+
+.timeline article {
+    position: relative;
+
+    width: 75vw;
+
+    padding: 0 2rem;
+}
+
+.timeline article header h3 {
+    font-style: italic;
+}
+
+/* Create Circle with orange background */
+.timeline article header::after {
+    display: block;
+
+    content:'';
+    width: 2rem;
+    height: 2rem;
+
+    border: 0.4rem solid #999;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0; left: -0.78rem;
+    z-index: 1;
+
+    background: orange;
+}
+
+.timeline article:nth-child(even) {
+}
+
+/* Changing color to green on every even circle */
+.timeline article:nth-child(even) header::after {
+    background: #090;
+}
+
+@media screen and (min-width: 800px) {
+    .timeline {
+        text-align: center;
+    }
+
+    .timeline .inner {
+        margin: 0 auto;
+    }
+
+    .timeline article {
+        width: 40vw;
+    }
+
+    .timeline article:nth-child(even) {
+        right: 40vw;
+        text-align: right;
+        /* top: -5rem; */
+    }
+
+    .timeline article:nth-child(even) header::after {
+        left: inherit;
+        right: -1.22rem;
+    }
+}
