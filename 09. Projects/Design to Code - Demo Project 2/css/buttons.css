@@ -1,0 +1,14 @@
+.button {
+    display: inline-block;
+
+    outline: none;
+    border: none;
+
+    line-height: 1;
+    text-decoration: none;
+
+    padding: 0.8rem 1.2rem;
+
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(246, 188, 18);
+}

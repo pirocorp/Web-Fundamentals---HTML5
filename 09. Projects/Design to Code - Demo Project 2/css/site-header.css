@@ -1,0 +1,128 @@
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+
+    height: 90vh;
+
+    padding: 4rem;
+    padding-bottom: 6rem;
+
+    color: #FFF;
+    background: #666;
+}
+
+.header-section-top {
+    flex: 1 0 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section-bottom hgroup h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.header-section-bottom hgroup h6 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+
+    margin-bottom: 1rem;
+
+    color: rgb(246, 188, 18);
+}
+
+.header-section-bottom hgroup + p::before {
+    display: block;
+    content: '';
+
+    width: 2rem;
+    height: 2px;
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    background: rgb(246, 188, 18);
+}
+
+.header-section-bottom p {
+    padding-bottom: 1rem;
+}
+
+.site-title {
+    background: url(../images/logo.svg) left center no-repeat;
+    width: 4rem;
+}
+
+.site-title a {
+    display: block;
+    padding: 0;
+    /* specifies the indentation of the first line in a text-block. */
+    /* The first line will be indented to the left if the value is negative. */
+    text-indent: -300vw;
+    overflow: hidden;
+}
+
+.site-header label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+
+    padding-left: 1rem;
+
+    color: #FFF;
+}
+
+/* Main navigation */
+.main-nav {
+    display: none;
+
+    margin-left: auto;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    display: block;
+    list-style: outside none;
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+
+    padding: 0 0.5rem;
+
+    color: #FFF;
+}
+
+#toggle-nav {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#toggle-nav:checked + .site-header .main-nav {
+    display: block;
+}
+
+.site-header label i.fa-times {
+    display: none;
+}
+
+#toggle-nav:checked + .site-header i.fa-times {
+    display: block;
+}
+
+#toggle-nav:checked + .site-header i.fa-bars {
+    display: none;
+}
