@@ -1,0 +1,18 @@
+{
+    "editor.quickSuggestionsDelay": 2000,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.snippetSuggestions": "none",
+    "editor.parameterHints.enabled": false,
+    "editor.suggest.filterGraceful": false,
+    "php.suggest.basic": false,
+    "workbench.tips.enabled": false,
+    "html.suggest.html5": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "css.validate": false,
+    "emmet.showExpandedAbbreviation": "never",
+    "editor.parameterHints.enabled": false
+}
