@@ -1,0 +1,75 @@
+section.site-footer {
+    padding: 8rem 2rem;
+
+    color: #FFF;
+    background: #222;
+}
+
+section.site-footer .container {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+section.site-footer header h2 {
+    color: #FFF;
+}
+
+section.site-footer .contact-form-container {
+    display: flex;
+    margin-top: 4rem;
+}
+
+section.site-footer .contact-form-container form {
+    flex: 1 1 auto;
+}
+
+section.site-footer .contact-form-container ul {
+    flex: 0 1 auto;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    padding: 2rem 0 6rem 0;
+
+    margin-left: 10rem;
+}
+
+section.site-footer .contact-form-container form input[type=text],
+section.site-footer .contact-form-container form input[type=email],
+section.site-footer .contact-form-container form textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 0.5rem 1rem;
+
+    border: 1px solid #555555;
+    color: #757575;    
+    background: #222222;
+
+    margin-bottom: 2rem;
+}
+
+section.site-footer .contact-form-container form textarea {
+    height: 10rem;
+}
+
+section.site-footer .contact-form-container ul li {
+    text-align: center;
+
+    list-style: none;
+}
+
+section.site-footer .contact-form-container ul h6 {
+    font-size: 1em;
+
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+section.site-footer .contact-form-container ul p {
+    color: #999999;
+}

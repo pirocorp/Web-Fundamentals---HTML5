@@ -1,4 +1,5 @@
-.button {
+.btn-fill,
+.btn {
     display: inline-block;
 
     outline: none;
@@ -8,6 +9,26 @@
     text-decoration: none;
 
     padding: 0.8rem 1.2rem;
+
+    border: 2px solid rgb(246, 188, 18);
+
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(246, 188, 18);
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+    color: rgb(246, 188, 18);
+    background: transparent;
+}
+
+.btn {
+    color: rgb(246, 188, 18);
+    background: transparent;
+}
+
+.btn:hover {
+    border: 2px solid rgb(246, 188, 18);
 
     color: rgba(0, 0, 0, 0.8);
     background: rgb(246, 188, 18);

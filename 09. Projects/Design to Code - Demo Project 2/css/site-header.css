@@ -51,7 +51,15 @@
 }
 
 .header-section-bottom p {
+    width: 55rem;
+
     padding-bottom: 1rem;
+}
+
+.header-section-bottom p a {
+    text-decoration: none;
+
+    color: rgb(246, 188, 18);
 }
 
 .site-title {
