@@ -1,0 +1,48 @@
+@import url('typography.css');
+@import url('reset.css');
+
+
+body {
+    padding: 4rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.top-part {
+    display: flex;
+
+    margin-bottom: 2rem;
+}
+
+.top-part h2 {
+    letter-spacing: 0.4rem;
+    
+}
+
+.top-part p {
+    color: #656565;
+}
+
+.top-part .welcome-part,
+.top-part .gallery-part {
+    padding-left: 3rem;
+
+    border-left: 2px solid #656565;
+}
+
+.top-part .welcome-part {
+    width: 68%;    
+}
+
+.top-part .gallery-part {
+
+}
+
+.bottom-part {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-part article {
+    width: 32%;
+}
