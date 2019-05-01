@@ -31,7 +31,7 @@ body {
 }
 
 .top-part .welcome-part {
-    width: 68%;    
+    width: 70%;    
 }
 
 .top-part .gallery-part {
@@ -44,5 +44,9 @@ body {
 }
 
 .bottom-part article {
-    width: 32%;
+    width: 30%;
+}
+
+.bottom-part article img {
+	width: 100%;
 }
