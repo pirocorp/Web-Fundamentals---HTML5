@@ -1,0 +1,237 @@
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('reset.css');
+@import url('typography.css');
+
+body > * {
+    padding: 0 4rem;
+}
+
+.container {
+    max-width: 80rem;
+
+    margin: 0 auto;    
+}
+
+.special {
+    color: #FA5B3D;
+}
+
+.special::after {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0d7';
+    font-weight: 900;
+    margin-left: 0.5rem;
+}
+
+/* Header Styles */
+body > header { 
+    padding: 2rem 0;
+    background: #FAFAFA;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+} 
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+    border-bottom: 1px solid transparent;
+}
+
+nav li:hover {
+    border-bottom: 1px solid #FA5B3D;
+}
+
+nav a {
+    color: #777777;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3.2rem;
+    color: #FFFFFF;
+    background: url('img/residential-banner-2.jpg') center no-repeat;    
+}
+
+.hero h1 {
+    font-size: 4em;
+    padding-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Articles */
+.articles {
+    text-align: center;  
+
+    color: #5A5A5A;
+}
+
+.articles .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles .container header {
+    flex: 0 0 100%;
+    padding-top: 3rem;
+    color: #000;
+}
+
+.articles .container article {
+    flex: 0 0 30%;
+    padding: 3rem 0;
+}
+
+.articles .container article h6 {
+    position: relative;
+    font-size: 3em;
+}
+
+.articles .container article h6::after,
+.articles .container article h6::before {
+    display: inline-block;
+    content:'';
+    width: 2.5rem;
+    border-bottom: solid 1px #000;
+    position: absolute;
+    top: 50%;    
+}
+
+.articles .container article h6::after {
+    right: 7.5rem;
+}
+
+.articles .container article h6::before {
+    left: 7.5rem;
+}
+
+.articles .container article h3 {
+    font-size: 2em;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Images */
+.images {
+    padding: 5rem;
+    background: #EDEDED;
+}
+
+.images ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    color: #888;
+    background: #000000;
+}
+
+footer a {
+    color: #888;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;    
+}
+
+.footer-top section {
+    flex: 0 0 30%;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    height: 21rem;
+
+    padding-top: 5rem;  
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #888;
+}
+
+.links-list li {
+    flex: 1 0 auto;
+    width: 30%;
+    line-height: 1.2;   
+    padding: 0.2rem 0; 
+}
+
+.list-cirles {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    margin: 0 0.2rem;
+}
+
+.circle.filled {
+    background: #FFF;
+}
+
+footer img {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+footer form {
+    margin-top: 1rem;
+}
+
+footer input {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 20rem;
+}
+
+footer input + input {
+    cursor: pointer;
+    width: auto;
+    margin-top: 0.5rem;
+    border-color: #FA5B3C; 
+    color: #FFF;
+    background: #FA5B3C;
+}
+
+.footer-bottom {
+    padding-bottom: 2rem;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom ul li {
+    padding-right: 0.5rem;
+}
+
+.footer-bottom ul li + li {
+    padding-left: 0.5rem;
+    border-left: 1px solid #888;
+}
