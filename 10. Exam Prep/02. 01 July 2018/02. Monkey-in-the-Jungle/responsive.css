@@ -1,0 +1,50 @@
+@media all and (max-width: 700px) {
+    body {
+        padding-top: 4rem;
+        background: url(images/bg.jpg);
+        background-color: #1e1f23;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .wrapper > header.special {
+        padding: 1rem 2rem;
+    }
+
+    .wrapper.style2 {
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .wrapper.style1 .content {
+        padding: 0 2rem;        
+    }    
+
+    .gallery {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .gallery > * {
+        width: auto;
+    }
+
+    .spotlight > * {
+        width: 100%;
+    }    
+
+    .spotlight .inner {
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+}
+
+@media all and (max-width: 1024px) and (min-width: 701px) {
+	.spotlight {
+		justify-content: center;
+	}
+
+	.spotlight > * {
+		min-width: 30rem;
+	}
+}
