@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* some tags do not inherit font by default */
+body, input, textarea, select, option, table, td, th {
+    font: inherit;
+}
+
+body {
+    background-image: linear-gradient(to right, #a0685c, #b5846f, #c8a086, #dcbd9f, #efdbbb);
+}
+
+.page-container {
+    display: flex;    
+    max-width: 70rem;
+    padding: 6rem 2rem;
+    border-radius: 1rem;
+    margin: 3rem auto;
+    background: #FFF;
+}
+
+.img-container {
+    flex: 1 0 50%;
+    text-align: center;    
+}
+
+.form-container {
+    flex: 1 0 50%;
+}
+
+.form-container h1 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-container form {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.form-container .input-field {
+    position: relative;
+}
+
+.form-container i {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+}
+
+.form-container label {
+    color: #AAAAAA;
+}
+
+.form-container input[type="email"], 
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 0.5rem 3rem;
+    border: 1px solid #E6E6E6;
+    border-radius: 2rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    background: #E6E6E6;
+}
+
+.form-container input[type="email"]:focus, 
+.form-container input[type="password"]:focus {
+    border-color: #8E6B52;
+}
+
+.form-container .input-field:focus-within i {
+    color: #8E6B52;
+}
+
+.form-container fieldset {
+    border: none;
+    margin: 2rem 0 1rem;    
+}
+
+.form-container legend {
+    margin-bottom: 1rem;
+}
+
+.form-container .radio-field {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.form-container .radio-field input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 25px;
+    width: 25px;
+    border: 5px solid #AAA;
+    border-radius: 50%;
+    background-color:transparent;
+    
+}
+
+/* On mouse-over, add a grey background color */
+.form-container .radio-field:hover input ~ .checkmark {
+    border-color: #8E6B52;
+}
+
+.form-container .radio-field:hover {
+    color: #8E6B52;
+}
+
+/* When the radio button is checked, add a blue background */
+.form-container .radio-field input:checked ~ .checkmark {    
+    background-color: #FFF;    
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-container .radio-field input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.form-container .radio-field .checkmark:after {
+ 	top: 3px;
+	left: 3px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #000;
+}
+
+
+.form-container input[type="submit"] {
+    letter-spacing: 1.5px;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 2rem;
+    color: #FFF;
+    background: #8E6B52;
+}
+
+.form-container input[type="submit"]:hover {
+    cursor: pointer;
+    background: #5E4736;
+}
+
+.form-container p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.form-container p + p {
+    margin-top: 5rem;
+}
