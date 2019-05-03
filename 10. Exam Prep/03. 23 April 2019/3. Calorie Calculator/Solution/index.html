@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="image/image.png" alt="">
+        </div>
+
+        <div class="form-container">
+            <header>
+                <h1>CALORIE CALCULATOR</h1>
+            </header>
+
+            <form action="#" method="POST">
+
+                <div class="radio-set">
+                    <input type="radio" name="units" id="us" value="us" checked>
+                    <label for="us">Standart units (US) </label>
+
+                    <input type="radio" name="units" id="metric" value="metric">
+                    <label for="metric">Metric units</label>
+                </div>
+
+                <div class="input-wrapper">
+
+                    <div class="input-field">
+    
+                        <label for="gender">Gender</label>
+    
+                        <select name="gender" id="gender">
+                            <option value="f">Female</option>
+                            <option value="m">Male</option>
+                        </select>
+    
+                    </div>
+    
+                    <div class="input-field">
+    
+                        <label for="age">Age</label>
+    
+                        <input type="number" name="age" id="age" min="0" max="125" placeholder="Years...">
+                    
+                    </div>
+    
+                    <div class="input-field full-width">
+    
+                        <label for="weight">Weight</label>
+    
+                        <input type="number" name="weight" id="weight" placeholder="Pounds...">
+                    
+                    </div>
+    
+                    <div class="input-field full-width">
+    
+                        <label for="feet">Height</label>
+    
+                        <div class="input-row">
+                            <input type="number" name="feet" id="feet" placeholder="Feet...">
+                            
+                            <input type="number" name="inches" id="inches" placeholder="Inches...">
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <input type="submit" value="Calculate">
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
