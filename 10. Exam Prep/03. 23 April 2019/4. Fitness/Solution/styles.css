@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', serif;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.9em; }
+h2 { font-size: 2.3em; }
+h3 { font-size: 2.0em; }
+h4 { font-size: 1.7em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.fa-rotate-45 {
+    transform: rotate(-45deg);
+}
+
+h2 {
+    text-align: center;
+} 
+
+h2::after {
+    display: block;
+    content: '';
+    width: 3rem;
+    border-bottom: 2px solid #D01919;
+    margin: 2rem auto 2.5rem;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    color: #FFFFFF;
+    background: #D01919;
+}
+
+.site-header ul {
+    display: flex;
+}
+
+.site-header li {
+    margin: 0 0.5rem;
+}
+
+/* Hero */
+.hero {
+    padding-bottom: 10rem;
+    color: #FFFFFF;
+    background: url('image/fitness-main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 3rem;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.hero li {
+    margin: 0 3rem;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.hero p {
+    width: 30rem;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.hero button { 
+    display: block;
+    font-weight: 900;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+    background: #D01919;
+    margin: 0 auto;
+}
+
+.hero button:hover {
+    cursor: pointer;
+} 
+
+/* Articles */
+.articles {
+    padding: 3rem 2rem 5rem;
+}
+
+.articles .articles-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.articles article + article {
+    margin-left: 8rem;
+}
+
+.articles article i {
+    font-size: 60px;
+}
+
+.articles article h3 {
+    font-weight: bold;
+    color: #D01919;
+    margin: 1.5rem 0;
+}
+
+/* Trainers */
+.trainers {
+    padding: 3rem 5rem 5rem;
+    background: #EFEFEF;
+}
+
+.trainers .articles-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.trainers .articles-container article {
+    flex: 0 0 30%;
+}
+
+.trainers .articles-container img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.trainers .articles-container h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.trainers .articles-container h4 {
+    font-size: 1.1rem;
+    color: #D01919;
+    margin-bottom: 1rem;
+}
+
+.trainers .articles-container p {
+    width: 18rem;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    padding: 0.5rem 2rem;
+    background: #D01919;
+}
+
+footer p {
+    text-align: center;
+}
