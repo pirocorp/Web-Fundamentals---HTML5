@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* some tags do not inherit font by default */
+body, input, textarea, select, option, table, td, th {
+    font: inherit;
+}
+
+body {
+    padding: 5rem 2rem;
+    background: #EBF0F0;
+}
+
+.form-container {
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.form-container input {
+    outline: none;
+    width: 100%;
+    padding: 0.3rem 1rem 0.3rem 2.5rem;
+    border: 2px solid #C4DFE9;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.form-container input:focus {
+    border-color: #007ACC;
+}
+
+.form-container h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-container h1::after {
+    display: block;
+    content: '';
+    border-bottom: 3px solid #007ACC;
+    margin-bottom: 1.5rem;
+}
+
+.form-container label {
+    color: #999;
+}
+
+.form-container label span {
+    color: #BFCFD4;
+}
+
+.form-container label::before {
+    display: inline-block;
+    content: '*';
+    color: #FF0000;
+    margin-left: -0.5rem;
+    margin-right: 0.1rem;
+}
+
+.form-container .input-field {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-field i {
+    position: absolute;
+    top: 1.15rem;
+    left: 0.5rem;
+    width: 1.5rem;
+    border-right: 1px solid #000;
+}
+
+.form-container input[type="submit"] {
+    color: #FFF;
+    background: #007ACC;
+    border-color: #007ACC;
+}
+
+.form-container input[type="submit"]:hover {
+    cursor: pointer;
+    background: #000;
+    border-color: #000;
+}
